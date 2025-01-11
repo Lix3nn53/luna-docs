@@ -1,4 +1,4 @@
-<div class="fullpage-bg bg-stone-50" />
+<div class="fullpage-bg bg-stone-900" />
 
 <style>
 	.fullpage-bg {
