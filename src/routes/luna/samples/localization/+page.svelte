@@ -16,6 +16,6 @@
   </P>
   <img alt="samples" src={CreateLocalizationSettings} class="max-w-2xl mb-6 rounded-xl border-4"/>
   <P class="mb-2">
-    Refer to <A color="text-blue-400" href="/luna/framework/localization">localization</A> for more info.
+    Refer to <A color="text-sky-400 font-extrabold" href="/luna/framework/localization">localization</A> for more info.
   </P>
 </div>

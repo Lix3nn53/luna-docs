@@ -30,6 +30,8 @@
 	:root {
     --toc-min-width: 256px; /* Default value for larger screens */
 		--toc-width: 256px;
+		--toc-active-bg: #8b5cf6;
+		--toc-li-hover-color: #e879f9;
   }
 
 	.toc-container {

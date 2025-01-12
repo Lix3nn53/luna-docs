@@ -12,6 +12,6 @@
     Demo scenes that showcases each component individually.
   </P>
   <P class="mb-2">
-    Pretty straightforward—refer to the <strong class="font-extrabold">Components</strong> section in the sidebar for component documentation.
+    Pretty straightforward—refer to the <strong class="font-extrabold text-rose-400">Components section in the sidebar</strong> for component documentation.
   </P>
 </div>

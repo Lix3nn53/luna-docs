@@ -15,6 +15,6 @@
     Uses multi-scene workflow thanks to Addressables.
   </P>
   <P class="mb-2">
-    Refer to <A color="text-blue-400" href="/luna/quick">quickstart</A> to get started.
+    Refer to <A color="text-sky-400 font-extrabold" href="/luna/quick">quickstart</A> to get started.
   </P>
 </div>

@@ -28,9 +28,9 @@ public FadeUIElement(
     <div class="flex flex-row">
       <i class="fa-solid fa-circle-info fa-2xl mt-4 mr-4"></i>
       <div>
-        <P class="mb-4">When fading a <strong class="font-bold">UIView</strong>, always use the public <strong class="font-bold">Fade</strong> variable provided by the UIView to ensure <strong class="font-bold">Actions</strong> work correctly. 
+        <P class="mb-4">When fading a <strong class="font-bold">UIView</strong>, always use the <strong class="font-bold text-rose-400">public Fade variable provided by the UIView</strong> to ensure <A class="font-extrabold text-sky-400">UI Actions</A> work correctly. 
           Typically, you should use this Fade rather than creating a custom instance.</P>
-        <P>Only create a <strong class="font-bold">custom Fade</strong> instance if you need to fade a <strong class="font-bold"></strong>VisualElement <strong class="font-bold">independently of UIView</strong>.</P>
+        <P>Only create a <strong class="font-bold">custom Fade</strong> instance if you need to fade a <strong class="font-bold"></strong>VisualElement <strong class="font-bold text-rose-400">independently of UIView</strong>.</P>
       </div>
     </div>
   </Alert>

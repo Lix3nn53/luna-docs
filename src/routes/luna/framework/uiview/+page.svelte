@@ -102,12 +102,12 @@ public UIView(
       </TableBodyRow>
       <TableBodyRow color="custom" class={tdrowClass}>
         <TableBodyCell {tdClass}>UIElementManager</TableBodyCell>
-        <TableBodyCell {tdClass}><A color="text-blue-400" href="/luna/framework/uielementmanager">UIElementManager</A></TableBodyCell>
+        <TableBodyCell {tdClass}><A color="text-sky-400 font-extrabold" href="/luna/framework/uielementmanager">UIElementManager</A></TableBodyCell>
         <TableBodyCell {tdClass}>UIElementManager tracks interactable visual elements, enabling mass activation or deactivation within a UIView. You can also set a blocking element to prevent interaction with other elements until it is clicked.</TableBodyCell>
       </TableBodyRow>
       <TableBodyRow color="custom" class={tdrowClass}>
         <TableBodyCell tdClass={tdClasss}>Fade</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}><A color="text-blue-400" href="/luna/framework/fadeuielement">FadeUIElement</A></TableBodyCell>
+        <TableBodyCell tdClass={tdClasss}><A color="text-sky-400 font-extrabold" href="/luna/framework/fadeuielement">FadeUIElement</A></TableBodyCell>
         <TableBodyCell tdClass={tdClasss}>Manage fade transitions of the UIView.</TableBodyCell>
       </TableBodyRow>
       <TableBodyRow color="custom" class={tdrowClass}>
@@ -140,14 +140,14 @@ public UIView(
   <P>Register an action that returns to the previous screen when the Escape key is pressed.</P>
   <CodeBlock
     language="csharp" 
-    code={`myUIView.AddAction(new UIViewActionEscape(ExitUI));`}
+    code={`myUIView.AddAction(new UIViewActionEscape(ReturnToPreviousScreen));`}
     showHeader={true}
     showLineNumbers={true}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
-  <P class="my-2">Learn more at <A color="text-blue-400" href="/luna/framework/uiactions">UI Actions</A>.</P>
-  <P class="my-2">See <A color="text-blue-400" href="/luna/framework/example01">Example: Multi Page UI</A> which demonstrates usage of UIViewActionEscape.</P>
+  <P class="my-2">Learn more at <A color="text-sky-400 font-extrabold" href="/luna/framework/uiactions">UI Actions</A>.</P>
+  <P class="my-2">See <A color="text-sky-400 font-extrabold" href="/luna/framework/example01">Example: Multi Page UI</A> which demonstrates usage of UIViewActionEscape.</P>
   <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl">AddChild</Heading>
   <CodeBlock
     language="csharp" 
@@ -159,5 +159,5 @@ public UIView(
   />
   <P>When you have nested UIViews with UI Actions, you might need to register their parent-child relationships.</P>
   <P>Whenever a parent UIView is enabled or disabled, it will trigger the UI Actions of its children.</P>
-  <P class="my-2">The <A color="text-blue-400" href="/luna/framework/example01">Example: Multi Page UI</A> also demonstrates parent-child relationships.</P>
+  <P class="my-2">The <A color="text-sky-400 font-extrabold" href="/luna/framework/example01">Example: Multi Page UI</A> also demonstrates parent-child relationships.</P>
 </div>

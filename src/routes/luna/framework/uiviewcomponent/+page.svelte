@@ -51,12 +51,12 @@ public UIView(
       </TableBodyRow>
       <TableBodyRow color="custom" class={tdrowClass}>
         <TableBodyCell {tdClass}>UIElementManager</TableBodyCell>
-        <TableBodyCell {tdClass}><A color="text-blue-400" href="/luna/framework/uielementmanager">UIElementManager</A></TableBodyCell>
+        <TableBodyCell {tdClass}><A color="text-sky-400 font-extrabold" href="/luna/framework/uielementmanager">UIElementManager</A></TableBodyCell>
         <TableBodyCell {tdClass}>UIElementManager tracks interactable visual elements, enabling mass activation or deactivation within a UIView. You can also set a blocking element to prevent interaction with other elements until it is clicked.</TableBodyCell>
       </TableBodyRow>
       <TableBodyRow color="custom" class={tdrowClass}>
         <TableBodyCell tdClass={tdClasss}>Fade</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}><A color="text-blue-400" href="/luna/framework/fadeuielement">FadeUIElement</A></TableBodyCell>
+        <TableBodyCell tdClass={tdClasss}><A color="text-sky-400 font-extrabold" href="/luna/framework/fadeuielement">FadeUIElement</A></TableBodyCell>
         <TableBodyCell tdClass={tdClasss}>Manage fade transitions of the UIView.</TableBodyCell>
       </TableBodyRow>
       <TableBodyRow color="custom" class={tdrowClass}>
