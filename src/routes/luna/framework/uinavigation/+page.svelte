@@ -3,20 +3,6 @@
 
   import { CodeBlock } from 'svhighlight';
   import 'highlight.js/styles/base16/papercolor-dark.css';
-
-  import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
-
-  let tdheadClass = 'px-6 py-4 whitespace-normal font-medium bg-stone-800 text-stone-50';
-  let tdrowClass = 'border-stone-200';
-  let tdClass = 'px-6 py-4 whitespace-normal font-medium bg-stone-700';
-  let tdClasss = 'px-6 py-4 whitespace-normal font-medium bg-stone-800';
-
-  let code = `
-public FadeUIElement(
-  MonoBehaviour coroutineRunner, 
-  VisualElement visualElement, 
-  EasingMode easingMode = EasingMode.EaseOutCirc, 
-  bool debug = false)`;
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">UI Navigation</Heading>

@@ -11,16 +11,6 @@
   let tdrowClass = 'border-stone-200';
   let tdClass = 'px-6 py-4 whitespace-normal font-medium bg-stone-700';
   let tdClasss = 'px-6 py-4 whitespace-normal font-medium bg-stone-800';
-
-  let code = `
-public UIView(
-  GameObject parent, 
-  VisualElement parentElement,
-  UIStartVisibility startVisibility = UIStartVisibility.Visible, 
-  VisualElement focusElement = null, 
-  float fadeDuration = 0.5f,
-  EasingMode easingMode = EasingMode.EaseOutCirc
-)`;
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">UIViewComponent</Heading>
