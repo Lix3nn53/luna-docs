@@ -5,7 +5,7 @@
   import 'highlight.js/styles/base16/papercolor-dark.css';
 
   import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
-	import unity from '$lib/img/docs/whyuitk/unity.png';
+	import uiviewcomponent from '$lib/img/docs/framework/uiviewcomponent.png';
 
   let tdheadClass = 'px-6 py-4 whitespace-normal font-medium bg-stone-800 text-stone-50';
   let tdrowClass = 'border-stone-200';
@@ -23,60 +23,14 @@ public UIView(
 )`;
 </script>
 
-<Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">UIView</Heading>
+<Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">UIViewComponent</Heading>
 <div class="p-4">
   <P class="mb-4">
-    The <strong class="font-bold">UIView</strong> is the base class responsible for managing the lifecycle and visibility of an UI Element. 
-    It provides control over UI visibility states, fade animations, and allows for custom actions during these transitions.
+    Attach on a game object with <strong class="font-bold">UIDocument</strong> component. 
+    Creates an <strong class="font-bold">UIView</strong> for <strong class="font-bold">UIDocument.rootVisualElement</strong>.
   </P>
-  <Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl">Constructor</Heading>
-  <CodeBlock
-    language="csharp" 
-    {code}
-    showHeader={true}
-    showLineNumbers={true}
-    background="bg-zinc-900"
-    headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
-  />
-  <Table class="border-4 border-stone-400 rounded my-4">
-    <TableHead>
-      <TableHeadCell class={tdheadClass}>Name</TableHeadCell>
-      <TableHeadCell class={tdheadClass}>Type</TableHeadCell>
-      <TableHeadCell class={tdheadClass}>Description</TableHeadCell>
-    </TableHead>
-    <TableBody tableBodyClass="divide-y">
-      <TableBodyRow color="custom" class={tdrowClass}>
-        <TableBodyCell {tdClass}>parent</TableBodyCell>
-        <TableBodyCell {tdClass}>GameObject</TableBodyCell>
-        <TableBodyCell {tdClass}>Parent GameObject used to control lifecycle of the UIView.</TableBodyCell>
-      </TableBodyRow>
-      <TableBodyRow color="custom" class={tdrowClass}>
-        <TableBodyCell tdClass={tdClasss}>parentElement</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}>VisualElement</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}>The VisualElement that serves as the parent for this UIView.</TableBodyCell>
-      </TableBodyRow>
-      <TableBodyRow color="custom" class={tdrowClass}>
-        <TableBodyCell {tdClass}>startVisibility</TableBodyCell>
-        <TableBodyCell {tdClass}>UIStartVisibility</TableBodyCell>
-        <TableBodyCell {tdClass}>The UIStartVisibility enum defines the possible initial visibility states of the parentElement.</TableBodyCell>
-      </TableBodyRow>
-      <TableBodyRow color="custom" class={tdrowClass}>
-        <TableBodyCell tdClass={tdClasss}>focusElement</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}>VisualElement</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}>The VisualElement element to focus whenever UIView becomes visible.</TableBodyCell>
-      </TableBodyRow>
-      <TableBodyRow color="custom" class={tdrowClass}>
-        <TableBodyCell {tdClass}>fadeDuration</TableBodyCell>
-        <TableBodyCell {tdClass}>float</TableBodyCell>
-        <TableBodyCell {tdClass}>Specifies the duration of the fade transition, in seconds.</TableBodyCell>
-      </TableBodyRow>
-      <TableBodyRow color="custom" class={tdrowClass}>
-        <TableBodyCell tdClass={tdClasss}>easingMode</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}>EasingMode</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}>Defines the easing effect applied during fade transitions.</TableBodyCell>
-      </TableBodyRow>
-    </TableBody>
-  </Table>
+  <Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl">Inspector View</Heading>
+  <img alt="samples" src={uiviewcomponent} class="max-w-2xl mb-6 rounded-xl border-4"/>
   <Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl">Public Properties</Heading>
   <Table class="border-4 border-stone-400 rounded my-4">
     <TableHead>
@@ -86,9 +40,9 @@ public UIView(
     </TableHead>
     <TableBody tableBodyClass="divide-y">
       <TableBodyRow color="custom" class={tdrowClass}>
-        <TableBodyCell {tdClass}>Parent</TableBodyCell>
-        <TableBodyCell {tdClass}>GameObject</TableBodyCell>
-        <TableBodyCell {tdClass}>Parent GameObject used to control lifecycle of the UIView.</TableBodyCell>
+        <TableBodyCell {tdClass}>UIView</TableBodyCell>
+        <TableBodyCell {tdClass}>UIView</TableBodyCell>
+        <TableBodyCell {tdClass}>The UIView created at Awake according to inspector settings.</TableBodyCell>
       </TableBodyRow>
       <TableBodyRow color="custom" class={tdrowClass}>
         <TableBodyCell tdClass={tdClasss}>ParentElement</TableBodyCell>
@@ -106,53 +60,21 @@ public UIView(
         <TableBodyCell tdClass={tdClasss}>Manage fade transitions of the UIView.</TableBodyCell>
       </TableBodyRow>
       <TableBodyRow color="custom" class={tdrowClass}>
-        <TableBodyCell {tdClass}>IsEnabled</TableBodyCell>
-        <TableBodyCell {tdClass}>bool</TableBodyCell>
-        <TableBodyCell {tdClass}>todo</TableBodyCell>
-      </TableBodyRow>
-      <TableBodyRow color="custom" class={tdrowClass}>
-        <TableBodyCell tdClass={tdClasss}>easingMode</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}>EasingMode</TableBodyCell>
-        <TableBodyCell tdClass={tdClasss}>Defines the easing effect applied during fade transitions.</TableBodyCell>
+        <TableBodyCell {tdClass}>UIDocument</TableBodyCell>
+        <TableBodyCell {tdClass}>UIDocument</TableBodyCell>
+        <TableBodyCell {tdClass}>UIDocument component attached to the same GameObject.</TableBodyCell>
       </TableBodyRow>
     </TableBody>
   </Table>
   <Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl">Public Methods</Heading>
-  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl">AddAction</Heading>
-  <P>Adds a new action to the view's action list.</P>
-  <P>If the view is currently faded in, the action's OnFadeIn method will be triggered immediately.</P>
-  <P>The action will be automatically enabled or disabled in sync with the view's fade-in or fade-out state.</P>
-  <P>Adds a new action to the view's action list.</P>
+  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl">FadeOutThenDestroy</Heading>
+  <P>This method uses the public Fade variable from the UIView to fade out. Once the fade-out transition is complete, it destroys the associated GameObject.</P>
   <CodeBlock
     language="csharp" 
-    code={`public void AddAction(IUIViewAction action)`}
+    code={`public void FadeOutThenDestroy()`}
     showHeader={true}
     showLineNumbers={true}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
-  <Heading tag="h4" class="my-2" customSize="text-base font-bold md:text-lg lg:text-xl">Example</Heading>
-  <P>Register an action that returns to the previous screen when the Escape key is pressed.</P>
-  <CodeBlock
-    language="csharp" 
-    code={`myUIView.AddAction(new UIViewActionEscape(ExitUI));`}
-    showHeader={true}
-    showLineNumbers={true}
-    background="bg-zinc-900"
-    headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
-  />
-  <P class="my-2">Learn more at <A color="text-blue-400" href="/luna/framework/uiactions">UI Actions</A>.</P>
-  <P class="my-2">See <A color="text-blue-400" href="/luna/framework/example01">Example: Multi Page UI</A> which demonstrates usage of UIViewActionEscape.</P>
-  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl">AddChild</Heading>
-  <CodeBlock
-    language="csharp" 
-    code={`public void AddChild(UIView child)`}
-    showHeader={true}
-    showLineNumbers={true}
-    background="bg-zinc-900"
-    headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
-  />
-  <P>When you have nested UIViews with UI Actions, you might need to register their parent-child relationships.</P>
-  <P>Whenever a parent UIView is enabled or disabled, it will trigger the UI Actions of its children.</P>
-  <P class="my-2">The <A color="text-blue-400" href="/luna/framework/example01">Example: Multi Page UI</A> also demonstrates parent-child relationships.</P>
 </div>

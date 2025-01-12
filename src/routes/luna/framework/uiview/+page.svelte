@@ -5,7 +5,6 @@
   import 'highlight.js/styles/base16/papercolor-dark.css';
 
   import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
-	import unity from '$lib/img/docs/whyuitk/unity.png';
 
   let tdheadClass = 'px-6 py-4 whitespace-normal font-medium bg-stone-800 text-stone-50';
   let tdrowClass = 'border-stone-200';
@@ -19,7 +18,8 @@ public UIView(
   UIStartVisibility startVisibility = UIStartVisibility.Visible, 
   VisualElement focusElement = null, 
   float fadeDuration = 0.5f,
-  EasingMode easingMode = EasingMode.EaseOutCirc
+  EasingMode easingMode = EasingMode.EaseOutCirc,
+  bool debug = false
 )`;
 </script>
 
@@ -74,6 +74,11 @@ public UIView(
         <TableBodyCell tdClass={tdClasss}>easingMode</TableBodyCell>
         <TableBodyCell tdClass={tdClasss}>EasingMode</TableBodyCell>
         <TableBodyCell tdClass={tdClasss}>Defines the easing effect applied during fade transitions.</TableBodyCell>
+      </TableBodyRow>
+      <TableBodyRow color="custom" class={tdrowClass}>
+        <TableBodyCell tdClass={tdClasss}>debug</TableBodyCell>
+        <TableBodyCell tdClass={tdClasss}>bool</TableBodyCell>
+        <TableBodyCell tdClass={tdClasss}>Logs fade transitions, enable/disable events, and UI Actions.</TableBodyCell>
       </TableBodyRow>
     </TableBody>
   </Table>

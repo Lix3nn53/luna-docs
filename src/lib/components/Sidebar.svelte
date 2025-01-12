@@ -64,11 +64,11 @@
 				</svelte:fragment>
 				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="UIView" href="/luna/framework/uiview" active={page.url.pathname === "/luna/framework/uiview"}/>
 				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="UIViewComponent" href="/luna/framework/uiviewcomponent" active={page.url.pathname === "/luna/framework/uiviewcomponent"}/>
-				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="FadeUIElement" href="/luna/framework/FadeUIElement" active={page.url.pathname === "/luna/framework/FadeUIElement"}/>
-				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="UIActions" href="/luna/framework/UIActions" active={page.url.pathname === "/luna/framework/UIActions"}/>
+				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="FadeUIElement" href="/luna/framework/fadeuielement" active={page.url.pathname === "/luna/framework/fadeuielement"}/>
+				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="UIActions" href="/luna/framework/uiactions" active={page.url.pathname === "/luna/framework/uiactions"}/>
 				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="Example: Multi Page UI" href="/luna/framework/example01" active={page.url.pathname === "/luna/framework/example01"}/>
-				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="UIElementManager" href="/luna/framework/UIElementManager" active={page.url.pathname === "/luna/framework/UIElementManager"}/>
-				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="UI Navigation" href="/luna/framework/UINavigation" active={page.url.pathname === "/luna/framework/UINavigation"}/>
+				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="UIElementManager" href="/luna/framework/uielementmanager" active={page.url.pathname === "/luna/framework/uielementmanager"}/>
+				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="UI Navigation" href="/luna/framework/uinavigation" active={page.url.pathname === "/luna/framework/uinavigation"}/>
 				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="Localization" href="/luna/framework/localization" active={page.url.pathname === "/luna/framework/localization"}/>
 				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={dropdownActiveClass} label="Drag & Drop" href="/luna/framework/dragdrop" active={page.url.pathname === "/luna/framework/dragdrop"}/>
 			</SidebarDropdownWrapper>
