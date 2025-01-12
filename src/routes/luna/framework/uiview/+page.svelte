@@ -33,8 +33,8 @@ public UIView(
   <CodeBlock
     language="csharp" 
     {code}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
@@ -131,8 +131,8 @@ public UIView(
   <CodeBlock
     language="csharp" 
     code={`public void AddAction(IUIViewAction action)`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
@@ -152,8 +152,8 @@ public UIView(
   <CodeBlock
     language="csharp" 
     code={`public void AddChild(UIView child)`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />

@@ -38,8 +38,8 @@ public FadeUIElement(
   <CodeBlock
     language="csharp" 
     {code}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
@@ -78,8 +78,8 @@ public FadeUIElement(
   <CodeBlock
     language="csharp" 
     code={`public void FadeIn()`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
@@ -88,8 +88,8 @@ public FadeUIElement(
   <CodeBlock
     language="csharp" 
     code={`public void FadeOut()`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
@@ -98,8 +98,8 @@ public FadeUIElement(
   <CodeBlock
     language="csharp" 
     code={`public void SetDuration(float seconds)`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
@@ -108,8 +108,8 @@ public FadeUIElement(
   <CodeBlock
     language="csharp" 
     code={`public float GetDuration()`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
@@ -118,8 +118,8 @@ public FadeUIElement(
   <CodeBlock
     language="csharp" 
     code={`public void SetEasing(EasingMode easingMode)`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
@@ -128,8 +128,8 @@ public FadeUIElement(
   <CodeBlock
     language="csharp" 
     code={`public void Stop()`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />

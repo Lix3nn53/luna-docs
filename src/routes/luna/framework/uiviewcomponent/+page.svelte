@@ -72,8 +72,8 @@ public UIView(
   <CodeBlock
     language="csharp" 
     code={`public void FadeOutThenDestroy()`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />

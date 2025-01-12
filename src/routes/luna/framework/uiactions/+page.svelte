@@ -38,8 +38,8 @@ public FadeUIElement(
   <CodeBlock
     language="csharp" 
     code={`public UIViewActionEscape(Action onEscape = null, bool debug = false)`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
@@ -53,7 +53,7 @@ public FadeUIElement(
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
   <P class="my-2">See <A color="text-sky-400 font-extrabold" href="/luna/framework/example01">Example: Multi Page UI</A> for more detailed example.</P>
-  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl">UIViewActionEnableElements</Heading>
+  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl" id="UIViewActionEnableElements">UIViewActionEnableElements</Heading>
   <P>Disables `VisualElements` during `OnFadeIn` and re-enables them during `OnFadeOut`.</P>
   <P>This is particularly useful for UI navigation with keys when opening a modal or screen on top of another view.</P>
   <P>Add this action to a modal and pass in the parent `VisualElement` of the underlying view. This will disable the elements of the underlying view when the modal becomes visible and re-enable them when the modal fades out.</P>
@@ -61,8 +61,8 @@ public FadeUIElement(
   <CodeBlock
     language="csharp" 
     code={`public UIViewActionEnableElements(bool enabled, VisualElement except = null)`}
-    showHeader={true}
-    showLineNumbers={true}
+    showHeader={false}
+    showLineNumbers={false}
     background="bg-zinc-900"
     headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
   />
