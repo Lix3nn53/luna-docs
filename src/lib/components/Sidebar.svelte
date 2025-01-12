@@ -54,7 +54,6 @@
 				<svelte:fragment slot="icon">
 					<i class="fa-solid fa-box"></i>
 				</svelte:fragment>
-				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={activeClass} label="Essentials" href="/luna/samples/essentials" active={activeUrl.includes("/luna/samples/essentials")}/>
 				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={activeClass} label="Components" href="/luna/samples/components" active={activeUrl.includes("/luna/samples/components")}/>
 				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={activeClass} label="Game" href="/luna/samples/game" active={activeUrl.includes("/luna/samples/game")}/>
 				<SidebarDropdownItem aClass={dropdownItemClass} activeClass={activeClass} label="Game Addressables" href="/luna/samples/addressables" active={activeUrl.includes("/luna/samples/addressables")}/>

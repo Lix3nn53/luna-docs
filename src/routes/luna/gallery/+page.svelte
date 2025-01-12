@@ -92,8 +92,8 @@
   let index = 0;
 </script>
 
-<div class="p-2 lg:p-4 xl:p-8">
-  <Heading tag="h1" class="mb-4" customSize="text-4xl font-extrabold  md:text-5xl lg:text-6xl">Gallery</Heading>
+<div class="p-4">
+  <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">Gallery</Heading>
   <div class="p-2 lg:p-4 xl:p-8 h-full">
     <div class="space-y-4 h-full">
       <Carousel {images} class="min-h-96 h-96" imgClass="object-contain h-full w-fit" slideDuration={800} let:Indicators let:Controls bind:index>
