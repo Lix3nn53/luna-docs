@@ -6,17 +6,15 @@
   let hrClass = 'h-px my-8 bg-gray-200 border-0 dark:bg-gray-400';
 </script>
 
+<Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">Sample/ Game</Heading>
 <div class="p-4">
-  <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">Sample/ Game</Heading>
-  <div class="p-4">
-    <P class="mb-2">
-      A complete game demo featuring settings, save/load functionality, and a showcase of Luna UI's capabilities.
-    </P>
-    <P class="mb-2">
-      Uses standart single scene workflow.
-    </P>
-    <P class="mb-2">
-      Refer to <A color="text-blue-400" href="/luna/quick">quickstart</A> to get started.
-    </P>
-  </div>
+  <P class="mb-2">
+    A complete game demo featuring settings, save/load functionality, and a showcase of Luna UI's capabilities.
+  </P>
+  <P class="mb-2">
+    Uses standart single scene workflow.
+  </P>
+  <P class="mb-2">
+    Refer to <A color="text-blue-400" href="/luna/quick">quickstart</A> to get started.
+  </P>
 </div>
