@@ -258,7 +258,7 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="List & Collections"
+					label="List & ScrollView"
 					href="/luna/components/list"
 					active={page.url.pathname === '/luna/components/list'}
 				/>

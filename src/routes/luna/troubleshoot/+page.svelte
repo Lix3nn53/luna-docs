@@ -1,13 +1,14 @@
 <script>
 	import { Heading, P, A, Mark, Secondary, GradientButton, Hr } from 'flowbite-svelte';
 	import reimport from '$lib/img/docs/troubleshoot/reimport.jpg';
+	import uibuildertheme from '$lib/img/docs/troubleshoot/uibuildertheme.jpg';
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">Troubleshoot</Heading
 >
 <div class="p-4">
 	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
-		>Styles Failing to Load Properly</Heading
+		>Styles failing to load properly</Heading
 	>
 	<P class="mb-2">
 		Sometimes, USS files fail to import correctly, requiring manual re-importing. Go to <strong
@@ -28,4 +29,9 @@
 		Styles should work properly now. If they don't, try reimporting the: Packages > Luna UI >
 		Runtime > Setup > CupkekGamesMainTheme.
 	</P>
+	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Styles not working in UI Builder</Heading
+	>
+	<P class="mb-2">Make sure you select the correct Theme.</P>
+	<img alt="uibuildertheme" src={uibuildertheme} class="mb-6 max-w-4xl rounded-xl border-4" />
 </div>
