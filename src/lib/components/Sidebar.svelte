@@ -473,7 +473,7 @@
 			<SidebarDropdownWrapper
 				btnClass={dropdownWrapperClass}
 				label="UI Toolkit Guides"
-				isOpen={page.url.pathname.includes('/core')}
+				isOpen={page.url.pathname.includes('/uitkguide')}
 			>
 				<svelte:fragment slot="icon">
 					<i class="fa-solid fa-book"></i>
@@ -481,9 +481,16 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="TODO"
-					href="/uitk/guide/border"
-					active={page.url.pathname === '/uitk/guide/border'}
+					label="ListView"
+					href="/uitkguide/listview"
+					active={page.url.pathname === '/uitkguide/listview'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="USS Variables"
+					href="/uitkguide/ussvariables"
+					active={page.url.pathname === '/uitkguide/ussvariables'}
 				/>
 			</SidebarDropdownWrapper>
 		</SidebarGroup>

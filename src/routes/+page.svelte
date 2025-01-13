@@ -1,7 +1,5 @@
 <script>
 	import { Heading, P, A, Mark, Secondary, GradientButton, Hr } from 'flowbite-svelte';
-
-	let hrClass = 'h-px my-8 bg-gray-200 border-0 dark:bg-gray-400';
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">Introduction</Heading
