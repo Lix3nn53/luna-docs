@@ -1,6 +1,8 @@
 <script>
-	import { Heading, P, A, Mark, Secondary, GradientButton, Hr } from 'flowbite-svelte';
-	import listImg from '$lib/img/docs/components/list.png';
+	import { Heading, P, A, Mark, Secondary, GradientButton, Hr, Li, List } from 'flowbite-svelte';
+	import inputpromptImg from '$lib/img/docs/components/inputprompt.jpg';
+	import inputdevicemanager from '$lib/img/docs/components/inputdevicemanager.jpg';
+	import inputicondatabase from '$lib/img/docs/components/inputicondatabase.jpg';
 	import input from '$lib/img/docs/gallery/luna_input.jpg';
 
 	import { CodeBlock } from 'svhighlight';
@@ -25,39 +27,87 @@
 >
 <div class="p-4">
 	<img alt="samples" src={input} class="mb-6 max-w-2xl rounded-xl border-4" />
-	<CodeBlock
-		language="html"
-		code={`
-<engine:ListView name="ListPrimary" fixed-item-height="100" class="primary" />
-<engine:ListView name="ListRed" fixed-item-height="100" class="red" />
-<engine:ListView name="ListPurple" fixed-item-height="100" class="purple" />
-<engine:ListView name="ListDefault" fixed-item-height="100" />
-
-<engine:ScrollView class="primary">
-<engine:ScrollView class="red">`}
-		showHeader={false}
-		showLineNumbers={false}
-		background="bg-zinc-900"
-		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
+	<img alt="samples" src={inputpromptImg} class="mb-6 max-w-md rounded-xl border-4" />
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Attributes</Heading
+	><Table class="rounded">
+		<TableHead>
+			<TableHeadCell class={tdheadClass}>Attribute</TableHeadCell>
+			<TableHeadCell class={tdheadClass}>Description</TableHeadCell>
+		</TableHead>
+		<TableBody tableBodyClass="divide-y">
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>InputActionName</TableBodyCell>
+				<TableBodyCell {tdClass}>Name of input action to pick from input actions.</TableBodyCell>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>OverrideIconSprite</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>InputPrompt displays icon according to InputActionName. You can override it with this.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>OverrideIconText</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>InputPrompt displays text according to InputActionName. You can override it with this.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>MinSize</TableBodyCell>
+				<TableBodyCell {tdClass}>Min width and height of the icon.</TableBodyCell>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>ButtonIf</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>List of InputIconControlScheme. If the list contains KeyboardMouse, the InputPrompt will
+					automatically switch to being interactable so it can be clicked with mouse. However, when
+					switching to a gamepad, it will no longer be interactable, ensuring that auto-navigation
+					ignores it. This prevents navigation with d-pad from selecting the InputPrompt, which is
+					typically not desirable.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>HideIf</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>List of InputIconControlScheme. Hide the InputPrompt automatically on desired input
+					control schemes.</TableBodyCell
+				>
+			</TableBodyRow>
+		</TableBody>
+	</Table>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>InputIconControlScheme</Heading
+	>
+	<P>enum</P>
+	<List tag="ul" class="space-y-1 py-2">
+		<Li>KeyboardMouse</Li>
+		<Li>Xbox</Li>
+		<Li>PlayStation4</Li>
+		<Li>PlayStation5</Li>
+	</List>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>InputDeviceManager</Heading
+	>
+	<P>Has 2 responsiblities.</P>
+	<List tag="ul" class="space-y-1 py-2">
+		<Li>Detecting input scheme changes to automatically update InputPrompt icons and texts.</Li>
+		<Li>Connection between InputPrompt and InputIconDatabase.</Li>
+	</List>
+	<img
+		alt="inputdevicemanager"
+		src={inputdevicemanager}
+		class="my-6 max-w-md rounded-xl border-4"
 	/>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
-		>Colors</Heading
+		>InputIconDatabase</Heading
 	>
+	<P>Dictionaries of sprites for each control scheme.</P>
 	<P
-		>To change the color of a ListView or ScrollView, add the color name as a class without a value.</P
+		>Icons used: <A
+			color="text-sky-400 font-extrabold"
+			href="https://www.kenney.nl/assets/input-prompts"
+			target="_blank">https://www.kenney.nl/assets/input-prompts</A
+		></P
 	>
-	<CodeBlock
-		language="html"
-		code={`
-<engine:ListView class="purple" />
-<engine:ScrollView class="purple" />`}
-		showHeader={false}
-		showLineNumbers={false}
-		background="bg-zinc-900"
-		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
-	/>
-	<P class="pt-4"
-		>Refer to <A color="text-sky-400 font-extrabold" href="/luna/styling/colors">colors</A> to learn
-		about available options.</P
-	>
+	<img alt="inputicondatabase" src={inputicondatabase} class="my-6 max-w-md rounded-xl border-4" />
 </div>
