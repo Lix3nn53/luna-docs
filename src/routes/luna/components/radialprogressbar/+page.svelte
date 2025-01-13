@@ -79,7 +79,7 @@
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell tdClass={tdClasss}>Thickness</TableBodyCell>
-				<TableBodyCell tdClass={tdClasss}>Thickness of the line.</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}>Width of the line that draws the circle.</TableBodyCell>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>Color BG</TableBodyCell>
