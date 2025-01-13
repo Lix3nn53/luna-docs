@@ -277,6 +277,9 @@ public DefaultTooltipContainerSetup(
 	<CodeBlock
 		language="csharp"
 		code={`
+// Reference to the DefaultTooltip singleton
+DefaultTooltip tooltip = DefaultTooltip.Instance;
+
 // VisualElement that will display tooltip on hover
 VisualElement tooltipOnHover = _uiDocument.rootVisualElement.Q<VisualElement>("TooltipOnHover");
 
@@ -303,7 +306,7 @@ var containerSetup = new DefaultTooltipContainerSetup(
 );
 
 // Create Manipulator
-DefaultTooltipManipulator manipulator = new DefaultTooltipManipulator(gameObject, _tooltip);
+DefaultTooltipManipulator manipulator = new DefaultTooltipManipulator(gameObject, tooltip);
 manipulator.SetSetup(containerSetup);
 
 // Add Manipulator, you can add same manipulator to multiple elements if needed
