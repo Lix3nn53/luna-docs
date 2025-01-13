@@ -370,7 +370,7 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Save/Load"
+					label="Save & Load"
 					href="/luna/views/saveload"
 					active={page.url.pathname === '/luna/views/saveload'}
 				/>
@@ -442,9 +442,9 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Fonts"
-					href="/luna/styling/fonts"
-					active={page.url.pathname === '/luna/styling/fonts'}
+					label="Text"
+					href="/luna/styling/text"
+					active={page.url.pathname === '/luna/styling/text'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
@@ -452,13 +452,6 @@
 					label="Cursor"
 					href="/luna/styling/cursor"
 					active={page.url.pathname === '/luna/styling/cursor'}
-				/>
-				<SidebarDropdownItem
-					aClass={dropdownItemClass}
-					activeClass={dropdownActiveClass}
-					label="Margin & Padding"
-					href="/luna/styling/marginpadding"
-					active={page.url.pathname === '/luna/styling/marginpadding'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
