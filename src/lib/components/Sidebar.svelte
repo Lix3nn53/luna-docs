@@ -82,7 +82,7 @@
 				{activeClass}
 				{nonActiveClass}
 				label="Quick Start"
-				href="/luna/quick"
+				href="/luna/quickstart"
 			/>
 			<SidebarItem
 				class={itemClass}
