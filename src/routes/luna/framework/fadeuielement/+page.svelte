@@ -15,8 +15,8 @@
 
 	let tdheadClass = 'px-6 py-4 whitespace-normal font-medium bg-stone-800 text-stone-50';
 	let tdrowClass = 'border-stone-200';
-	let tdClass = 'px-6 py-4 whitespace-normal font-medium bg-stone-700';
-	let tdClasss = 'px-6 py-4 whitespace-normal font-medium bg-stone-800';
+	let tdClass = 'px-6 py-4 whitespace-normal font-medium bg-stone-700 min-w-48';
+	let tdClasss = 'px-6 py-4 whitespace-normal font-medium bg-stone-800 min-w-48';
 
 	let code = `
 public FadeUIElement(

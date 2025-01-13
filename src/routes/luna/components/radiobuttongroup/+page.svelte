@@ -16,7 +16,7 @@
 
 	let tdheadClass = 'px-6 py-2 whitespace-normal font-medium bg-stone-800 text-stone-50';
 	let tdrowClass = 'border-stone-500';
-	let tdClass = 'px-6 py-2 whitespace-normal font-medium bg-stone-600';
+	let tdClass = 'px-6 py-2 whitespace-normal font-medium bg-stone-600 min-w-48';
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl"
