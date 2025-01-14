@@ -168,8 +168,8 @@
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
 					label="Example: Multi Page UI"
-					href="/luna/framework/example01"
-					active={page.url.pathname === '/luna/framework/example01'}
+					href="/luna/framework/examplemultipage"
+					active={page.url.pathname === '/luna/framework/examplemultipage'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}

@@ -86,7 +86,7 @@ public FadeUIElement(
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
 	<P class="my-2"
-		>See <A color="text-sky-400 font-extrabold" href="/luna/framework/example01"
+		>See <A color="text-sky-400 font-extrabold" href="/luna/framework/examplemultipage"
 			>Example: Multi Page UI</A
 		> for more detailed example.</P
 	>
@@ -129,7 +129,7 @@ public FadeUIElement(
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
 	<P class="my-2"
-		>See <A color="text-sky-400 font-extrabold" href="/luna/framework/example01"
+		>See <A color="text-sky-400 font-extrabold" href="/luna/framework/examplemultipage"
 			>Example: Multi Page UI</A
 		> for more detailed example.</P
 	>

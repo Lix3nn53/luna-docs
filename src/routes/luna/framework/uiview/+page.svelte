@@ -184,12 +184,36 @@ public UIView(
 	<P>Adds a new action to the view's action list.</P>
 	<CodeBlock
 		language="csharp"
-		code={`public void AddAction(IUIViewAction action)`}
+		code={`public void AddAction(IUIViewAction action, bool activate = true)`}
 		showHeader={false}
 		showLineNumbers={false}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
+	
+	<Table class="my-4 rounded border-4 border-stone-400">
+		<TableHead>
+			<TableHeadCell class={tdheadClass}>Name</TableHeadCell>
+			<TableHeadCell class={tdheadClass}>Type</TableHeadCell>
+			<TableHeadCell class={tdheadClass}>Description</TableHeadCell>
+		</TableHead>
+		<TableBody tableBodyClass="divide-y">
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>action</TableBodyCell>
+				<TableBodyCell {tdClass}>IUIViewAction</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>Action to add to the UIView.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell tdClass={tdClasss}>activate</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}>bool</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}
+					>Activates the Action immediately if the UIView is currently enabled. If the UIView is not enabled, the Action is not triggered even if this is true.</TableBodyCell
+				>
+			</TableBodyRow>
+		</TableBody>
+	</Table>
 	<Heading tag="h4" class="my-2" customSize="text-base font-bold md:text-lg lg:text-xl"
 		>Example</Heading
 	>
@@ -208,7 +232,7 @@ public UIView(
 		>.</P
 	>
 	<P class="my-2"
-		>See <A color="text-sky-400 font-extrabold" href="/luna/framework/example01"
+		>See <A color="text-sky-400 font-extrabold" href="/luna/framework/examplemultipage"
 			>Example: Multi Page UI</A
 		> which demonstrates usage of UIViewActionEscape.</P
 	>
@@ -232,7 +256,7 @@ public UIView(
 		children.</P
 	>
 	<P class="my-2"
-		>The <A color="text-sky-400 font-extrabold" href="/luna/framework/example01"
+		>The <A color="text-sky-400 font-extrabold" href="/luna/framework/examplemultipage"
 			>Example: Multi Page UI</A
 		> also demonstrates parent-child relationships.</P
 	>
