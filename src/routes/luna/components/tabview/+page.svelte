@@ -2,7 +2,7 @@
 	import { Heading, P, A, Mark, Secondary, GradientButton, Hr, Li, List } from 'flowbite-svelte';
 	import tabs_h from '$lib/img/docs/components/tabs_h.png';
 	import tabs_v from '$lib/img/docs/components/tabs_v.png';
-	import settings from '$lib/img/docs/components/settings.jpg';
+	import settings from '$lib/img/docs/views/settings.jpg';
 	import tabs_inspector from '$lib/img/docs/components/tabs_inspector.jpg';
 	import tabs_usage_1 from '$lib/img/docs/components/tabs_usage_1.png';
 	import tabs_usage_2 from '$lib/img/docs/components/tabs_usage_2.png';

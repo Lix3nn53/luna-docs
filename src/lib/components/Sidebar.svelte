@@ -319,13 +319,6 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Confirmation Popup"
-					href="/luna/components/confirmationpopup"
-					active={page.url.pathname === '/luna/components/confirmationpopup'}
-				/>
-				<SidebarDropdownItem
-					aClass={dropdownItemClass}
-					activeClass={dropdownActiveClass}
 					label="Notifications"
 					href="/luna/components/notifications"
 					active={page.url.pathname === '/luna/components/notifications'}
@@ -402,6 +395,13 @@
 					href="/luna/views/visualnovel"
 					active={page.url.pathname === '/luna/views/visualnovel'}
 				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Confirmation Popup"
+					href="/luna/views/confirmationpopup"
+					active={page.url.pathname === '/luna/views/confirmationpopup'}
+				/>
 			</SidebarDropdownWrapper>
 			<SidebarDropdownWrapper
 				btnClass={dropdownWrapperClass}
@@ -414,9 +414,9 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="USS Guide"
-					href="/luna/styling/ussguide"
-					active={page.url.pathname === '/luna/styling/ussguide'}
+					label="USS Setup"
+					href="/luna/styling/usssetup"
+					active={page.url.pathname === '/luna/styling/usssetup'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
@@ -474,16 +474,16 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="ListView"
-					href="/uitkguide/listview"
-					active={page.url.pathname === '/uitkguide/listview'}
+					label="USS guide"
+					href="/uitkguide/ussguide"
+					active={page.url.pathname === '/uitkguide/ussguide'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="USS Variables"
-					href="/uitkguide/ussvariables"
-					active={page.url.pathname === '/uitkguide/ussvariables'}
+					label="ListView"
+					href="/uitkguide/listview"
+					active={page.url.pathname === '/uitkguide/listview'}
 				/>
 			</SidebarDropdownWrapper>
 		</SidebarGroup>

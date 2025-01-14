@@ -1,7 +1,17 @@
 <script>
-	import { Heading, P, A, Mark, Secondary, GradientButton, Hr, Li, List } from 'flowbite-svelte';
-	import confirmationpopup_ex from '$lib/img/docs/components/confirmationpopup_ex.png';
-	import confirmationpopup_ins from '$lib/img/docs/components/confirmationpopup_ins.jpg';
+	import {
+		Heading,
+		P,
+		A,
+		Mark,
+		Secondary,
+		GradientButton,
+		Hr,
+		Li,
+		List,
+		Alert
+	} from 'flowbite-svelte';
+	import mainmenu from '$lib/img/docs/views/mainmenu.jpg';
 
 	import { CodeBlock } from 'svhighlight';
 	import 'highlight.js/styles/base16/papercolor-dark.css';
@@ -25,5 +35,32 @@
 	>Views/ Main Menu</Heading
 >
 <div class="p-4">
-	<P>TODO</P>
+	<img alt="mainmenu" src={mainmenu} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<P
+		>An example implementation that you can use directly or as a starting point. You can refer to
+		the demo game samples to see it in action or see the implementation details.</P
+	>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>MainMenuView{'<TSaveData>'}</Heading
+	>
+	<P>Base class with buttons:</P>
+	<List tag="ul" class="space-y-1 py-2">
+		<Li>Continue</Li>
+		<Li>Load</Li>
+		<Li>New Game</Li>
+		<Li>Settings</Li>
+		<Li>Credits</Li>
+		<Li>Quit</Li>
+	</List>
+	<Alert border>
+		<div class="flex flex-row">
+			<i class="fa-solid fa-circle-info fa-2xl mr-4 mt-4"></i>
+			<div>
+				<P class="mb-4"
+					>The Continue and Load buttons are enabled or disabled automatically based on the presence
+					of a save file, in coordination with the GameSaveManager.</P
+				>
+			</div>
+		</div>
+	</Alert>
 </div>
