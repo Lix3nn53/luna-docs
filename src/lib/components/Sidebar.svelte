@@ -521,8 +521,8 @@
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
 					label="KeyValue Database"
-					href="/core/KeyValueDatabase"
-					active={page.url.pathname === '/core/KeyValueDatabase'}
+					href="/core/keyvaluedatabase"
+					active={page.url.pathname === '/core/keyvaluedatabase'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
@@ -541,9 +541,9 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Scene Management Addressable"
-					href="/core/scenemanagementaddressable"
-					active={page.url.pathname === '/core/scenemanagementaddressable'}
+					label="Scene Management"
+					href="/core/scenemanagement"
+					active={page.url.pathname === '/core/scenemanagement'}
 				/>
 			</SidebarDropdownWrapper>
 		</SidebarGroup>

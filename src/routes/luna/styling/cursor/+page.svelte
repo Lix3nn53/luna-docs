@@ -75,83 +75,82 @@
 		<TableBody tableBodyClass="divide-y">
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>cursor-default</TableBodyCell>
-				<TableBodyCell {tdClass}><img alt="pointer_a" src={pointer_a} class="w-12" /></TableBodyCell
-				>
+				<TableBodyCell {tdClass}><img alt="pointer_a" src={pointer_a} class="w-8" /></TableBodyCell>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell tdClass={tdClasss}>cursor-pointer</TableBodyCell>
 				<TableBodyCell tdClass={tdClasss}
-					><img alt="hand_small_point" src={hand_small_point} class="w-12" /></TableBodyCell
+					><img alt="hand_small_point" src={hand_small_point} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>cursor-wait</TableBodyCell>
 				<TableBodyCell {tdClass}
-					><img alt="cursor_busy" src={cursor_busy} class="w-12" /></TableBodyCell
+					><img alt="cursor_busy" src={cursor_busy} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell tdClass={tdClasss}>cursor-text</TableBodyCell>
 				<TableBodyCell tdClass={tdClasss}
-					><img alt="bracket_a_vertical" src={bracket_a_vertical} class="w-12" /></TableBodyCell
+					><img alt="bracket_a_vertical" src={bracket_a_vertical} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>cursor-move</TableBodyCell>
 				<TableBodyCell {tdClass}
-					><img alt="resize_a_cross" src={resize_a_cross} class="w-12" /></TableBodyCell
+					><img alt="resize_a_cross" src={resize_a_cross} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell tdClass={tdClasss}>cursor-help</TableBodyCell>
 				<TableBodyCell tdClass={tdClasss}
-					><img alt="cursor_help" src={cursor_help} class="w-12" /></TableBodyCell
+					><img alt="cursor_help" src={cursor_help} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>cursor-not-allowed</TableBodyCell>
 				<TableBodyCell {tdClass}
-					><img alt="cursor_disabled" src={cursor_disabled} class="w-12" /></TableBodyCell
+					><img alt="cursor_disabled" src={cursor_disabled} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell tdClass={tdClasss}>cursor-context-menu</TableBodyCell>
 				<TableBodyCell tdClass={tdClasss}
-					><img alt="cursor_menu" src={cursor_menu} class="w-12" /></TableBodyCell
+					><img alt="cursor_menu" src={cursor_menu} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>cursor-cell</TableBodyCell>
 				<TableBodyCell {tdClass}
-					><img alt="line_cross" src={line_cross} class="w-12" /></TableBodyCell
+					><img alt="line_cross" src={line_cross} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell tdClass={tdClasss}>cursor-copy</TableBodyCell>
 				<TableBodyCell tdClass={tdClasss}
-					><img alt="cursor_copy" src={cursor_copy} class="w-12" /></TableBodyCell
+					><img alt="cursor_copy" src={cursor_copy} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>cursor-grab</TableBodyCell>
 				<TableBodyCell {tdClass}
-					><img alt="hand_small_open" src={hand_small_open} class="w-12" /></TableBodyCell
+					><img alt="hand_small_open" src={hand_small_open} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell tdClass={tdClasss}>cursor-grabbing</TableBodyCell>
 				<TableBodyCell tdClass={tdClasss}
-					><img alt="hand_small_closed" src={hand_small_closed} class="w-12" /></TableBodyCell
+					><img alt="hand_small_closed" src={hand_small_closed} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>cursor-zoom-in</TableBodyCell>
-				<TableBodyCell {tdClass}><img alt="zoom_in" src={zoom_in} class="w-12" /></TableBodyCell>
+				<TableBodyCell {tdClass}><img alt="zoom_in" src={zoom_in} class="w-8" /></TableBodyCell>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell tdClass={tdClasss}>cursor-zoom-out</TableBodyCell>
 				<TableBodyCell tdClass={tdClasss}
-					><img alt="zoom_out" src={zoom_out} class="w-12" /></TableBodyCell
+					><img alt="zoom_out" src={zoom_out} class="w-8" /></TableBodyCell
 				>
 			</TableBodyRow>
 		</TableBody>
