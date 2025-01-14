@@ -32,13 +32,19 @@
 	let tdClasss = 'px-6 py-2 whitespace-normal font-medium bg-stone-600 min-w-48';
 </script>
 
-<Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">UITK/ Colors</Heading
+<Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl"
+	>Styling/ Colors</Heading
 >
 <div class="p-4">
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Default Colors</Heading
 	>
-	<P class="mb-4"
+	For full color palette, visit <A
+		color="text-sky-400 font-extrabold"
+		href="https://tailwindcss.com/docs/customizing-colors"
+		target="_blank">Tailwind Colors</A
+	>.
+	<P class="my-4"
 		>SLATE, GRAY, ZINC, NEUTRAL, STONE, RED, ORANGE, AMBER, YELLOW, LIME, GREEN, EMERALD, TEAL,
 		CYAN, SKY, BLUE, INDIGO, VIOLET, PURPLE, FUCHSIA, PINK, and ROSE.</P
 	>
