@@ -10,7 +10,10 @@
 		>1 - Import Game Library</Heading
 	>
 	<P class="mb-2">
-		Start by importing <strong class="font-extrabold text-rose-400">Game Library</strong>.
+		Start by importing <strong class="font-extrabold text-rose-400">Library</strong>.
+	</P>
+	<P class="mb-2">
+		The library sample includes dependencies required by other samples. Without it, the samples will not function.
 	</P>
 	<img alt="samples" src={samples} class="mb-6 max-w-2xl rounded-xl border-4" />
 	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
