@@ -38,7 +38,7 @@
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
 	<P class="pt-4"
-		>Refer to <A color="text-sky-400 font-extrabold" href="/luna/styling/colors">colors</A> to learn
-		about available options.</P
+		>Refer to <A color="text-sky-400 font-extrabold" href="/luna/styling/colors">Styling/Colors</A> to
+		learn about available options.</P
 	>
 </div>
