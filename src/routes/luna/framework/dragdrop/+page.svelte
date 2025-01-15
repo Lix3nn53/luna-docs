@@ -1,6 +1,6 @@
 <script>
-	import { Heading, P } from 'flowbite-svelte';
-	import pagination from '$lib/img/docs/components/pagination.jpg';
+	import { Heading, P, Alert } from 'flowbite-svelte';
+	import draganddrop from '$lib/img/docs/framework/dragdrop.jpg';
 
 	import { CodeBlock } from 'svhighlight';
 	import 'highlight.js/styles/base16/papercolor-dark.css';
@@ -10,13 +10,23 @@
 	>Framework/ Drag & Drop</Heading
 >
 <div class="p-4">
-	<img alt="pagination" src={pagination} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="draganddrop" src={draganddrop} class="mb-6 max-w-2xl rounded-xl border-4" />
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Example Usage</Heading
 	>
 	<P>
 		As always, you can find this example in the Components sample.
 	</P>
+	<Alert border>
+		<div class="flex flex-row">
+			<i class="fa-solid fa-circle-info fa-2xl mr-4 mt-4"></i>
+			<div>
+				<P class="mb-4"
+					>For more advanced example, refer to Inventory implementation in Game samples.</P
+				>
+			</div>
+		</div>
+	</Alert>
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
 		>DragAndDropManipulator</Heading
 	>
