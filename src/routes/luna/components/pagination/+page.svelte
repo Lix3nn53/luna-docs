@@ -1,26 +1,9 @@
 <script>
-	import { Heading, P, A, Mark, Secondary, GradientButton, Hr, Li, List } from 'flowbite-svelte';
+	import { Heading, P } from 'flowbite-svelte';
 	import pagination from '$lib/img/docs/components/pagination.jpg';
-	import tooltip_inspector from '$lib/img/docs/components/tooltip_inspector.jpg';
-	import default_tooltip_inspector from '$lib/img/docs/components/default_tooltip_inspector.jpg';
-	import default_tooltip_setup from '$lib/img/docs/components/default_tooltip_setup.jpg';
-	import input from '$lib/img/docs/gallery/luna_input.jpg';
 
 	import { CodeBlock } from 'svhighlight';
 	import 'highlight.js/styles/base16/papercolor-dark.css';
-
-	import {
-		Table,
-		TableBody,
-		TableBodyCell,
-		TableBodyRow,
-		TableHead,
-		TableHeadCell
-	} from 'flowbite-svelte';
-
-	let tdheadClass = 'px-6 py-2 whitespace-normal font-medium bg-stone-800 text-stone-50';
-	let tdrowClass = 'border-stone-500';
-	let tdClass = 'px-6 py-2 whitespace-normal font-medium bg-stone-600 min-w-48';
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl"
@@ -29,11 +12,55 @@
 <div class="p-4">
 	<img alt="pagination" src={pagination} class="mb-6 max-w-2xl rounded-xl border-4" />
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
-		>Example{"<T>"}</Heading
+		>Example Usage</Heading
 	>
 	<P>
-		As always, you can find this example in Components sample.
+		As always, you can find this example in the Components sample.
 	</P>
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+		>LabelWithBinding</Heading
+	>
+	<P>
+	Create an UI controller class named LabelWithBinding. This allows us to reuse existing elements, instead of deleting and recreating elements at runtime.
+	</P>
+	<P>
+	This approach improves performance by reducing garbage collection overhead and ensures smoother UI updates.
+	</P>
+	<CodeBlock
+		language="csharp"
+		code={`
+using UnityEngine.UIElements;
+
+namespace CupkekGames.UITK.Demo.Components
+{
+    public class LabelWithBinding
+    {
+        private Label _label;
+
+        public LabelWithBinding(Label label)
+        {
+            _label = label;
+        }
+
+        public void Bind(string data)
+        {
+            _label.text = data;
+        }
+
+        public void Unbind()
+        {
+            _label.text = "";
+        }
+    }
+}`}
+		showHeader={true}
+		showLineNumbers={true}
+		background="bg-zinc-900"
+		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
+	/>
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+		>PaginationDemo</Heading
+	>
 	<CodeBlock
 		language="csharp"
 		code={`
