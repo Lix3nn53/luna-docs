@@ -27,7 +27,7 @@ public FadeUIElement(
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">Example: Multi Page UI</Heading>
-<div class="p-4 max-w-5xl">
+<div class="p-4">
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>MultiPageUI</Heading
 	>

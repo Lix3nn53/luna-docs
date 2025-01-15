@@ -194,7 +194,7 @@ public DragAndDropManipulator(
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
 		>UIElementManager?</Heading
 	>
-  <P>UIElementManager's purpose in DragAndDropManipulator is to prevent hover audio from playing when hovering over other buttons and other interactable elements while dragging an element.</P>
+  <P>UIElementManager's purpose in DragAndDropManipulator is to prevent hover audio from playing when hovering over other buttons and interactable elements while dragging an element.</P>
   <P>When a drag operation starts, if UIElementManager is not null, hover audio will be muted until the drag operation ends.</P>
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
 		>Public Methods</Heading

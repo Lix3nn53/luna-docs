@@ -14,7 +14,7 @@
 	<div class="flex-1 flex flex-col">
 		<div class="flex-1 flex flex-col">
 			<div class="p-4 flex flex-row justify-between">
-				<div>
+				<div class="max-w-5xl">
 					<slot />
 				</div>
 				<div class="toc-container border-l border-stone-500">
