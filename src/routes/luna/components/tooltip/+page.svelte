@@ -5,7 +5,6 @@
 	import tooltip_inspector from '$lib/img/docs/components/tooltip_inspector.jpg';
 	import default_tooltip_inspector from '$lib/img/docs/components/default_tooltip_inspector.jpg';
 	import default_tooltip_setup from '$lib/img/docs/components/default_tooltip_setup.jpg';
-	import input from '$lib/img/docs/gallery/luna_input.jpg';
 
 	import { CodeBlock } from 'svhighlight';
 	import 'highlight.js/styles/base16/papercolor-dark.css';
@@ -28,12 +27,11 @@
 	>Components/ Tooltip</Heading
 >
 <div class="p-4">
-	<img alt="samples" src={tooltip} class="mb-6 max-w-2xl rounded-xl border-4" />
-	<P>The tooltip itself is a simple component.</P>
-	<P>
-		However, we created an implementation of the Tooltip called <strong>DefaultTooltip</strong>.
-		Controlling the DefaultTooltip is more complex to accommodate a wide range of scenarios.
-	</P>
+	<img alt="tooltip" src={tooltip} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<p>The tooltip is a straightforward component.</p>
+	<p>
+			For more complex needs, we provide an implementation called <strong>DefaultTooltip</strong>. It is designed to handle a wide range of scenarios.
+	</p>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Attributes</Heading
 	>
@@ -87,8 +85,7 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 	/>
 	<P class="pt-4"
 		>This will display the tooltip we created when myElement is hovered over or focused. As you can
-		see, the Tooltip itself is very simple and may not suffice for more complex scenarios commonly
-		encountered in games.</P
+		see, the Tooltip itself is very simple.</P
 	>
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
 		>Class Controls</Heading
@@ -141,12 +138,12 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 	>
 	<img alt="samples" src={tooltip_compare} class="mb-4 max-w-2xl rounded-xl border-4" />
 	<P class="pb-4"
-		>This is where it gets more complex. While the Tooltip is a basic feature with limited
-		customization, we've provided a default implementation to cover most use cases.</P
+		>To support more complex scenarios commonly
+		encountered in games, we've provided a default implementation to cover most use cases.</P
 	>
 	<P class="pb-4"
 		>DefaultTooltip is not an extension of Tooltip; it is an extension of TooltipManipulator. It
-		creates and controls Tooltip with customizable slots and the ability to display multiple columns
+		creates and controls a Tooltip with customizable slots and the ability to display multiple columns
 		simultaneously.</P
 	>
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
