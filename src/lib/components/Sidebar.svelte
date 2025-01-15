@@ -319,13 +319,6 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Notifications"
-					href="/luna/components/notifications"
-					active={page.url.pathname === '/luna/components/notifications'}
-				/>
-				<SidebarDropdownItem
-					aClass={dropdownItemClass}
-					activeClass={dropdownActiveClass}
 					label="Pagination"
 					href="/luna/components/pagination"
 					active={page.url.pathname === '/luna/components/pagination'}
@@ -401,6 +394,20 @@
 					label="Confirmation Popup"
 					href="/luna/views/confirmationpopup"
 					active={page.url.pathname === '/luna/views/confirmationpopup'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Notifications"
+					href="/luna/views/notifications"
+					active={page.url.pathname === '/luna/views/notifications'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Autosave Notification"
+					href="/luna/views/autosave"
+					active={page.url.pathname === '/luna/views/autosave'}
 				/>
 			</SidebarDropdownWrapper>
 			<SidebarDropdownWrapper
@@ -484,6 +491,13 @@
 					label="ListView"
 					href="/uitkguide/listview"
 					active={page.url.pathname === '/uitkguide/listview'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Data Binding"
+					href="/uitkguide/databinding"
+					active={page.url.pathname === '/uitkguide/databinding'}
 				/>
 			</SidebarDropdownWrapper>
 		</SidebarGroup>

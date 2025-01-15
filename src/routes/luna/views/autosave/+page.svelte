@@ -1,7 +1,7 @@
 <script>
 	import { Heading, P, A, Mark, Secondary, GradientButton, Hr, Li, List } from 'flowbite-svelte';
 	import confirmationpopup_ex from '$lib/img/docs/components/confirmationpopup_ex.png';
-	import confirmationpopup_ins from '$lib/img/docs/components/confirmationpopup_ins.jpg';
+	import autosavegif from '$lib/img/docs/views/autosave.gif';
 
 	import { CodeBlock } from 'svhighlight';
 	import 'highlight.js/styles/base16/papercolor-dark.css';
@@ -22,8 +22,13 @@
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl"
-	>Components/ Notifications</Heading
+	>Views/ Autosave Notification</Heading
 >
 <div class="p-4">
-	<P>TODO</P>
+	<img
+		alt="autosavegif"
+		src={autosavegif}
+		class="mb-6 max-w-2xl rounded-xl border-4"
+	/>
+	<P>An autosave notification that integrates with the <A color="text-sky-400 font-extrabold" href="/core/gamesavemanager">Game Save Manager</A> and utilizes the <A color="text-sky-400 font-extrabold" href="/luna/framework/examplemultipage">Radial Loading</A> component.</P>
 </div>
