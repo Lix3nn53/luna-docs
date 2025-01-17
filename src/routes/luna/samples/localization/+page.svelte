@@ -5,7 +5,7 @@
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl"
-	>Sample/ Localization</Heading
+	>Samples/ Localization</Heading
 >
 <div class="p-4">
 	<P class="mb-2">

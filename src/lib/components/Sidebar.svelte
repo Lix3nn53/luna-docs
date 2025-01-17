@@ -102,6 +102,18 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
+					label="Asset Sources"
+					href="/luna/samples/assetsources"
+					active={page.url.pathname === '/luna/samples/assetsources'}
+				/>
+				<div class="ml-4 flex flex-row items-center ps-2">
+					<Heading tag="h5" customSize="text-sm underline underline-offset-4"
+						>Samples</Heading
+					>
+				</div>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
 					label="Components"
 					href="/luna/samples/components"
 					active={page.url.pathname === '/luna/samples/components'}
