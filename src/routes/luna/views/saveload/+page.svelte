@@ -35,7 +35,7 @@
 		>All you have to do implement abstract class GameSaveViewList according to your game's custom
 		save data.</P
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Example</Heading
 	>
 	<CodeBlock

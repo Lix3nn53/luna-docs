@@ -53,7 +53,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Top / Right / Bottom / Left</Heading
 	>
 	<P
@@ -85,7 +85,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Flex</Heading
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Flex Direction</Heading
 	>
 	<CodeBlock
@@ -104,7 +104,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Flex Grow & Shrink</Heading
 	>
 	<P
@@ -125,7 +125,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Align Items</Heading
 	>
 	<Table class="rounded">
@@ -156,7 +156,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 			</TableBodyRow>
 		</TableBody>
 	</Table>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Justify Content</Heading
 	>
 	<Table class="rounded">
@@ -191,7 +191,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 			</TableBodyRow>
 		</TableBody>
 	</Table>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Align Self</Heading
 	>
 	<Table class="rounded">
@@ -222,7 +222,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 			</TableBodyRow>
 		</TableBody>
 	</Table>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Align Content</Heading
 	>
 	<Table class="rounded">

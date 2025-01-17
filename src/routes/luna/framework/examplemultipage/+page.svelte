@@ -146,7 +146,7 @@ namespace CupkekGames.UITK.Demo.Components
 	<P class="mb-4">
 		I will elaborate on the problem and solution by building upon the example provided above.
 	</P>
-  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Add an Action to first page</Heading
 	>
 	<CodeBlock
@@ -163,7 +163,7 @@ _modalPageFirst.AddAction(new UIViewActionEscape(() => Debug.Log("First page: Ca
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Problem</Heading
 	>
 	<P class="mb-4">
@@ -172,7 +172,7 @@ _modalPageFirst.AddAction(new UIViewActionEscape(() => Debug.Log("First page: Ca
 	<P class="mb-4">
 		In this case, we are controlling visibility with the parent _modal and we never fade _modalPageFirst directly. This means the Action we added to _modalPageFirst will never activate.
 	</P>
-  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+  <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Solution</Heading
 	>
 	<P class="mb-4">

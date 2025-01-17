@@ -76,15 +76,15 @@
 		>Usage</Heading
 	>
 	<img alt="tabs_layout" src={tabs_layout} class="mb-6 max-w-64 rounded-xl border-4" />
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>1 - Drag and drop custom TabView to your Hierarchy</Heading
 	>
 	<img alt="tabs_usage_1" src={tabs_usage_1} class="mb-6 max-w-64 rounded-xl border-4" />
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>2 - Drag and drop default Tab to the TabView</Heading
 	>
 	<img alt="tabs_usage_2" src={tabs_usage_2} class="mb-6 max-w-64 rounded-xl border-4" />
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>3 - Configure Tab and add content inside it</Heading
 	>
 	<img alt="tabs_usage_3" src={tabs_usage_3} class="mb-6 max-w-64 rounded-xl border-4" />

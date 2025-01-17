@@ -56,8 +56,8 @@ public FadeUIElement(
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Default Actions</Heading
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
-		>UIViewActionEscape</Heading
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+	id="UIViewActionEscape">UIViewActionEscape</Heading
 	>
 	<P
 		>This class allows you to push and pop a custom action(System.Action) into the

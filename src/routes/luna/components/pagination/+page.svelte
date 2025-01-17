@@ -17,7 +17,7 @@
 	<P>
 		As always, you can find this example in the Components sample.
 	</P>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>LabelWithBinding</Heading
 	>
 	<P>
@@ -58,7 +58,7 @@ namespace CupkekGames.UITK.Demo.Components
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>PaginationDemo</Heading
 	>
 	<CodeBlock
@@ -188,7 +188,7 @@ namespace CupkekGames.UITK.Demo.Components
 	<P>
 		Pagination{"<T>"} is the base class for controlling data, without any relation to UI.
 	</P>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Contructors</Heading
 	>
 	<CodeBlock
@@ -199,10 +199,10 @@ namespace CupkekGames.UITK.Demo.Components
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Public Methods</Heading
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>NextPage</Heading
 	>
 	<CodeBlock
@@ -215,7 +215,7 @@ public bool NextPage()`}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>PreviousPage</Heading
 	>
 	<CodeBlock
@@ -228,7 +228,7 @@ public bool PreviousPage()`}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>GoToPage</Heading
 	>
 	<CodeBlock
@@ -241,7 +241,7 @@ public bool GoToPage(int pageIndex)`}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>GetCurrentPageElements</Heading
 	>
 	<CodeBlock
@@ -254,7 +254,7 @@ public List<T> GetCurrentPageElements()`}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>GoToPage</Heading
 	>
 	<CodeBlock
@@ -267,10 +267,10 @@ public int GetStartIndex(int page)`}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Events</Heading
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>OnPageChange</Heading
 	>
 	<CodeBlock
@@ -287,7 +287,7 @@ public int GetStartIndex(int page)`}
 	<P>
 		PaginationController{"<T>"} is the UI controller class that makes use of Pagination{"<T>"}.
 	</P>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Contructors</Heading
 	>
 	<CodeBlock
@@ -311,10 +311,10 @@ public PaginationController(
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Public Methods</Heading
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>SetUI</Heading
 	>
 	<CodeBlock
@@ -325,7 +325,7 @@ public PaginationController(
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>UpdateUI</Heading
 	>
 	<CodeBlock
@@ -338,7 +338,7 @@ public void UpdateUI()`}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Show</Heading
 	>
 	<CodeBlock
@@ -349,7 +349,7 @@ public void UpdateUI()`}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Hide</Heading
 	>
 	<CodeBlock

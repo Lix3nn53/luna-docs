@@ -3,12 +3,61 @@
 
 	import { CodeBlock } from 'svhighlight';
 	import 'highlight.js/styles/base16/papercolor-dark.css';
+
+	import uimanager from '$lib/img/docs/framework/uimanager.jpg';
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl"
-	>UI Element Manager</Heading
+	>Luna UI Manager</Heading
 >
 <div class="p-4">
+	<img alt="uimanager" src={uimanager} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Settings</Heading
+	>
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+		>Input Settings</Heading
+	>
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+		>Player Input</Heading
+	>
+	<P>
+		A Player Input reference is required for the proper functioning of Escape Action
+		<A class="font-bold text-sky-400" href="/luna/components/inputprompt">
+			InputPromt
+		</A>
+		component.
+	</P>
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+		>Escape Action Names</Heading
+	>
+	<P>Names of InputActions that will trigger escape when performed. See
+		<A class="font-bold text-sky-400" href="/luna/framework/uiactions#UIViewActionEscape">
+			UIViewActionEscape
+		</A>
+		for more info.
+	</P>
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+		>Input Icon Database</Heading
+	>
+	<P>Input icons for 
+		<A class="font-bold text-sky-400" href="/luna/components/inputprompt">
+			InputPromt
+		</A>
+		components.
+	</P>
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+		>UI Element Manager Settings</Heading
+	>
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+		>Blacklist</Heading
+	>
+	<P>List of VisualElement names to ignore. UIElementManager automatically adds hover and click sounds to focusable elements. 
+		Add elements here if you cannot disable their focusable state but do not want sounds applied to them.</P>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>UI Element Manager</Heading
+	>
+	<P class="mb-4">UI Element Manager is a feature within the Luna UI Manager.</P>
 	<P class="mb-4">
 		Manages the registration and state of VisualElement instances within a hierarchy of
 		VisualElement containers. It provides functionality for <strong class="font-bold text-rose-400"
@@ -24,10 +73,10 @@
 			>blocker element</strong
 		>.
 	</P>
-	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Public Methods</Heading
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>SetBlocker</Heading
 	>
 	<P
@@ -46,7 +95,7 @@ public void SetBlocker(string elementName)`}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>SetEnabledAll</Heading
 	>
 	<Alert border>
@@ -75,7 +124,7 @@ public List<VisualElement> SetEnabledAll(bool enabled, List<VisualElement> excep
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>SetEnabledPage</Heading
 	>
 	<P></P>
@@ -87,14 +136,14 @@ public List<VisualElement> SetEnabledAll(bool enabled, List<VisualElement> excep
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>RegisterPage</Heading
 	>
 	<Alert border>
 		<div class="flex flex-row">
 			<i class="fa-solid fa-circle-info fa-2xl mr-4 mt-4"></i>
 			<div>
-				<P>You don't need to manually register elements when using UIViews.</P>
+				<P>You <strong class="font-bold text-rose-400">don't need to manually register</strong> elements when using UIViews.</P>
 				<P>However, for documentation purposes, the functions are detailed here.</P>
 			</div>
 		</div>
@@ -108,7 +157,7 @@ public List<VisualElement> SetEnabledAll(bool enabled, List<VisualElement> excep
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>UnregisterPage</Heading
 	>
 	<P
@@ -123,7 +172,7 @@ public List<VisualElement> SetEnabledAll(bool enabled, List<VisualElement> excep
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>GetPage</Heading
 	>
 	<P></P>
@@ -135,7 +184,7 @@ public List<VisualElement> SetEnabledAll(bool enabled, List<VisualElement> excep
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>RegisterElement</Heading
 	>
 	<P></P>
@@ -147,7 +196,7 @@ public List<VisualElement> SetEnabledAll(bool enabled, List<VisualElement> excep
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>UnregisterElement</Heading
 	>
 	<P></P>

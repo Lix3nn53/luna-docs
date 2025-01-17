@@ -17,7 +17,7 @@
 		>Custom Components</Heading
 	>
 	<P class="mb-2">Custom components built from scratch.</P>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Using custom components</Heading
 	>
 	<P class="mb-2"

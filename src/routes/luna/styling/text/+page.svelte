@@ -105,7 +105,7 @@ Label {
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Utility Classes</Heading
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Text Color</Heading
 	>
 	<P><strong class="font-extrabold">Format:</strong> text-{'{'}color{'}'}-{'{'}tone{'}'}</P>
@@ -121,7 +121,7 @@ Label {
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Font Size</Heading
 	>
 	<Table class="rounded">

@@ -7,7 +7,7 @@
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">UI Navigation</Heading>
 <div class="p-4">
-  <P>Luna UI provides utilities to automatically disable unrelated interactable elements using the UIElementManager, enabling Unity's auto navigation to function without manual setup.</P>
+  <P>Luna UI provides utilities to automatically disable unrelated interactable elements using the LunaUIManager, enabling Unity's auto navigation to function without manual setup.</P>
   <Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl">Auto Navigation</Heading>
   <P class="mb-4">
     Each UI Toolkit panel features a focus ring that determines the focus order of elements. You can learn more about this feature here:

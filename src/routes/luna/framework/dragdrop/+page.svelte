@@ -27,7 +27,7 @@
 			</div>
 		</div>
 	</Alert>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>DragAndDropManipulator</Heading
 	>
 	<P>
@@ -54,12 +54,12 @@ namespace CupkekGames.UITK.Demo.Components
         public event Action<VisualElement, Sprite> ExampleOnDropEvent;
 
         public DragAndDropManipulatorDemo(
-            UIElementManager uiElementManager,
+            LunaUIManager uiManager,
             VisualElement dragArea, int key,
             List<VisualElement> dropSlots,
             Func<List<VisualElement>> getDropSlots,
             Sprite background)
-         : base(uiElementManager, dragArea, key, dropSlots, getDropSlots)
+         : base(uiManager, dragArea, key, dropSlots, getDropSlots)
         {
             _background = background;
         }
@@ -103,7 +103,7 @@ namespace CupkekGames.UITK.Demo.Components
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>DragAndDropDemo</Heading
 	>
 	<CodeBlock
@@ -139,7 +139,7 @@ namespace CupkekGames.UITK.Demo.Components
 
                 // Create manipulator
                 DragAndDropManipulatorDemo manipulator = new DragAndDropManipulatorDemo(
-                    null, // UIElementManager can be null. Refer to the documentation for its usage in DragAndDropManipulator.
+                    null, // LunaUIManager can be null. Refer to the documentation for its usage in DragAndDropManipulator.
                     ParentElement, // The drag area.
                     i, // Key identifier for the manipulator.
                     dropSlots, // Predefined drop slots.
@@ -173,14 +173,14 @@ namespace CupkekGames.UITK.Demo.Components
 	<P>
 		DragAndDropManipulator is the base class you can inherit from to create custom Drag & Drop operations easily.
 	</P>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Contructors</Heading
 	>
 	<CodeBlock
 		language="csharp"
 		code={`
 public DragAndDropManipulator(
-  UIElementManager uiElementManager, // UIElementManager can be null. Look below for its usage in DragAndDropManipulator.
+  LunaUIManager uiManager, // LunaUIManager can be null. Look below for its usage in DragAndDropManipulator.
   VisualElement dragArea, // The drag area.
   int key, // Key identifier for the manipulator. It's not required, but useful for identifying elements.
   List<VisualElement> dropSlots, // Predefined drop slots.
@@ -191,15 +191,15 @@ public DragAndDropManipulator(
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
-		>UIElementManager?</Heading
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+		>LunaUIManager?</Heading
 	>
-  <P>UIElementManager's purpose in DragAndDropManipulator is to prevent hover audio from playing when hovering over other buttons and interactable elements while dragging an element.</P>
-  <P>When a drag operation starts, if UIElementManager is not null, hover audio will be muted until the drag operation ends.</P>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+  <P>LunaUIManager's purpose in DragAndDropManipulator is to prevent hover audio from playing when hovering over other buttons and interactable elements while dragging an element.</P>
+  <P>When a drag operation starts, if LunaUIManager is not null, hover audio will be muted until the drag operation ends.</P>
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Public Methods</Heading
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>CreateDragElement</Heading
 	>
   <P>Called when drag operation starts.</P>
@@ -212,7 +212,7 @@ public DragAndDropManipulator(
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>DisposeDragElement</Heading
 	>
   <P>Called when drag operation ends.</P>
@@ -225,24 +225,24 @@ public DragAndDropManipulator(
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Events</Heading
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>OnStart{"<Vector3>"}</Heading
 	>
   <P>First parameter is pointerPosition.</P>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>OnMove{"<Vector3>"}</Heading
 	>
   <P>First parameter is pointerPosition.</P>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>OnDrop{"<int, int, VisualElement>"}</Heading
 	>
   <P>First parameter is key.</P>
   <P>Second parameter is the index of the drop slot where the element was dropped.</P>
   <P>Second parameter is the drop slot where the element was dropped.</P>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>OnCancel</Heading
 	>
 </div>

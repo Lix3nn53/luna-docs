@@ -63,7 +63,7 @@
 		>Tooltip Guide</Heading
 	>
 
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>TooltipManipulator</Heading
 	>
 	<P
@@ -87,10 +87,10 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 		>This will display the tooltip we created when myElement is hovered over or focused. As you can
 		see, the Tooltip itself is very simple.</P
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Class Controls</Heading
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Position</Heading
 	>
 	<P class="pb-2"
@@ -116,7 +116,7 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 			</TableBodyRow>
 		</TableBody>
 	</Table>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Follow Mouse</Heading
 	><Table class="rounded">
 		<TableHead>
@@ -146,7 +146,7 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 		creates and controls a Tooltip with customizable slots and the ability to display multiple columns
 		simultaneously.</P
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Setup</Heading
 	>
 	<P class="pb-4"
@@ -155,10 +155,10 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 	>
 	<img alt="samples" src={default_tooltip_setup} class="mb-6 max-w-md rounded-xl border-4" />
 	<img alt="samples" src={default_tooltip_inspector} class="mb-6 max-w-md rounded-xl border-4" />
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>DefaultTooltipManipulator</Heading
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Constructor</Heading
 	>
 	<CodeBlock

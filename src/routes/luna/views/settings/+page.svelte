@@ -48,7 +48,7 @@
 		>ScriptableObject, abstract class you have to implement to add custom sections to
 		SettingsDataSO.</P
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Example</Heading
 	>
 	<CodeBlock
@@ -137,7 +137,7 @@ public class SettingsDataSectionGameplay : SettingsDataSection
 		>MonoBehaviour, abstract class you have to implement to add custom sections to SettingsMenuView.</P
 	>
 
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Example</Heading
 	>
 	<CodeBlock

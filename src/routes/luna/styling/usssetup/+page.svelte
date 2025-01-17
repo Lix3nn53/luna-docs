@@ -40,7 +40,7 @@
 		>Setting up a theme file</Heading
 	>
 	<P class="mb-4">As always, you can refer to Game sample for an example setup.</P>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>1 - Theme File</Heading
 	>
 	<P class="mb-4"
@@ -48,7 +48,7 @@
 		inherit from "CupkekGamesMainTheme".</P
 	>
 	<img alt="setup_theme" src={setup_theme} class="mb-6 max-w-lg rounded-xl border-4" />
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>2 - Panel Settings</Heading
 	>
 	<P class="mb-4">Make sure your panel settings are using the correct Theme Style Sheet.</P>
@@ -57,14 +57,14 @@
 		src={setup_panel_settings}
 		class="mb-6 max-w-lg rounded-xl border-4"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>3 - Overriding or expanding global styles</Heading
 	>
 	<P class="mb-4"
 		>As shown in the image in step 1, colors, fonts, and dropdown style sheets have been added.
 		These style sheets override the styles from the CupkekGamesMainTheme.</P
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Text & font</Heading
 	>
 	<P class="mb-4"
@@ -73,7 +73,7 @@
 			href="/luna/styling/text">Text</A
 		>.</P
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Override dropdown colors</Heading
 	><CodeBlock
 		language="css"
@@ -88,7 +88,7 @@
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Define the base, primary and secondary colors</Heading
 	><CodeBlock
 		language="css"

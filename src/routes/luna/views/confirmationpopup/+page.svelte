@@ -42,7 +42,7 @@
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Setup</Heading
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>1 - Create UXML with VisualElement that supports ConfirmationPopup</Heading
 	>
 	<P
@@ -55,7 +55,7 @@
 		<Li>Button with name "Accept"</Li>
 		<Li>Button with name "Decline"</Li>
 	</List>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>2 - Create UI Document and add Confirmation Popup</Heading
 	>
 	<P

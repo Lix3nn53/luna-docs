@@ -174,9 +174,9 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="UI Element Manager"
-					href="/luna/framework/uielementmanager"
-					active={page.url.pathname === '/luna/framework/uielementmanager'}
+					label="Luna UI Manager"
+					href="/luna/framework/uimanager"
+					active={page.url.pathname === '/luna/framework/uimanager'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
@@ -527,17 +527,21 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Game Save Manager"
-					href="/core/gamesavemanager"
-					active={page.url.pathname === '/core/gamesavemanager'}
-				/>
-				<SidebarDropdownItem
-					aClass={dropdownItemClass}
-					activeClass={dropdownActiveClass}
 					label="KeyValue Database"
 					href="/core/keyvaluedatabase"
 					active={page.url.pathname === '/core/keyvaluedatabase'}
 				/>
+			</SidebarDropdownWrapper>
+		</SidebarGroup>
+		<SidebarGroup border {borderClass}>
+			<SidebarDropdownWrapper
+				btnClass={dropdownWrapperClass}
+				label="Systems Library"
+				isOpen={page.url.pathname.includes('/systems')}
+			>
+				<svelte:fragment slot="icon">
+					<i class="fa-solid fa-wrench"></i>
+				</svelte:fragment>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
@@ -548,16 +552,30 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Addressable Asset Manager"
-					href="/core/addressableassetmanager"
-					active={page.url.pathname === '/core/addressableassetmanager'}
+					label="Scene Management"
+					href="/systems/scenemanagement"
+					active={page.url.pathname === '/systems/scenemanagement'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Scene Management"
-					href="/core/scenemanagement"
-					active={page.url.pathname === '/core/scenemanagement'}
+					label="Addressable Asset Manager"
+					href="/systems/addressableassetmanager"
+					active={page.url.pathname === '/systems/addressableassetmanager'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Game Save Manager"
+					href="/systems/gamesavemanager"
+					active={page.url.pathname === '/systems/gamesavemanager'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Game Settings System"
+					href="/systems/gamesettings"
+					active={page.url.pathname === '/systems/gamesettings'}
 				/>
 			</SidebarDropdownWrapper>
 		</SidebarGroup>

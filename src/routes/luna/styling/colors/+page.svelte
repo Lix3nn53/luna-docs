@@ -101,7 +101,7 @@
 		>In addition to colors listed above, the classes also include 'transparent', 'black', and
 		'white'.</P
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Background Color</Heading
 	>
 	<P><strong class="font-extrabold">Format:</strong> bg-{'{'}color{'}'}-{'{'}tone{'}'}</P>
@@ -116,7 +116,7 @@
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Text Color</Heading
 	>
 	<P><strong class="font-extrabold">Format:</strong> text-{'{'}color{'}'}-{'{'}tone{'}'}</P>
@@ -132,7 +132,7 @@
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Border Color</Heading
 	>
 	<P><strong class="font-extrabold">Format:</strong> border-{'{'}color{'}'}-{'{'}tone{'}'}</P>
@@ -147,7 +147,7 @@
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Image Tint Color</Heading
 	>
 	<P><strong class="font-extrabold">Format:</strong> tint-{'{'}color{'}'}-{'{'}tone{'}'}</P>

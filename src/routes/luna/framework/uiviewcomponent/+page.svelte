@@ -58,14 +58,14 @@
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
-				<TableBodyCell {tdClass}>UIElementManager</TableBodyCell>
+				<TableBodyCell {tdClass}>LunaUIManager</TableBodyCell>
 				<TableBodyCell {tdClass}
-					><A color="text-sky-400 font-extrabold" href="/luna/framework/uielementmanager"
-						>UIElementManager</A
+					><A color="text-sky-400 font-extrabold" href="/luna/framework/uimanager"
+						>Luna UI Manager</A
 					></TableBodyCell
 				>
 				<TableBodyCell {tdClass}
-					>UIElementManager tracks interactable visual elements, enabling mass activation or
+					>LunaUIManager tracks interactable visual elements, enabling mass activation or
 					deactivation within a UIView. You can also set a blocking element to prevent interaction
 					with other elements until it is clicked.</TableBodyCell
 				>
@@ -91,7 +91,7 @@
 	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Public Methods</Heading
 	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>FadeOutThenDestroy</Heading
 	>
 	<P

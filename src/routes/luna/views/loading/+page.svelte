@@ -72,7 +72,7 @@ public class SceneLoadTransitionFade : SceneTransition
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>SceneTransition.LoadingScreenToggleEvent</Heading
 	><P class="pb-4">This event is used to fade LoadingScreen.</P><Table class="rounded">
 		<TableHead>
