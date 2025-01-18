@@ -13,7 +13,7 @@
 		and utility functions for using Unity's Localization package.
 	</P>
 	<P class="mb-2">Don't forget to set the active localization settings.</P>
-	<img alt="samples" src={CreateLocalizationSettings} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="samples" src={CreateLocalizationSettings} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<P class="mb-2">
 		Refer to <A color="text-sky-400 font-extrabold" href="/luna/framework/localization"
 			>localization</A

@@ -9,13 +9,6 @@
 		SidebarDropdownWrapper
 	} from 'flowbite-svelte';
 	import { SidebarBrand, Heading, P, A } from 'flowbite-svelte';
-	import logo from '$lib/img/logo128.png';
-
-	let site = {
-		name: 'CupkekGames',
-		href: '/',
-		img: logo
-	};
 
 	let spanClass = 'flex-1 ms-3 whitespace-nowrap';
 	let itemClass = 'flex items-center rounded px-2 py-2 my-0 text-sm hover:bg-violet-400/50';
@@ -35,7 +28,6 @@
 		divClass={'overflow-y-auto py-4 px-3 bg-stone-50 dark:bg-stone-800'}
 	>
 		<SidebarGroup>
-			<SidebarBrand {site} />
 			<SidebarItem class={itemClass} {activeClass} {nonActiveClass} label="Introduction" href="/">
 				<svelte:fragment slot="icon">
 					<i class="fa-solid fa-door-open"></i>

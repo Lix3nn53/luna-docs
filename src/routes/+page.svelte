@@ -10,7 +10,7 @@
 	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		><i class="fa-solid fa-moon mr-2"></i>Luna UI</Heading
 	>
-	<img alt="banner" src={banner} class="mb-4 max-w-xl rounded-xl border-4" />
+	<img alt="banner" src={banner} class="mb-4 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<P class="mb-4"
 		>Luna UI is built on top of Unity's UI Toolkit, offering simple solutions for common UI
 		challenges without imposing any limitations on the UI Toolkit.</P

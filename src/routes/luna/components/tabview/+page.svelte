@@ -32,9 +32,9 @@
 	>Components/ Tab View</Heading
 >
 <div class="p-4">
-	<img alt="tabs_h" src={tabs_h} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="tabs_h" src={tabs_h} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<img alt="tabs_v" src={tabs_v} class="mb-6 max-w-64 rounded-xl border-4" />
-	<img alt="settings" src={settings} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="settings" src={settings} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Unity has built-in TabView, why make a new one?</Heading
 	>
@@ -46,7 +46,7 @@
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Attributes</Heading
 	>
-	<img alt="tabs_inspector" src={tabs_inspector} class="mb-6 max-w-2xl rounded-xl border-4" /><Table
+	<img alt="tabs_inspector" src={tabs_inspector} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" /><Table
 		class="rounded"
 	>
 		<TableHead>

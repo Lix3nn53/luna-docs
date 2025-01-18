@@ -32,7 +32,7 @@
 	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Inspector View</Heading
 	>
-	<img alt="samples" src={uiviewcomponent} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="samples" src={uiviewcomponent} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Public Properties</Heading
 	>

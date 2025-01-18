@@ -26,7 +26,7 @@
 	>Views/ Save & Load</Heading
 >
 <div class="p-4">
-	<img alt="saveload" src={saveload} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="saveload" src={saveload} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<P>GameSaveViewList works together with the GameSaveManager.</P>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>GameSaveViewList</Heading

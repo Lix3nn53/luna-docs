@@ -10,7 +10,7 @@
 	>Framework/ Drag & Drop</Heading
 >
 <div class="p-4">
-	<img alt="draganddrop" src={draganddrop} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="draganddrop" src={draganddrop} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Example Usage</Heading
 	>

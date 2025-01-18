@@ -28,7 +28,7 @@
 	<img
 		alt="confirmationpopup_ex"
 		src={confirmationpopup_ex}
-		class="mb-6 max-w-2xl rounded-xl border-4"
+		class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4"
 	/>
 	<P>Confirmation Popup is an UIView.</P>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
@@ -37,7 +37,7 @@
 	<img
 		alt="confirmationpopup_ins"
 		src={confirmationpopup_ins}
-		class="mb-6 max-w-2xl rounded-xl border-4"
+		class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4"
 	/>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Setup</Heading

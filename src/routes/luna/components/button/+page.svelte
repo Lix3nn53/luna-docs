@@ -23,7 +23,7 @@
 	>Components/ Button</Heading
 >
 <div class="p-4">
-	<img alt="samples" src={buttonImg} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="samples" src={buttonImg} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<CodeBlock
 		language="html"
 		code={`

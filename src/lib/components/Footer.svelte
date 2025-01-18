@@ -10,7 +10,7 @@
 			<A href="/">Cupkek Games</A>. All Rights Reserved.
 		</span>
 		<ul class="flex flex-wrap items-center mt-3 text-sm sm:mt-0">
-			<li class="mr-4 md:mr-6">
+			<!-- <li class="mr-4 md:mr-6">
 				<A href="#">About</A>
 			</li>
 			<li class="mr-4 md:mr-6">
@@ -18,7 +18,7 @@
 			</li>
 			<li class="mr-4 md:mr-6">
 				<A href="#">Terms of Service</A>
-			</li>
+			</li> -->
 			<!-- <li class="mr-4 md:mr-6">
 				<SwitchTheme />
 			</li> -->

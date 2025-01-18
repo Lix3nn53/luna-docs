@@ -26,7 +26,7 @@
 	>Views/ Settings</Heading
 >
 <div class="p-4">
-	<img alt="settings" src={settings} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="settings" src={settings} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<P
 		>The Settings system provides complete functionality. The demo samples include a working example
 		with Graphics, Audio, and Localization settings, which can be used as a starting point for your

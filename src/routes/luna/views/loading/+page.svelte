@@ -25,7 +25,7 @@
 	>Views/ Loading</Heading
 >
 <div class="p-4">
-	<img alt="loading" src={loading} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="loading" src={loading} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<P
 		>The LoadingView is a simple component. It works alongside the SceneTransitionManager, which can
 		be extended with custom transitions. You can refer to the demo game samples to see it in action.</P

@@ -28,7 +28,7 @@
 	<img
 		alt="autosavegif"
 		src={autosavegif}
-		class="mb-6 max-w-2xl rounded-xl border-4"
+		class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4"
 	/>
 	<P>An autosave notification that integrates with the <A color="text-sky-400 font-extrabold" href="/core/gamesavemanager">Game Save Manager</A> and utilizes the <A color="text-sky-400 font-extrabold" href="/luna/framework/examplemultipage">Radial Loading</A> component.</P>
 </div>

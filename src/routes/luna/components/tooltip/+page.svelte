@@ -27,7 +27,7 @@
 	>Components/ Tooltip</Heading
 >
 <div class="p-4">
-	<img alt="tooltip" src={tooltip} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="tooltip" src={tooltip} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<p>The tooltip is a straightforward component.</p>
 	<p>
 			For more complex needs, we provide an implementation called <strong>DefaultTooltip</strong>. It is designed to handle a wide range of scenarios.
@@ -136,7 +136,7 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>DefaultTooltip Guide</Heading
 	>
-	<img alt="samples" src={tooltip_compare} class="mb-4 max-w-2xl rounded-xl border-4" />
+	<img alt="samples" src={tooltip_compare} class="mb-4 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<P class="pb-4"
 		>To support more complex scenarios commonly
 		encountered in games, we've provided a default implementation to cover most use cases.</P

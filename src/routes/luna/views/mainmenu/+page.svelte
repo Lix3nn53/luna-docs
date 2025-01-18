@@ -35,7 +35,7 @@
 	>Views/ Main Menu</Heading
 >
 <div class="p-4">
-	<img alt="mainmenu" src={mainmenu} class="mb-6 max-w-2xl rounded-xl border-4" />
+	<img alt="mainmenu" src={mainmenu} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<P
 		>An example implementation that you can use directly or as a starting point. You can refer to
 		the demo game samples to see it in action or see the implementation details.</P
