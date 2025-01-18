@@ -13,7 +13,6 @@
 		title="HeroManager"
 		src="https://store.steampowered.com/widget/2671700/"
 		frameborder="0"
-		width="646"
-		height="190"
+		class="xl:max-w-xl max-w-full w-full aspect-video"
 	></iframe>
 </div>

@@ -96,7 +96,7 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 	<P class="pb-2"
 		>Apply these USS classes to the VisualElements that will display a tooltip when hovered over or
 		focused to adjust the tooltip's position. Default value is top.</P
-	><Table class="rounded">
+	><Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Description</TableHeadCell>
@@ -118,7 +118,7 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 	</Table>
 	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Follow Mouse</Heading
-	><Table class="rounded">
+	><Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Description</TableHeadCell>
@@ -174,7 +174,7 @@ manipulator.SetSetup(setup);`}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<br /><Table class="rounded">
+	<br /><Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Name</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Type</TableHeadCell>
@@ -221,7 +221,7 @@ public DefaultTooltipContainerSetup(
 		showLineNumbers={false}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
-	/><br /><Table class="rounded">
+	/><br /><Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Name</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Type</TableHeadCell>

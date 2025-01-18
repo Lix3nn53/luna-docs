@@ -94,7 +94,7 @@
 		<NavUl
 			hidden={navbarHidden}
 			divClass="w-full lg:block lg:w-auto order-1 lg:order-none"
-			ulClass="flex flex-col lg:flex-row text-md font-bold gap-4 p-4 lg:p-0 my-4 lg:my-0 dark:bg-yellow-300"
+			ulClass="flex flex-col lg:flex-row text-md font-bold gap-4 p-4 lg:p-0 my-4 lg:my-0 dark:bg-yellow-300 border-0"
 			slideParams={{delay: 100, duration: 200, easing: sineIn }}
 			activeUrl={page.url.pathname}
 			nonActiveClass="text-black"

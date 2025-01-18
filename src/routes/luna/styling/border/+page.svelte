@@ -53,7 +53,7 @@
 		>Border Width</Heading
 	>
 	<P><strong class="font-extrabold">Format:</strong> border-{'{'}value{'}'}</P>
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Properties</TableHeadCell>
@@ -93,7 +93,7 @@
 		>Border Radius</Heading
 	>
 	<P><strong class="font-extrabold">Format:</strong> rounded-{'{'}value{'}'}</P>
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Properties</TableHeadCell>

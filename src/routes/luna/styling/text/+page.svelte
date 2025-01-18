@@ -124,7 +124,7 @@ Label {
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Font Size</Heading
 	>
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Properties</TableHeadCell>

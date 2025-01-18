@@ -18,7 +18,7 @@
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">Samples/ Asset Sources</Heading
 >
 <div class="p-4">
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Credits</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>License</TableHeadCell>

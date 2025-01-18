@@ -45,7 +45,7 @@
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Comparison</Heading
 	>
-	<Table class="rounded border-4 border-stone-400">
+	<Table class="rounded border-4 border-stone-400 table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Subject</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Unity UI (uGUI)</TableHeadCell>

@@ -41,7 +41,7 @@
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Horizontal</Heading
 	>
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Description</TableHeadCell>

@@ -128,7 +128,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Align Items</Heading
 	>
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Properties</TableHeadCell>
@@ -159,7 +159,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Justify Content</Heading
 	>
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Properties</TableHeadCell>
@@ -194,7 +194,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Align Self</Heading
 	>
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Properties</TableHeadCell>
@@ -225,7 +225,7 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Align Content</Heading
 	>
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Properties</TableHeadCell>

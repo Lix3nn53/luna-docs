@@ -24,7 +24,7 @@
 		Do <strong class="font-extrabold text-rose-400">NOT</strong> click "Reimport All", make sure you
 		click <strong class="font-extrabold text-lime-400">"Reimport"</strong>.
 	</P>
-	<img alt="samples" src={reimport} class="mb-6 max-w-lg rounded-xl border-4" />
+	<img alt="samples" src={reimport} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<P class="mb-2">
 		Styles should work properly now. If they don't, try reimporting the: Packages > Luna UI >
 		Runtime > Setup > CupkekGamesMainTheme.
@@ -33,5 +33,5 @@
 		>Styles not working in UI Builder</Heading
 	>
 	<P class="mb-2">Make sure you select the correct Theme.</P>
-	<img alt="uibuildertheme" src={uibuildertheme} class="mb-6 max-w-4xl rounded-xl border-4" />
+	<img alt="uibuildertheme" src={uibuildertheme} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 </div>

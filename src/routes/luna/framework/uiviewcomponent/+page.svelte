@@ -36,7 +36,7 @@
 	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Public Properties</Heading
 	>
-	<Table class="my-4 rounded border-4 border-stone-400">
+	<Table class="my-4 rounded border-4 border-stone-400 table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Name</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Type</TableHeadCell>

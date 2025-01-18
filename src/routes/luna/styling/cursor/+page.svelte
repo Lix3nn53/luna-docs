@@ -67,7 +67,7 @@
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
 	<br />
-	<Table class="rounded">
+	<Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Class</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Icon</TableHeadCell>

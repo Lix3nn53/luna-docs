@@ -74,7 +74,7 @@ public class SceneLoadTransitionFade : SceneTransition
 	/>
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>SceneTransition.LoadingScreenToggleEvent</Heading
-	><P class="pb-4">This event is used to fade LoadingScreen.</P><Table class="rounded">
+	><P class="pb-4">This event is used to fade LoadingScreen.</P><Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Paramater</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Type</TableHeadCell>

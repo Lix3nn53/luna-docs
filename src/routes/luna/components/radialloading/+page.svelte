@@ -33,7 +33,7 @@
 		alt="samples"
 		src={radial_loading_inspector}
 		class="mb-6 max-w-md rounded-xl border-4"
-	/><Table class="rounded">
+	/><Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Attribute</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Description</TableHeadCell>

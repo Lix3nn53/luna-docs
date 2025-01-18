@@ -62,7 +62,7 @@ public FadeUIElement(
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
-	<Table class="my-4 rounded border-4 border-stone-400">
+	<Table class="my-4 rounded border-4 border-stone-400 table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Name</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Type</TableHeadCell>
