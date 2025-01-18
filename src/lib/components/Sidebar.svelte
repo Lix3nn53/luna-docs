@@ -29,7 +29,7 @@
 	let dropdownActiveClass = itemClass + ' ml-4 ps-4 ' + activeClass;
 </script>
 
-<Sidebar class="min-h-full" activeUrl={page.url.pathname}>
+<Sidebar class="min-h-full text-stone-50 bg-stone-800" activeUrl={page.url.pathname} >
 	<SidebarWrapper
 		class="min-h-full"
 		divClass={'overflow-y-auto py-4 px-3 bg-stone-50 dark:bg-stone-800'}

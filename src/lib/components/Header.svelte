@@ -22,7 +22,7 @@
 </script>
 
 <nav class="px-2 sm:px-4 py-2.5 bg-stone-800">
-	<div class="md:container flex flex-col gap-2 md:flex-row justify-between items-center mx-auto">
+	<div class="md:container flex flex-col gap-2 md:flex-row justify-between items-center">
 		<div class="flex flex-row w-full md:w-auto">
 			<button
 				data-collapse-toggle="mobile-menu-4"
