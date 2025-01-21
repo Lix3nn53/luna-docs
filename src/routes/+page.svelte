@@ -15,7 +15,7 @@
 		>Luna UI is built on top of Unity's UI Toolkit, offering simple solutions for common UI
 		challenges without imposing any limitations on the UI Toolkit.</P
 	>
-	<GradientButton color="redToYellow" href="/luna/gallery">
+	<GradientButton color="cyanToBlue" href="/luna/gallery">
 		Learn more
 		<i class="fa-solid fa-right-long ms-2 flex items-center"></i>
 	</GradientButton>

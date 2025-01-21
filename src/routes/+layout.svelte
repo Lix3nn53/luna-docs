@@ -100,10 +100,13 @@
 			nonActiveClass="text-black"
 			activeClass="text-black"
 		>
+		<NavLi class="flex flex-row justify-end" href="/community"
+			>Support</NavLi
+		>
 		<NavLi class="flex flex-row justify-end" href="https://discord.com/invite/k3yj8Az2VC" target="_blank"
 			>Discord<i class="fa-solid fa-up-right-from-square ml-1 flex items-center"></i></NavLi
 		>
-		<NavLi class="flex flex-row justify-end"
+		<NavLi class="flex flex-row justify-end" href="https://assetstore.unity.com/packages/tools/gui/luna-complete-ui-solution-299710" target="_blank"
 			>Buy on the Asset Store<i class="fa-solid fa-up-right-from-square ml-1 flex items-center"></i></NavLi
 		>
 		</NavUl>
