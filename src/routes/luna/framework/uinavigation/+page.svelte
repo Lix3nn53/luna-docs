@@ -35,7 +35,8 @@ myVisualElement.RegisterCallback<NavigationMoveEvent>(e =>
         case NavigationMoveEvent.Direction.Left: L.Focus(); break;
         case NavigationMoveEvent.Direction.Right: R.Focus(); break;
     }
-    e.PreventDefault();
+    e.StopPropagation(); // Prevent further processing of the event
+    myVisualElement.focusController.IgnoreEvent(e); // Prevent default navigation
 });`}
   showHeader={true}
   showLineNumbers={true}
