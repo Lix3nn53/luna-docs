@@ -26,6 +26,7 @@ public UIView(
   VisualElement focusElement = null, 
   float fadeDuration = 0.5f,
   EasingMode easingMode = EasingMode.EaseOutCirc,
+  bool disableOtherViewsOnFadeIn = false,
   bool debug = false
 )`;
 </script>
@@ -96,6 +97,13 @@ public UIView(
 				<TableBodyCell tdClass={tdClasss}>EasingMode</TableBodyCell>
 				<TableBodyCell tdClass={tdClasss}
 					>Defines the easing effect applied during fade transitions.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell tdClass={tdClasss}>disableOtherViewsOnFadeIn</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}>bool</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}
+					>Disable the interactable elements on other views whenever this view becomes visible. This is particularly useful for UI navigation with keys when opening a modal or screen on top of another view. This will prevent the auto navigation from interacting with the elements behind this view.</TableBodyCell
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>

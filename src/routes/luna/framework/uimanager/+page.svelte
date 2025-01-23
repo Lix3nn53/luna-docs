@@ -96,18 +96,29 @@ public void SetBlocker(string elementName)`}
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
 	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
-		>SetEnabledAll</Heading
+		>RemoveBlocker</Heading
+	>
+	<P
+		>If you want, you can remove blocker manually.</P
+	>
+	<CodeBlock
+		language="csharp"
+		code={`
+public void RemoveBlocker()`}
+		showHeader={false}
+		showLineNumbers={false}
+		background="bg-zinc-900"
+		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
+	/>
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+		>SetEnabledAllPages</Heading
 	>
 	<Alert border>
 		<div class="flex flex-row">
 			<i class="fa-solid fa-circle-info fa-2xl mr-4 mt-4"></i>
 			<div>
 				<P
-					>The <A
-						class="font-bold text-sky-400"
-						href="/luna/framework/uiactions#UIViewActionEnableElements"
-						>UIViewActionEnableElements</A
-					> uses these functions.</P
+					>The "disableOtherViewsOnFadeIn" option on UIView uses these functions.</P
 				>
 			</div>
 		</div>
@@ -116,9 +127,13 @@ public void SetBlocker(string elementName)`}
 	<CodeBlock
 		language="csharp"
 		code={`
-public List<VisualElement> SetEnabledAll(bool enabled, VisualElement except = null)
+/// <param name="exceptPages">Pages to ignore.</param>
+/// <returns>
+/// List of disabled elements.
+/// </returns>
+public List<VisualElement> SetEnabledAllPages(bool enabled, params VisualElement[] exceptPages)
 // or
-public List<VisualElement> SetEnabledAll(bool enabled, List<VisualElement> except)`}
+public List<VisualElement> SetEnabledAllPages(bool enabled, HashSet<VisualElement> exceptPages)`}
 		showHeader={false}
 		showLineNumbers={false}
 		background="bg-zinc-900"
@@ -130,7 +145,7 @@ public List<VisualElement> SetEnabledAll(bool enabled, List<VisualElement> excep
 	<P></P>
 	<CodeBlock
 		language="csharp"
-		code={`public void SetEnabledPage(VisualElement page, bool enabled)`}
+		code={`public void SetEnabledPage(VisualElement page, bool enabled, HashSet<VisualElement> exceptElements)`}
 		showHeader={false}
 		showLineNumbers={false}
 		background="bg-zinc-900"
