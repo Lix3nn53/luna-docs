@@ -8,6 +8,9 @@
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">UI Navigation</Heading>
 <div class="p-4">
   <P>Luna UI provides utilities to automatically disable unrelated interactable elements using the LunaUIManager, enabling Unity's auto navigation to function without manual setup.</P>
+  <P class="my-4">
+    See the <span class="font-bold text-rose-400">Disable Other Views On FadeIn</span> field in <A class="font-bold text-sky-400" href="/luna/framework/uiviewcomponent">UIView</A> or <A class="font-bold text-sky-400" href="/luna/framework/uiview">UIViewComponent</A>.
+  </P>
   <Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl">Auto Navigation</Heading>
   <P class="mb-4">
     Each UI Toolkit panel features a focus ring that determines the focus order of elements. You can learn more about this feature here:
@@ -16,9 +19,6 @@
     Unity: Dispatch Events
     <i class="fa-solid fa-up-right-from-square ms-2 flex items-center"></i>
   </Button  >
-  <P class="my-4">
-    Luna UI provides an UI Action(<A class="font-bold text-sky-400" href="/luna/framework/uiactions#UIViewActionEnableElements">UIViewActionEnableElements</A>) to automatically disable unrelated interactable elements, enabling Unity's auto navigation to function without manual setup.
-  </P>
   <Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl">Change what element is focused next</Heading>
   <P class="mb-4">
     You can manually determine what element is focused next.
