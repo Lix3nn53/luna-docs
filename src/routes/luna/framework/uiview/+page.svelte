@@ -173,6 +173,13 @@ public UIView(
 					>Defines the easing effect applied during fade transitions.</TableBodyCell
 				>
 			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell tdClass={tdClasss}>DisableOtherViewsOnFadeIn</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}>bool</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}
+					>Disable the interactable elements on other views whenever this view becomes visible. This is particularly useful for UI navigation with keys when opening a modal or screen on top of another view. This will prevent the auto navigation from interacting with the elements behind this view.</TableBodyCell
+				>
+			</TableBodyRow>
 		</TableBody>
 	</Table>
 	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
