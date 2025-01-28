@@ -20,24 +20,28 @@
 		<AccordionItem 
 			tag="div"
 			textFlushDefault="text-white"
-			textFlushOpen="text-yellow-300 border-b-0"
+			textFlushOpen="text-yellow-300 border-b-0 bg-stone-900"
 			borderSharedClass="border-gray-200 dark:border-gray-50"
 			borderBottomClass="border-b"
-			paddingFlush="py-2"
+			paddingFlush="p-2"
 		>
-			<span slot="header">TODO header</span>
-			<p class="mb-2 ml-2 text-gray-50 dark:text-gray-50">todo text</p>
+			<span slot="header">1 - TODO header</span>
+			<div class="bg-stone-900 p-4">
+				<p class="mb-2 ml-2 text-gray-50 dark:text-gray-50">todo text</p>
+			</div>
 		</AccordionItem>
 		<AccordionItem 
 			tag="div"
 			textFlushDefault="text-white"
-			textFlushOpen="text-yellow-300 border-b-0"
+			textFlushOpen="text-yellow-300 border-b-0 bg-stone-900"
 			borderSharedClass="border-gray-200 dark:border-gray-50"
 			borderBottomClass="border-b"
-			paddingFlush="py-2"
+			paddingFlush="p-2"
 		>
-			<span slot="header">TODO header</span>
-			<p class="mb-2 ml-2 text-gray-50 dark:text-gray-50">todo text</p>
+			<span slot="header">2 - TODO header</span>
+			<div class="bg-stone-900 p-4">
+				<p class="mb-2 ml-2 text-gray-50 dark:text-gray-50">todo text</p>
+			</div>
 		</AccordionItem>
 	</Accordion>
 </div>
