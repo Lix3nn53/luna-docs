@@ -91,8 +91,19 @@
 
   let index = 0;
 </script>
-
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">Gallery</Heading>
+<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+  >Videos</Heading
+>
+<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+  >Demo Setup & Showcase</Heading
+>
+<div class="flex w-full items-center justify-center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/boum9mjxdyE?si=rV-OQ0QWv2_H8My6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+  >Images</Heading
+>
 <div class="p-2 lg:p-4 xl:p-8 h-full">
   <div class="space-y-4 h-full">
     <Carousel {images} class="min-h-96 h-96" imgClass="object-contain h-full w-fit" slideDuration={800} let:Indicators let:Controls bind:index>

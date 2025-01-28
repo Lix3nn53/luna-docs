@@ -6,6 +6,13 @@
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl">Quick Start</Heading>
 <div class="p-4">
+	<P class="pt-4"
+		>You can watch the video or follow the step-by-step instructions below.</P
+	>
+<div class="flex w-full items-center justify-center py-4">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/boum9mjxdyE?si=rV-OQ0QWv2_H8My6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
 	<Heading tag="h2" class="mb-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>1 - Import Game Library</Heading
 	>
