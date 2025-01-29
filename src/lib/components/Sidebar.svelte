@@ -517,13 +517,6 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Fadeable"
-					href="/core/fadeable"
-					active={page.url.pathname === '/core/fadeable'}
-				/>
-				<SidebarDropdownItem
-					aClass={dropdownItemClass}
-					activeClass={dropdownActiveClass}
 					label="Input Escape Manager"
 					href="/core/inputescapemanager"
 					active={page.url.pathname === '/core/inputescapemanager'}
@@ -550,8 +543,8 @@
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
 					label="Prefab Loader"
-					href="/core/prefabloader"
-					active={page.url.pathname === '/core/prefabloader'}
+					href="/systems/prefabloader"
+					active={page.url.pathname === '/systems/prefabloader'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}

@@ -186,8 +186,8 @@ Utility classes to provide an easy way to adjust the layout of the elements.
 				<TableBodyCell {tdClass}>justify-content: space-around</TableBodyCell>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
-				<TableBodyCell tdClass={tdClasss}>justify-around</TableBodyCell>
-				<TableBodyCell tdClass={tdClasss}>justify-content: space-around</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}>justify-evenly</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}>justify-content: space-evenly</TableBodyCell>
 			</TableBodyRow>
 		</TableBody>
 	</Table>
