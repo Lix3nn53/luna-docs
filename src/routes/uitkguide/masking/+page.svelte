@@ -81,7 +81,7 @@
 	<P class="mb-4">
 		To enable masking with custom shapes, you’ll use SVG. To apply an SVG image as a background,
 		you must <A color="text-sky-400 font-extrabold" href="https://docs.unity3d.com/6000.0/Documentation/Manual/upm-ui-actions.html" target="_blank">
-			install the <code>com.unity.vectorgraphics</code> package
+			install the <code class="mx-2">com.unity.vectorgraphics</code> package
 		</A>.
 	</P>
 	<P class="mb-4">
