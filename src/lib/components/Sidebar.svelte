@@ -503,6 +503,13 @@
 					href="/uitkguide/databinding"
 					active={page.url.pathname === '/uitkguide/databinding'}
 				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Masking"
+					href="/uitkguide/masking"
+					active={page.url.pathname === '/uitkguide/masking'}
+				/>
 			</SidebarDropdownWrapper>
 		</SidebarGroup>
 		<SidebarGroup border {borderClass}>
