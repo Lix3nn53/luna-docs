@@ -327,6 +327,13 @@
 					href="/luna/components/pagination"
 					active={page.url.pathname === '/luna/components/pagination'}
 				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="CircleHoleElement"
+					href="/luna/components/circlehole"
+					active={page.url.pathname === '/luna/components/circlehole'}
+				/>
 			</SidebarDropdownWrapper>
 			<SidebarDropdownWrapper
 				btnClass={dropdownWrapperClass}
