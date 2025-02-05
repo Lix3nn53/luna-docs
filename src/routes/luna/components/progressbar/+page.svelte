@@ -27,6 +27,9 @@
 >
 <div class="p-4">
 	<img alt="samples" src={progress_bars} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
+	<div class="flex w-full">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/jipPpZlOAVo?si=Qk28twaOPNeo_YZV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+	</div>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Attributes</Heading
 	>
