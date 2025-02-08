@@ -131,6 +131,13 @@
 					href="/luna/samples/localization"
 					active={page.url.pathname === '/luna/samples/localization'}
 				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Ink"
+					href="/luna/samples/ink"
+					active={page.url.pathname === '/luna/samples/ink'}
+				/>
 			</SidebarDropdownWrapper>
 			<SidebarDropdownWrapper
 				btnClass={dropdownWrapperClass}

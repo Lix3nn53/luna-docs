@@ -96,4 +96,10 @@ public class PauseMenuViewExample : PauseMenuView
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>PauseMenuEscapeAction</Heading
+	>
+	<P>Example Usage:</P>
+	<P>In a visual novel, you might want to prevent going back before the dialogue finishes. Previously, using InputEscapeManager.SetBlocked(true) would block all escape actions (including opening the pause menu). With this new class, you can add the pause menu action to the end of the stack so that the pause menu remains accessible while blocking other back actions.</P>
+
 </div>
