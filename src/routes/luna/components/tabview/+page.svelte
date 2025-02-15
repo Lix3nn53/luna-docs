@@ -9,6 +9,8 @@
 	import tabs_usage_3 from '$lib/img/docs/components/tabs_usage_3.png';
 	import tabs_usage_4 from '$lib/img/docs/components/tabs_usage_4.png';
 	import tabs_layout from '$lib/img/docs/components/tabs_layout.png';
+	import tab_custom from '$lib/img/docs/components/tab_custom.png';
+	import tab_custom_2 from '$lib/img/docs/components/tab_custom_2.png';
 
 	import { CodeBlock } from 'svhighlight';
 	import 'highlight.js/styles/base16/papercolor-dark.css';
@@ -89,4 +91,15 @@
 	>
 	<img alt="tabs_usage_3" src={tabs_usage_3} class="mb-6 max-w-64 rounded-xl border-4" />
 	<img alt="tabs_usage_4" src={tabs_usage_4} class="mb-6 max-w-64 rounded-xl border-4" />
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Custom Tab Component</Heading
+	>
+	<P
+		>Built-in Tab component is easier to use but it doesn't allow customization of Tab-Button.</P
+	>
+	<P
+		>Custom Tab component allows you to add any element to Tab-Button content via VisualTreeAsset.</P
+	>
+	<img alt="tab_custom" src={tab_custom} class="mb-6 max-w-64 rounded-xl border-4" />
+	<img alt="tab_custom" src={tab_custom_2} class="mb-6 rounded-xl border-4" />
 </div>
