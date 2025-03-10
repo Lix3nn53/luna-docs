@@ -402,6 +402,13 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
+					label="GridView"
+					href="/luna/views/gridview"
+					active={page.url.pathname === '/luna/views/gridview'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
 					label="Visual Novel"
 					href="/luna/views/visualnovel"
 					active={page.url.pathname === '/luna/views/visualnovel'}
