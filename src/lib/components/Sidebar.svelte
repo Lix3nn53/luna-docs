@@ -138,6 +138,13 @@
 					href="/luna/samples/ink"
 					active={page.url.pathname === '/luna/samples/ink'}
 				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Newtonsoft"
+					href="/luna/samples/newtonsoft"
+					active={page.url.pathname === '/luna/samples/newtonsoft'}
+				/>
 			</SidebarDropdownWrapper>
 			<SidebarDropdownWrapper
 				btnClass={dropdownWrapperClass}
@@ -337,6 +344,13 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
+					label="CooldownWipe"
+					href="/luna/components/cooldownwipe"
+					active={page.url.pathname === '/luna/components/cooldownwipe'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
 					label="CircleHoleElement"
 					href="/luna/components/circlehole"
 					active={page.url.pathname === '/luna/components/circlehole'}
@@ -395,16 +409,16 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Inventory"
-					href="/luna/views/inventory"
-					active={page.url.pathname === '/luna/views/inventory'}
+					label="GridView"
+					href="/luna/views/gridview"
+					active={page.url.pathname === '/luna/views/gridview'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="GridView"
-					href="/luna/views/gridview"
-					active={page.url.pathname === '/luna/views/gridview'}
+					label="Inventory"
+					href="/luna/views/inventory"
+					active={page.url.pathname === '/luna/views/inventory'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}

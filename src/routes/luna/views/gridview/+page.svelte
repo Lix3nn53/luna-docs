@@ -47,6 +47,7 @@ public GridView(
       GameObject parent, // Parent GameObject
       VisualElement parentElement, // Parent VisualElement
       VisualElement slotContainer, // Container VisualElement to hold the item slots, grid items will be added to this container
+      TooltipController tooltipController = null, // Tooltip Controller reference to close tooltips on page change
 // UIView properties
       UIStartVisibility startVisibility = UIStartVisibility.Visible,
       VisualElement focusElement = null,

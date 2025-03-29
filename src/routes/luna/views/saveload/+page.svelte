@@ -42,54 +42,86 @@
 		language="csharp"
 		code={`
 using UnityEngine.UIElements;
-using CupkekGames.Core;
+using CupkekGames.Luna.Library;
+using UnityEngine;
+using CupkekGames.Systems.UI;
+using CupkekGames.Systems;
+using System;
 
-public class GameSaveViewListExample : GameSaveViewList<GameSaveDataExample>
+namespace CupkekGames.Luna.Demo.Game.Standart
 {
-	protected override GameSaveManager<GameSaveDataExample> GetSaveManager()
-	{
-		return GameSaveManagerExample.Instance;
-	}
+  public class GameSaveViewListExample : GameSaveViewList<GameSaveDataExample, GameSaveMetadataExample>
+  {
+    [SerializeField] GameSaveManagerExample _saveManager;
+    protected override GameSaveManager<GameSaveDataExample, GameSaveMetadataExample> GetSaveManager()
+    {
+      // You can use alternative ways to get save manager
+      // Here we are using serialized field to get save manager
+      return _saveManager;
+    }
 
-	protected override bool IsInGame()
-	{
-		// If MainMenu Scene is not loaded, we are not in game so return false to disable saving
-		return !SceneLoader.Instance.IsLoaded("MainMenu");
-	}
+    protected override bool IsInGame()
+    {
+      // If MainMenu Scene is loaded, we are not in game so return false to disable saving
+      return !SceneLoader.Instance.IsLoaded(1);
+    }
 
-	protected override VisualElement SlotOne(int index, int saveSlot, GameSaveDataExample data)
-	{
-		VisualElement container = new();
-		container.AddToClassList("flex-row");
+    protected override VisualElement SlotOne(int index, int saveSlot, GameSaveMetadataExample metadata)
+    {
+      VisualElement container = new();
+      container.AddToClassList("flex-row");
 
-		VisualElement containerLeft = new();
-		container.Add(containerLeft);
-		VisualElement containerRight = new();
-		container.Add(containerRight);
+      VisualElement containerLeft = new();
+      container.Add(containerLeft);
+      VisualElement containerRight = new();
+      container.Add(containerRight);
 
-		containerLeft.Add(new Label("Index: " + (index + 1)));
-		containerLeft.Add(new Label("File: " + (saveSlot + 1)));
+      containerLeft.Add(new Label("Index: " + (index + 1)));
+      containerLeft.Add(new Label("File: " + (saveSlot + 1)));
 
-		containerRight.Add(new Label(data.SaveDate.ToString()));
-		bool autosave = GameSaveManager.IsAutosave(saveSlot);
-		containerRight.Add(new Label("Autosave: " + autosave));
+      containerRight.Add(new Label(metadata.SaveDate.ToString()));
+      bool autosave = GameSaveManager.IsAutosave(saveSlot);
+      containerRight.Add(new Label("Autosave: " + autosave));
 
-		return container;
-	}
+      VisualElement containerEnd = new();
+      container.Add(containerEnd);
 
-	protected override VisualElement SlotTwo(int index, int saveSlot, GameSaveDataExample data)
-	{
-		return new Label("Gold: " + data.Gold);
-	}
+      containerEnd.Add(new Label("Save Version: " + metadata.SaveVersion));
 
-	protected override void OnLoadButtonClicked(int saveSlot, GameSaveDataExample slot)
-	{
-		GameSaveManager.CurrentSave.Data = slot;
+      return container;
+    }
 
-		SceneLoader.Instance.LoadScene(2, SceneTransitionManager.Instance.Transitions.GetValue("FadeWithInput"));
+    protected override VisualElement SlotTwo(int index, int saveSlot, GameSaveMetadataExample metadata)
+    {
+      return new Label("Gold: " + metadata.Gold);
+    }
 
-		GameSaveView.ReturnClicked(); // unloads prefab
-	}
+    protected override void OnLoadButtonClicked(int saveSlot, GameSaveMetadataExample metadata)
+    {
+      try {
+        GameSaveManager.CurrentSave.Data = GameSaveManager.GetSave(saveSlot);
+      }
+      catch (Exception e)
+      {
+        Debug.LogException(e, this);
+        return;
+      }
+
+#if UNITY_INPUT
+      SceneLoader.Instance.LoadScene(2, SceneTransitionDatabase.Instance.Transitions.GetValue("FadeWithInput"));
+#else
+      SceneLoader.Instance.LoadScene(2, SceneTransitionDatabase.Instance.Transitions.GetValue("Fade"));
+#endif
+
+      GameSaveView.ReturnClicked(); // unloads prefab
+    }
+
+    protected override TooltipController GetTooltipController()
+    {
+      // You can use alternative ways to get tooltip controller if you don't like singleton solution
+      return TooltipDatabaseExample.Instance.TooltipController;
+    }
+  }
 }`}
 		showHeader={false}
 		showLineNumbers={false}

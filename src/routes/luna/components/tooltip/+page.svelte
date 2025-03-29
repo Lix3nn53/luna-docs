@@ -3,8 +3,6 @@
 	import tooltip from '$lib/img/docs/gallery/luna_tooltip.jpg';
 	import tooltip_compare from '$lib/img/docs/components/tooltip_compare.jpg';
 	import tooltip_inspector from '$lib/img/docs/components/tooltip_inspector.jpg';
-	import default_tooltip_inspector from '$lib/img/docs/components/default_tooltip_inspector.jpg';
-	import default_tooltip_setup from '$lib/img/docs/components/default_tooltip_setup.jpg';
 
 	import { CodeBlock } from 'svhighlight';
 	import 'highlight.js/styles/base16/papercolor-dark.css';
@@ -28,10 +26,17 @@
 >
 <div class="p-4">
 	<img alt="tooltip" src={tooltip} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
-	<p>The tooltip is a straightforward component.</p>
-	<p>
-			For more complex needs, we provide an implementation called <strong>DefaultTooltip</strong>. It is designed to handle a wide range of scenarios.
-	</p>
+	<p>The tooltip is designed to handle a wide range of scenarios.</p>
+	
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl">Features</Heading>
+	<List class="list-disc pl-6">
+		<Li>Smooth size and position updates with configurable <Mark>fade settings</Mark></Li>
+		<Li>Smart <Mark>auto-positioning</Mark> that prevents tooltips from going off-screen</Li>
+		<Li>Display <Mark>multiple columns</Mark> simultaneously, perfect for comparing items in inventory with equipped gear</Li>
+		<Li>Support for <Mark>nested tooltips</Mark> with customizable locking behavior</Li>
+		<Li><Mark>Object pooling</Mark> for optimal performance with many tooltips</Li>
+	</List>
+	
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Attributes</Heading
 	>
@@ -44,53 +49,24 @@
 		</TableHead>
 		<TableBody tableBodyClass="divide-y">
 			<TableBodyRow color="custom" class={tdrowClass}>
-				<TableBodyCell {tdClass}>FadeDelay</TableBodyCell>
-				<TableBodyCell {tdClass}>Delay before starting to fade in or out.</TableBodyCell>
+				<TableBodyCell {tdClass}>Fade Duration</TableBodyCell>
+				<TableBodyCell {tdClass}>Duration of fade animation.</TableBodyCell>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
-				<TableBodyCell {tdClass}>FadeUpdateFrequency</TableBodyCell>
+				<TableBodyCell {tdClass}>Fade Easing Mode</TableBodyCell>
 				<TableBodyCell {tdClass}
-					>The frequency (in milliseconds) for fade updates. Lower values result in faster fading.</TableBodyCell
+					>Easing mode of fade animation.</TableBodyCell
 				>
-			</TableBodyRow>
-			<TableBodyRow color="custom" class={tdrowClass}>
-				<TableBodyCell {tdClass}>Start Hidden</TableBodyCell>
-				<TableBodyCell {tdClass}>Initial visibily.</TableBodyCell>
 			</TableBodyRow>
 		</TableBody>
 	</Table>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Tooltip Guide</Heading
 	>
-
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
-		>TooltipManipulator</Heading
-	>
-	<P
-		>Add the TooltipManipulator to the VisualElements you want to display a tooltip for when they
-		are hovered over or focused.</P
-	>
-	<CodeBlock
-		language="csharp"
-		code={`
-var myTooltip = new Tooltip();
-myTooltip.Add(new Label("This is a tooltip"));
-
-var myElement = new VisualElement();
-myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
-		showHeader={false}
-		showLineNumbers={false}
-		background="bg-zinc-900"
-		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
-	/>
-	<P class="pt-4"
-		>This will display the tooltip we created when myElement is hovered over or focused. As you can
-		see, the Tooltip itself is very simple.</P
-	>
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Class Controls</Heading
 	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Position</Heading
 	>
 	<P class="pb-2"
@@ -112,11 +88,11 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>tooltip-bottom</TableBodyCell>
-				<TableBodyCell {tdClass}>Position tooltip to the left of the VisualElement.</TableBodyCell>
+				<TableBodyCell {tdClass}>Position tooltip to the bottom of the VisualElement.</TableBodyCell>
 			</TableBodyRow>
 		</TableBody>
 	</Table>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>Follow Mouse</Heading
 	><Table class="rounded table-auto">
 		<TableHead>
@@ -133,47 +109,45 @@ myElement.AddManipulator(new TooltipManipulator(myTooltip));`}
 			</TableBodyRow>
 		</TableBody>
 	</Table>
-	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
-		>DefaultTooltip Guide</Heading
+	
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+		>TooltipController</Heading
+	>
+	<P
+		>TooltipController is a MonoBehaviour that keeps track of Tooltip element.</P
+	>
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+		>TooltipManipulator</Heading
 	>
 	<img alt="samples" src={tooltip_compare} class="mb-4 xl:max-w-xl max-w-full rounded-xl border-4" />
-	<P class="pb-4"
-		>To support more complex scenarios commonly
-		encountered in games, we've provided a default implementation to cover most use cases.</P
-	>
-	<P class="pb-4"
-		>DefaultTooltip is not an extension of Tooltip; it is an extension of TooltipManipulator. It
-		creates and controls a Tooltip with customizable slots and the ability to display multiple columns
-		simultaneously.</P
-	>
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
-		>Setup</Heading
-	>
-	<P class="pb-4"
-		>You can just copy the setup from demo Game samples. All you need is to create a document with
-		Tooltip component named DefaultTooltip.</P
-	>
-	<img alt="samples" src={default_tooltip_setup} class="mb-6 max-w-md rounded-xl border-4" />
-	<img alt="samples" src={default_tooltip_inspector} class="mb-6 max-w-md rounded-xl border-4" />
-	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
-		>DefaultTooltipManipulator</Heading
-	>
-	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
-		>Constructor</Heading
+	<P
+		>Add the TooltipManipulator to the VisualElements you want to display a tooltip for when they
+		are hovered over or focused.</P
 	>
 	<CodeBlock
 		language="csharp"
 		code={`
 // Create manipulator with multiple columns, as demonstrated in the item comparison tooltip example above.
-public DefaultTooltipManipulator(GameObject parent, DefaultTooltip tooltip, List<DefaultTooltipContainerSetup> setups);
+public TooltipManipulator(GameObject parent, TooltipController tooltipController, List<TooltipContainerSetup> setups);
+
 // Create manipulator with one column
-var manipulator = public DefaultTooltipManipulator(GameObject parent, DefaultTooltip tooltip);
-manipulator.SetSetup(setup);`}
+var manipulator = public TooltipManipulator(GameObject parent, TooltipController tooltipController);
+manipulator.SetSetup(setup);
+
+// myElement will show tooltip on hover
+myElement.AddManipulator(manipulator);`}
 		showHeader={false}
 		showLineNumbers={false}
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
+	<P class="pt-4"
+		>This will display the tooltip we created when myElement is hovered over or focused. As you can
+		see, the Tooltip itself is very simple.</P
+	>
+	<Heading tag="h4" class="mb-2" customSize="text-md font-bold md:text-lg lg:text-xl"
+		>Constructor</Heading
+	>
 	<br /><Table class="rounded table-auto">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Name</TableHeadCell>
@@ -189,26 +163,26 @@ manipulator.SetSetup(setup);`}
 				>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
-				<TableBodyCell {tdClass}>tooltip</TableBodyCell>
-				<TableBodyCell {tdClass}>DefaultTooltip</TableBodyCell>
-				<TableBodyCell {tdClass}>Referance to the tooltip to control.</TableBodyCell>
+				<TableBodyCell {tdClass}>tooltipController</TableBodyCell>
+				<TableBodyCell {tdClass}>TooltipController</TableBodyCell>
+				<TableBodyCell {tdClass}>Reference to the tooltip controller.</TableBodyCell>
 			</TableBodyRow>
 			<TableBodyRow color="custom" class={tdrowClass}>
 				<TableBodyCell {tdClass}>setup</TableBodyCell>
-				<TableBodyCell {tdClass}>DefaultTooltipContainerSetup</TableBodyCell>
+				<TableBodyCell {tdClass}>TooltipContainerSetup</TableBodyCell>
 				<TableBodyCell {tdClass}>Container setup for a column. See below for details.</TableBodyCell
 				>
 			</TableBodyRow>
 		</TableBody>
 	</Table><br />
-	<Heading tag="h4" class="mb-2" customSize="text-md font-bold md:text-lg lg:text-xl"
-		>DefaultTooltipContainerSetup</Heading
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+		>TooltipContainerSetup</Heading
 	>
 	<CodeBlock
 		language="csharp"
 		code={`
-// Constructor of DefaultTooltipContainerSetup
-public DefaultTooltipContainerSetup(
+// Constructor of TooltipContainerSetup
+public TooltipContainerSetup(
 	VisualElement image, 
 	VisualElement title, 
 	VisualElement body, 
@@ -274,8 +248,8 @@ public DefaultTooltipContainerSetup(
 	<CodeBlock
 		language="csharp"
 		code={`
-// Reference to the DefaultTooltip singleton
-DefaultTooltip tooltip = DefaultTooltip.Instance;
+// Reference to the TooltipController
+[SerializeField] private TooltipController _tooltipController;
 
 // VisualElement that will display tooltip on hover
 VisualElement tooltipOnHover = _uiDocument.rootVisualElement.Q<VisualElement>("TooltipOnHover");
@@ -292,8 +266,8 @@ VisualElement bottom = null;
 UIColor bgColor = new UIColor(UIColorName.SLATE, UIColorValue.V_800);
 UIColor borderColor = new UIColor(UIColorName.SLATE, UIColorValue.V_200);
 
-// Create a DefaultTooltipContainerSetup
-var containerSetup = new DefaultTooltipContainerSetup(
+// Create a TooltipContainerSetup
+var containerSetup = new TooltipContainerSetup(
 	image,
 	title,
 	body,
@@ -303,7 +277,7 @@ var containerSetup = new DefaultTooltipContainerSetup(
 );
 
 // Create Manipulator
-DefaultTooltipManipulator manipulator = new DefaultTooltipManipulator(gameObject, tooltip);
+TooltipManipulator manipulator = new TooltipManipulator(gameObject, _tooltipController);
 manipulator.SetSetup(containerSetup);
 
 // Add Manipulator, you can add same manipulator to multiple elements if needed
