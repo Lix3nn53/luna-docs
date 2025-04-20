@@ -1,0 +1,119 @@
+[1.1.1]
+### New Features
+
+**Custom USS Property**
+- ProgressBar: Added support for setting colors via USS variables—an alternative to configuring colors in UXML or via script. See the `Custom USS Property` section in https://www.docs.cupkek.games/luna/components/progressbar
+- Radial Progress Bar: Same feature as above. See the `Custom USS Property` section in https://www.docs.cupkek.games/luna/components/radialprogressbar
+
+If you’d like to see USS variables for other components or properties, let me know!
+
+**Samples**
+- Save/Load UI: Added filters for auto and manual saves. Complete REDESIGN of UI to support both gamepad and keyboard.
+- Architecture: Replaced Singleton with ServiceLocator. The samples are meant to demonstrate architecture concepts—they're not mandatory patterns. I personally use ServiceLocator, so I’ve updated the samples to reflect that.
+- ASMDEF: Split the Systems assembly definition into smaller modules. If you're using these samples, make sure to update your ASMDEF references accordingly.
+### Fixes
+**Samples**
+- Autosave: Fixed logic issues. Autosave settings are now stored in metadata.
+- ItemDatabase: Don’t enforce Singleton on ItemDatabase.
+
+[1.1.0] [Major Update]
+
+Warning: It's recommended to remove Luna and samples before updating. This update includes significant refactors to the Tooltip, Save/Load and Inventory systems. If you are using these features, you may need to update your implementation. Feel free to ask for support.
+
+### New Features
+
+**Tooltip System**
+- Added `UpdateDisplay` function to `TooltipManipulator` for seamless tooltip updates without closing and reopening.
+- Added `Close` function to `TooltipManipulator`, ensuring only the currently active tooltip is closed.
+- **Smart Position**: If the tooltip is set to appear on top but doesn't fit, it will smartly adjust its position to the bottom, left, or right.
+- Introduced **Nested Tooltips**, requiring a major code refactor. If this affects your implementation, feel free to ask for support.
+- **Tooltip Refactor:**
+- `DefaultTooltip` has been renamed to `TooltipController`. Since this is a `MonoBehaviour`, you’ll need to update your `GameObject`. Select the `GameObject` that previously contained `DefaultTooltip` in your scene, remove the missing component, and add `TooltipController` manually.
+- `DefaultTooltipContainerSetup` has been renamed to `TooltipContainerSetup`.
+- `DefaultTooltipManipulator` has been renamed to `TooltipManipulator`.
+- Simplifies development by consolidating tooltip logic into a single, more versatile component.
+- Limits fully custom tooltip behavior but is designed to cover all standard needs.
+- Added new Tooltip demos to Components sample, showcasing seamless updates and nesting.
+
+**Save/Load System**
+- **Functional Save System:** New sample that showcases a working save system using the Newtonsoft JSON library.
+- **Optimized Save Data Loading:**
+- Previously, the Save/Load UI loaded all save files in full, which was inefficient for large files.
+- Now, it can load only metadata and fetch full save data only when needed.
+
+**Other**
+- **GridView**: Constructor now accepts optional TooltipController.
+- **Inventory**: Moved from Luna to `Library Sample`. The inventory system is not strictly a UI component but rather a gameplay feature, making it more appropriate for Library Sample rather than the UI library. It now has it's own assembly file called `CupkekGames.InventorySystem`.
+- **Core.Pool**: Added pooling classes that uses unity's pool internally. Used by new Tooltip internally but you can use them for any pooling. Implemented versions are plain classes, GameObjects, MonoBehaviours, ScriptableObjects.
+
+### Fixes
+- **Game Demo – Save/Load:** Fixed an issue where loading a save while already in the game scene caused errors.
+- **Addressable Demo:** Fixed broken configurations from previous updates.
+
+[1.0.8]
+Added:
+- NotificationView: Optional sfx on push and dismiss
+- GridView(Mainly used in inventory, can be used to create custom grid views): Added uss classes to filter buttons, so you can customize their styles
+Fixes:
+- NotificationView: Fix showing dismissed notifications at initialization
+- ProgressBar: Editor code in runtime assembly causing error on build
+
+[1.0.7]
+Added:
+- New Custom Element: CooldownWipe. Useful for showing cooldown of skills or duration of status effects/buffs.
+Fixes:
+- TabView: Add USS class names to header buttons and their selected states, useful for customizing style.
+
+[1.0.6]
+Added:
+- TabView: Added a custom Tab component while keeping the support for built-in Tab component. Custom Tab component is more cumbersome to use but allows you to add custom content to the Tab-Button. Added a red-dot example to the component sample, similar to a notification indicator on a button.
+Fixes:
+- ProgressBar: Fixed alignment problems when using multiple bars with instant = false.
+
+[1.0.5]
+Added:
+- new PauseMenuEscapeAction: Added a plain class version alongside the MonoBehaviour version.
+Example Usage:
+In a view like visual novel, you might want to prevent going back before the dialogue finishes. You can do this with `InputEscapeManager.SetBlocked(true)` but it will block all escape actions. With this new class, you can add the pause menu action to the end of the stack so that the pause menu remains accessible while blocking other back actions.
+- Fadeable: split duration into fadeInDuration and fadeOutDuration.
+Fixes:
+- ProgressBar: various fixes for changes made in 1.0.3.
+- Added null check for LunaUIManager in UIView for 'Disable Other Views On Fade-In' option. It will fail silently.
+- Added fading to the LoadingUI in CircleSceneTransition for a smoother transition from the black circle to the LoadingUI.
+- Fix compile error when InputSystem package is not installed.
+
+[1.0.4]
+New:
+- New Custom Element: CircleHoleElement - I was using shaders and uGui for circle loading transition. CircleHoleElement uses UI Toolkit's Vector API to draw the shape to achieve the same effect.
+- Renamed PopupConfirmation to PopupChoice as it supports multiple choices now.
+- New Sample: Ink - A sample demonstrating how to integrate the Ink narrative scripting language with the VisualNovel component. With support for choices and branching.
+
+[1.0.3]
+New:
+- ProgressBar: Added an overlay feature. The API has changed significantly, and the documentation has been updated with new examples. Includes a new Overwatch-style health bar sample!
+- PieChart: Made gap line strokes straight.
+- ProgressBar: Improved performance using the DynamicTransform UsageHint.
+- Notifications: Improved performance using the DynamicTransform UsageHint.
+Fixes:
+- Samples (Game): Added escape input action to dialogue player UIs.
+- Samples (Game): Improved inventory layout.
+- Samples (Components): Fixed NPEs caused by the new "Disable Other Views On Fade-In" option.
+
+[1.0.2]
+New:
+- Added 'Add Default Escape Action' option to UIViewComponent which adds UIViewActionEscape that calls FadeOutAndDestroy. So you don't have to write script for simple escape with input.
+- Samples: Added input support and icons to all three dialogue players
+Fixes:
+- Sample game, save/load view: Fix issue where the save button is not disabled when you are in the main menu
+
+[1.0.1]
+New:
+- Added 'Disable Other Views On Fade-In' option to UIView and UIViewComponent
+- Improved UI Element Manager API
+Fixes:
+- Game Sample: Fixed credits view
+- Game Sample: Add custom navigation to main menu to be able to target quit button
+- Game Sample: Fixed inventory item filter buttons
+
+<All release notes>
+https://www.docs.cupkek.games/luna/releasenotes
