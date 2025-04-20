@@ -194,6 +194,44 @@
 		</TableBodyRow>
 		</TableBody>
 	</Table>
+	
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Custom USS Property</Heading
+	>
+	<p>You can customize the appearance by overriding these USS properties in your stylesheet.</p>
+	<p>For quick styling, you can also use predefined color schemes by adding color classes. For example, adding the `primary` USS class will apply the default primary color settings.</p>
+	<P class="pt-4"
+		>Refer to <A color="text-sky-400 font-extrabold" href="/luna/styling/colors">colors</A> to learn
+		about available options.</P
+	>
+	<Table class="rounded">
+		<TableHead>
+			<TableHeadCell class={tdheadClass}>Property</TableHeadCell>
+			<TableHeadCell class={tdheadClass}>Description</TableHeadCell>
+		</TableHead>
+		<TableBody tableBodyClass="divide-y">
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>--progress-bar-bg-color</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>Sets the background color of the progress bar.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell tdClass={tdClasss}>--progress-bar-indicator-positive-color</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}>Defines the color of the indicator bar when displaying an increase in value.</TableBodyCell>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>--progress-bar-indicator-negative-color</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>Specifies the color of the indicator bar when displaying a decrease in value.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell tdClass={tdClasss}>--progress-bar-progress-color-0</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}>Controls the color of individual progress bars. You can define up to 10 different progress colors (0-9) for multi-segment progress bars.</TableBodyCell>
+			</TableBodyRow>
+		</TableBody>
+	</Table>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Public Methods</Heading
 	>

@@ -29,9 +29,8 @@
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Attributes</Heading
 	>
-	<img alt="samples" src={progressbar} class="mb-6 max-w-md rounded-xl border-4" /><Table
-		class="rounded"
-	>
+	<img alt="samples" src={progressbar} class="mb-6 max-w-md rounded-xl border-4" />
+	<Table class="rounded">
 		<TableHead>
 			<TableHeadCell class={tdheadClass}>Attribute</TableHeadCell>
 			<TableHeadCell class={tdheadClass}>Description</TableHeadCell>
@@ -101,6 +100,45 @@
 				<TableBodyCell tdClass={tdClasss}>Color Indicator Negative</TableBodyCell>
 				<TableBodyCell tdClass={tdClasss}
 					>LColor of the indicator bar when the change is negative.</TableBodyCell
+				>
+			</TableBodyRow>
+		</TableBody>
+	</Table>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Custom USS Property</Heading
+	>
+	<p>You can customize the appearance by overriding these USS properties in your stylesheet.</p>
+	<p>For quick styling, you can also use predefined color schemes by adding color classes. For example, adding the `primary` USS class will apply the default primary color settings.</p>
+	<P class="pt-4"
+		>Refer to <A color="text-sky-400 font-extrabold" href="/luna/styling/colors">colors</A> to learn
+		about available options.</P
+	>
+	<Table class="rounded">
+		<TableHead>
+			<TableHeadCell class={tdheadClass}>Property</TableHeadCell>
+			<TableHeadCell class={tdheadClass}>Description</TableHeadCell>
+		</TableHead>
+		<TableBody tableBodyClass="divide-y">
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>--radial-progress-bg-color</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>Background color of the radial progress bar.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell tdClass={tdClasss}>--radial-progress-progress-color</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}>Color of the main progress bar.</TableBodyCell>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>--radial-progress-indicator-positive-color</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>Color of the indicator bar when showing a positive change.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell tdClass={tdClasss}>--radial-progress-indicator-negative-color</TableBodyCell>
+				<TableBodyCell tdClass={tdClasss}
+					>Color of the indicator bar when showing a negative change.</TableBodyCell
 				>
 			</TableBodyRow>
 		</TableBody>
