@@ -3,14 +3,12 @@
   import { Carousel, Thumbnails, Button, Indicator } from 'flowbite-svelte';
   import { onMount } from 'svelte';
   import { marked } from 'marked';
+  import releasenotes from '$lib/docs/releasenotes.txt?raw';
 
-  let releaseNotes = '';
   let parsedNotes: string = '';
 
   onMount(async () => {
-    const response = await fetch('/src/lib/docs/releasenotes.txt');
-    releaseNotes = await response.text();
-    parsedNotes = await marked.parse(releaseNotes);
+    parsedNotes = await marked.parse(releasenotes);
   });
 </script>
 
