@@ -28,12 +28,15 @@
 		language="html"
 		code={`
 <engine:ListView name="ListPrimary" fixed-item-height="100" class="primary" />
-<engine:ListView name="ListRed" fixed-item-height="100" class="red" />
 <engine:ListView name="ListPurple" fixed-item-height="100" class="purple" />
 <engine:ListView name="ListDefault" fixed-item-height="100" />
 
 <engine:ScrollView class="primary">
-<engine:ScrollView class="red">`}
+<engine:ScrollView class="red">
+
+<!-- Ghost -->
+<engine:ListView class="red ghost">
+<engine:ScrollView class="red ghost">`}
 		showHeader={false}
 		showLineNumbers={false}
 		background="bg-zinc-900"
@@ -59,4 +62,21 @@
 		>Refer to <A color="text-sky-400 font-extrabold" href="/luna/styling/colors">colors</A> to learn
 		about available options.</P
 	>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Ghost</Heading
+	>
+	<P
+		>Makes the background transparent.</P
+	>
+	<CodeBlock
+		language="html"
+		code={`
+<!-- Ghost -->
+<engine:ListView class="red ghost">
+<engine:ScrollView class="red ghost">`}
+		showHeader={false}
+		showLineNumbers={false}
+		background="bg-zinc-900"
+		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
+	/>
 </div>
