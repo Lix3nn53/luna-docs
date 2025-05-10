@@ -1,4 +1,38 @@
-[1.1.1]
+# [1.2.0] (New Mobile Sampe, Inventory and GridView)
+### :warning: Warning
+If you're using GridView or Inventory, refactor is required. See details below.
+## New Features
+### Mobile Sample:mobile_phone:
+- Configured for mobile devices. Responsive design, has features like SafeArea for UI Toolkit. More to come.
+- Includes a new Mobile Equipment scene. Has listview and pagination versions. Pagination version has drag & drop and InventoryWithSlots, which lets you move items between slots.
+### New Element: Aspect Ratio
+- USS still doesn’t support aspect-ratio or vw/vh units, so I implemented an AspectRatio element. It can take the full width or height of its parent while maintaining a consistent shape — like staying perfectly square.
+### GridView
+- Responsive: Automatically updates element count when container width changes, enabling responsive layouts.
+- Refactor: GridView has been renamed to GridViewPagination.
+- New: Introduced GridViewList as an alternative version.
+- Added ability to define buttons for clearing filters.
+- Components Sample: Added a standalone example scene.
+- Components Sample: Added a responsive layout example.
+### Inventory and Equipment:
+- Refactor: Renamed InventoryView to InventoryViewPagination.
+- New: Introduced InventoryViewList.
+- Refactor: Renamed EquipmentView to EquipmentViewPagination.
+- New: Introduced EquipmentViewList.
+- Added a dedicated scenes featuring both InventoryViewPagination and InventoryViewList to Components sample.
+- Refactor: ItemDragAndDrop now requires two InventoryItemSlotController instances. One for the slot that will start the drag, and one for creating the visual element at drag start.
+### Drag & Drop:
+- Added ability to style drop slots on drag start.
+- Improved target detection on drop.
+## Fixes
+### AddressableAssetManager:
+- Removed redundant locks.
+- Improved internal logic.
+- Added test scripts and a sample scene.
+### Input Prompts
+- Fixed an issue that prevented builds on platforms where Unity’s Input System strips PlayStation controller classes, such as android.
+
+# [1.1.1]
 ### New Features
 
 **Custom USS Property**
@@ -16,7 +50,7 @@ If you’d like to see USS variables for other components or properties, let me 
 - Autosave: Fixed logic issues. Autosave settings are now stored in metadata.
 - ItemDatabase: Don’t enforce Singleton on ItemDatabase.
 
-[1.1.0] [Major Update]
+# [1.1.0] [Major Update]
 
 Warning: It's recommended to remove Luna and samples before updating. This update includes significant refactors to the Tooltip, Save/Load and Inventory systems. If you are using these features, you may need to update your implementation. Feel free to ask for support.
 
