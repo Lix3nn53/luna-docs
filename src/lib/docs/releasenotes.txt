@@ -1,5 +1,5 @@
 # [1.2.0] (New Mobile Sample, Inventory and GridView)
-### :warning: Warning
+### Warning
 If you're using GridView or Inventory, refactor is required. See details below.
 ## New Features
 ### Mobile Sample:mobile_phone:
