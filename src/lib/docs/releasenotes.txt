@@ -1,4 +1,4 @@
-# [1.2.0] (New Mobile Sampe, Inventory and GridView)
+# [1.2.0] (New Mobile Sample, Inventory and GridView)
 ### :warning: Warning
 If you're using GridView or Inventory, refactor is required. See details below.
 ## New Features
@@ -10,27 +10,27 @@ If you're using GridView or Inventory, refactor is required. See details below.
 ### GridView
 - Responsive: Automatically updates element count when container width changes, enabling responsive layouts.
 - Refactor: GridView has been renamed to GridViewPagination.
-- New: Introduced GridViewList as an alternative version.
+- New: Introduced GridViewList as an alternative to pagination.
 - Added ability to define buttons for clearing filters.
 - Components Sample: Added a standalone example scene.
 - Components Sample: Added a responsive layout example.
 ### Inventory and Equipment:
 - Refactor: Renamed InventoryView to InventoryViewPagination.
-- New: Introduced InventoryViewList.
+- New: Introduced InventoryViewList as an alternative to pagination.
 - Refactor: Renamed EquipmentView to EquipmentViewPagination.
-- New: Introduced EquipmentViewList.
+- New: Introduced EquipmentViewList as an alternative to pagination.
 - Added a dedicated scenes featuring both InventoryViewPagination and InventoryViewList to Components sample.
 - Refactor: ItemDragAndDrop now requires two InventoryItemSlotController instances. One for the slot that will start the drag, and one for creating the visual element at drag start.
 ### Drag & Drop:
 - Added ability to style drop slots on drag start.
 - Improved target detection on drop.
 ## Fixes
+### Input Prompts
+- Fixed an issue that prevented builds on platforms where Unity’s Input System strips PlayStation controller classes, such as android.
 ### AddressableAssetManager:
 - Removed redundant locks.
 - Improved internal logic.
 - Added test scripts and a sample scene.
-### Input Prompts
-- Fixed an issue that prevented builds on platforms where Unity’s Input System strips PlayStation controller classes, such as android.
 
 # [1.1.1]
 ### New Features
