@@ -1,3 +1,15 @@
+# [1.2.1]
+## New Features
+### ProgressBar
+- Added `bool IndicatorAutoColor` attribute. Useful when you don't want indicator color to update automatically, for example when using `SetFilling` function to show a change.
+## Fixes
+- Fix: InputIconControlScheme error when new input system is not installed.
+### Tooltip
+- Fix: Handle null TooltipContainerSetup values.
+## Samples
+### GameSaveManager
+- Change access modifiers of `_enableAutosave` and `_autosaveSlots` to protected from private.
+
 # [1.2.0] (New Mobile Sample, Inventory and GridView)
 ### Warning
 If you're using GridView or Inventory, refactor is required. See details below.
