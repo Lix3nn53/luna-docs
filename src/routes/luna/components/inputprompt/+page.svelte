@@ -26,7 +26,7 @@
 	>Components/ Input Prompt</Heading
 >
 <div class="p-4">
-	<img alt="samples" src={input} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
+	<img alt="samples" src={input} class="mb-6 max-w-full rounded-xl border-4 xl:max-w-xl" />
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Attributes</Heading
 	>
@@ -75,6 +75,20 @@
 					control schemes.</TableBodyCell
 				>
 			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>PlayerIndex</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>Index of the player this InputPrompt should display input for. Used in multiplayer
+					scenarios to show different player inputs.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>HideIfPlayerIndexMissing</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>If true, hides the InputPrompt when the specified PlayerIndex doesn't have an active
+					PlayerInput. Useful for dynamic multiplayer UI.</TableBodyCell
+				>
+			</TableBodyRow>
 		</TableBody>
 	</Table>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
@@ -88,18 +102,43 @@
 		<Li>PlayStation5</Li>
 	</List>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
-		>InputDeviceManager</Heading
+		>Integration with InputDeviceManager</Heading
 	>
-	<P>Has 2 responsiblities.</P>
+	<P
+		>InputPrompt works closely with <A
+			class="font-bold text-sky-400"
+			href="/luna/framework/devicemanager">InputDeviceManager</A
+		> which has 2 responsibilities:</P
+	>
 	<List tag="ul" class="space-y-1 py-2">
 		<Li>Detecting input scheme changes to automatically update InputPrompt icons and texts.</Li>
 		<Li>Connection between InputPrompt and InputIconDatabase.</Li>
+		<Li
+			>Managing player input registration and control scheme tracking for multiplayer scenarios.</Li
+		>
 	</List>
+	<P class="mb-4">
+		The InputPrompt automatically subscribes to InputDeviceManager events to update its display when
+		players join/leave or when control schemes change.
+	</P>
 	<img
 		alt="inputdevicemanager"
 		src={inputdevicemanager}
 		class="my-6 max-w-md rounded-xl border-4"
 	/>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Integration with LunaUIManager</Heading
+	>
+	<P class="mb-4">
+		InputPrompt integrates with <A class="font-bold text-sky-400" href="/luna/framework/uimanager"
+			>LunaUIManager</A
+		> to access the InputIconDatabase. The LunaUIManager provides the IconDatabase property which contains
+		the input icons for different control schemes.
+	</P>
+	<P class="mb-4">
+		When InputPrompt needs to display an icon, it queries the LunaUIManager's IconDatabase to get
+		the appropriate sprite and text for the current control scheme.
+	</P>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>InputIconDatabase</Heading
 	>

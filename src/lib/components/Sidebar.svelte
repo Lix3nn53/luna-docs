@@ -22,7 +22,7 @@
 	let dropdownActiveClass = itemClass + ' ml-4 ps-4 ' + activeClass;
 </script>
 
-<Sidebar class="min-h-full text-stone-50 bg-stone-800" activeUrl={page.url.pathname} >
+<Sidebar class="min-h-full bg-stone-800 text-stone-50" activeUrl={page.url.pathname}>
 	<SidebarWrapper
 		class="min-h-full"
 		divClass={'overflow-y-auto py-4 px-3 bg-stone-50 dark:bg-stone-800'}
@@ -99,9 +99,7 @@
 					active={page.url.pathname === '/luna/samples/assetsources'}
 				/>
 				<div class="ml-4 flex flex-row items-center ps-2">
-					<Heading tag="h5" customSize="text-sm underline underline-offset-4"
-						>Samples</Heading
-					>
+					<Heading tag="h5" customSize="text-sm underline underline-offset-4">Samples</Heading>
 				</div>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
@@ -562,6 +560,13 @@
 					label="Input Escape Manager"
 					href="/core/inputescapemanager"
 					active={page.url.pathname === '/core/inputescapemanager'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Input Device Manager"
+					href="/core/inputdevicemanager"
+					active={page.url.pathname === '/core/inputdevicemanager'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}

@@ -11,7 +11,7 @@
 	>Luna UI Manager</Heading
 >
 <div class="p-4">
-	<img alt="uimanager" src={uimanager} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
+	<img alt="uimanager" src={uimanager} class="mb-6 max-w-full rounded-xl border-4 xl:max-w-xl" />
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Settings</Heading
 	>
@@ -23,15 +23,21 @@
 	>
 	<P>
 		A Player Input reference is required for the proper functioning of Escape Action
-		<A class="font-bold text-sky-400" href="/luna/components/inputprompt">
-			InputPromt
-		</A>
-		component.
+		<A class="font-bold text-sky-400" href="/luna/components/inputprompt">InputPromt</A>
+		component. Represents a single player's input device. Sufficient for singleplayer games.
+	</P>
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+		>Player Input Manager</Heading
+	>
+	<P>
+		When set, overrides the standalone PlayerInput above. Solution for local multiplayer. Enables
+		multiple players to join and leave the game dynamically. See documentation for more info.
 	</P>
 	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Escape Action Names</Heading
 	>
-	<P>Names of InputActions that will trigger escape when performed. See
+	<P
+		>Names of InputActions that will trigger escape when performed. See
 		<A class="font-bold text-sky-400" href="/luna/framework/uiactions#UIViewActionEscape">
 			UIViewActionEscape
 		</A>
@@ -40,11 +46,17 @@
 	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Input Icon Database</Heading
 	>
-	<P>Input icons for 
-		<A class="font-bold text-sky-400" href="/luna/components/inputprompt">
-			InputPromt
-		</A>
+	<P
+		>Input icons for
+		<A class="font-bold text-sky-400" href="/luna/components/inputprompt">InputPromt</A>
 		components.
+	</P>
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+		>Loading Action Maps</Heading
+	>
+	<P
+		>Enables all other action maps on start. Optionally, loading transitions with input disables
+		other action maps during the loading screen.
 	</P>
 	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
 		>UI Element Manager Settings</Heading
@@ -52,8 +64,54 @@
 	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>Blacklist</Heading
 	>
-	<P>List of VisualElement names to ignore. UIElementManager automatically adds hover and click sounds to focusable elements. 
-		Add elements here if you cannot disable their focusable state but do not want sounds applied to them.</P>
+	<P
+		>List of VisualElement names to ignore. UIElementManager automatically adds hover and click
+		sounds to focusable elements. Add elements here if you cannot disable their focusable state but
+		do not want sounds applied to them.</P
+	>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Integration with Other Components</Heading
+	>
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+		>InputDeviceManager Integration</Heading
+	>
+	<P class="mb-4">
+		LunaUIManager automatically initializes and manages the <A
+			class="font-bold text-sky-400"
+			href="/luna/framework/devicemanager">InputDeviceManager</A
+		>. It calls InputDeviceManager.OnEnable() with the configured escape action names and loading
+		action maps, and handles player input registration through the OnPlayerJoined and OnPlayerLeft
+		events.
+	</P>
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+		>InputPrompt Integration</Heading
+	>
+	<P class="mb-4">
+		The LunaUIManager provides the IconDatabase property that <A
+			class="font-bold text-sky-400"
+			href="/luna/components/inputprompt">InputPrompt</A
+		> components use to display appropriate input icons for different control schemes. InputPrompt components
+		automatically query this database to get the correct sprites and text for the current input method.
+	</P>
+	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
+		>Input Methods</Heading
+	>
+	<Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2"
+		>Player Input Events</Heading
+	>
+	<P class="mb-4">
+		Methods for handling player join and leave events in multiplayer scenarios. Automatically
+		handled by PlayerInputManager so you don't need to call these manually.
+	</P>
+	<CodeBlock
+		language="csharp"
+		code={`public void OnPlayerJoined(PlayerInput playerInput)
+public void OnPlayerLeft(PlayerInput playerInput)`}
+		showHeader={false}
+		showLineNumbers={false}
+		background="bg-zinc-900"
+		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
+	/>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>UI Element Manager</Heading
 	>
@@ -98,9 +156,7 @@ public void SetBlocker(string elementName)`}
 	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>RemoveBlocker</Heading
 	>
-	<P
-		>If you want, you can remove blocker manually.</P
-	>
+	<P>If you want, you can remove blocker manually.</P>
 	<CodeBlock
 		language="csharp"
 		code={`
@@ -117,9 +173,7 @@ public void RemoveBlocker()`}
 		<div class="flex flex-row">
 			<i class="fa-solid fa-circle-info fa-2xl mr-4 mt-4"></i>
 			<div>
-				<P
-					>The "disableOtherViewsOnFadeIn" option on UIView uses these functions.</P
-				>
+				<P>The "disableOtherViewsOnFadeIn" option on UIView uses these functions.</P>
 			</div>
 		</div>
 	</Alert>
@@ -152,13 +206,31 @@ public List<VisualElement> SetEnabledAllPages(bool enabled, HashSet<VisualElemen
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
 	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
+		>SetEnabledElements</Heading
+	>
+	<P class="mb-4">
+		Enables or disables a specific set of VisualElements. Useful for controlling individual elements
+		or custom groups.
+	</P>
+	<CodeBlock
+		language="csharp"
+		code={`public void SetEnabledElements(bool enabled, HashSet<VisualElement> elements)`}
+		showHeader={false}
+		showLineNumbers={false}
+		background="bg-zinc-900"
+		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
+	/>
+	<Heading tag="h4" class="my-2" customSize="text-md font-bold md:text-lg lg:text-xl ml-4"
 		>RegisterPage</Heading
 	>
 	<Alert border>
 		<div class="flex flex-row">
 			<i class="fa-solid fa-circle-info fa-2xl mr-4 mt-4"></i>
 			<div>
-				<P>You <strong class="font-bold text-rose-400">don't need to manually register</strong> elements when using UIViews.</P>
+				<P
+					>You <strong class="font-bold text-rose-400">don't need to manually register</strong> elements
+					when using UIViews.</P
+				>
 				<P>However, for documentation purposes, the functions are detailed here.</P>
 			</div>
 		</div>

@@ -1,3 +1,16 @@
+# [1.2.2]
+## New Features
+- InputPrompt: Local multiplayer support via PlayerInputManager. New demo added to components sample. See documentation for more info: https://www.docs.cupkek.games/luna/framework/uimanager
+## Fixes
+### ProgressBar
+- Refactor: Remove redundant background color variable from ProgressBar color styles so applying a uss class (e.g. primary, red, blue, etc.) doesn't affect the background.
+### TabView
+- Fix: Tab label binding not working when using Luna.Tab.
+- Added: Rebuild function to use when binding is not enough or possible.
+## Library Sample
+### Scene Transitions With Input
+- Refactor: Input actions settings moved to LunaUIManager. Change input action map management strategy from "disable specific maps" to "enable only specified maps, disable all others".
+
 # [1.2.1]
 ## New Features
 ### ProgressBar
