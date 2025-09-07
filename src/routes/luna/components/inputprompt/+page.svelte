@@ -107,7 +107,7 @@
 	<P
 		>InputPrompt works closely with <A
 			class="font-bold text-sky-400"
-			href="/luna/framework/devicemanager">InputDeviceManager</A
+			href="/luna/core/devicemanager">InputDeviceManager</A
 		> which has 2 responsibilities:</P
 	>
 	<List tag="ul" class="space-y-1 py-2">

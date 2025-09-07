@@ -78,7 +78,7 @@
 	<P class="mb-4">
 		LunaUIManager automatically initializes and manages the <A
 			class="font-bold text-sky-400"
-			href="/luna/framework/devicemanager">InputDeviceManager</A
+			href="/luna/core/devicemanager">InputDeviceManager</A
 		>. It calls InputDeviceManager.OnEnable() with the configured escape action names and loading
 		action maps, and handles player input registration through the OnPlayerJoined and OnPlayerLeft
 		events.
