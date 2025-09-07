@@ -107,7 +107,7 @@
 	<P
 		>InputPrompt works closely with <A
 			class="font-bold text-sky-400"
-			href="/core/devicemanager">InputDeviceManager</A
+			href="/core/inputdevicemanager">InputDeviceManager</A
 		> which has 2 responsibilities:</P
 	>
 	<List tag="ul" class="space-y-1 py-2">
