@@ -1,6 +1,12 @@
 # [1.2.2]
 ## New Features
-- InputPrompt: Local multiplayer support via PlayerInputManager. New demo added to components sample. See documentation for more info: https://www.docs.cupkek.games/luna/framework/uimanager
+- InputPrompt: Local multiplayer support via PlayerInputManager. See documentation for more info: https://www.docs.cupkek.games/luna/framework/uimanager
+You can also find about new InputDeviceManager in the documentation.
+### New Demo Scene
+- New local multiplayer demo added to components sample in InputPrompt folder.
+### Refactors: 
+- `LunaUIManager.GetInputAction("Move")` is now `InputDeviceManager.PlayerInputs[0].actions["Move"];`
+- `InputDeviceManager.PlayerInput.actions["Move"];` is now ``InputDeviceManager.PlayerInputs[0].actions["Move"];`
 ## Fixes
 ### ProgressBar
 - Refactor: Remove redundant background color variable from ProgressBar color styles so applying a uss class (e.g. primary, red, blue, etc.) doesn't affect the background.
