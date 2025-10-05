@@ -505,6 +505,22 @@
 					active={page.url.pathname === '/luna/styling/border'}
 				/>
 			</SidebarDropdownWrapper>
+			<SidebarDropdownWrapper
+				btnClass={dropdownWrapperClass}
+				label="Utility"
+				isOpen={page.url.pathname.includes('/luna/utility')}
+			>
+				<svelte:fragment slot="icon">
+					<i class="fa-solid fa-wrench"></i>
+				</svelte:fragment>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="TransitionToggleRepeat"
+					href="/luna/utility/transitiontogglerepeat"
+					active={page.url.pathname === '/luna/utility/transitiontogglerepeat'}
+				/>
+			</SidebarDropdownWrapper>
 		</SidebarGroup>
 		<SidebarGroup border {borderClass}>
 			<SidebarDropdownWrapper
