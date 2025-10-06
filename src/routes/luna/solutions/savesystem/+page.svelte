@@ -202,6 +202,13 @@
 		</div>
 	</div>
 
+	<P class="pt-4">
+		For detailed UI implementation examples, see:
+		<A color="text-sky-400 font-extrabold" href="/luna/views/mainmenu">Main Menu</A> and 
+		<A color="text-sky-400 font-extrabold" href="/luna/views/saveload">Save & Load</A> views. 
+		Also available is the <A color="text-sky-400 font-extrabold" href="/luna/views/autosave">Autosave Notification</A> utility UI.
+	</P>
+
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Implementation Examples</Heading
 	>

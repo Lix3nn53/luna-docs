@@ -29,7 +29,7 @@
 	<title>{status} - {message}</title>
 </svelte:head>
 
-<div class="min-h-screen bg-stone-700 text-stone-50 flex items-center justify-center">
+<div class="flex-1 flex items-center justify-center">
 	<div class="text-center px-4">
 		<h1 class="text-9xl font-bold text-violet-400 mb-4">{status}</h1>
 		<h2 class="text-2xl font-semibold mb-6 text-stone-100">{message}</h2>
