@@ -15,7 +15,7 @@
 	<P class="mb-2">Don't forget to set the active localization settings.</P>
 	<img alt="samples" src={CreateLocalizationSettings} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />
 	<P class="mb-2">
-		Refer to <A color="text-sky-400 font-extrabold" href="/luna/framework/localization"
+		Refer to <A color="text-sky-400 font-extrabold" href="/uitkguide/localization"
 			>localization</A
 		> for more info.
 	</P>

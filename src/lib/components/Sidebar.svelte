@@ -201,20 +201,6 @@
 					href="/luna/framework/uinavigation"
 					active={page.url.pathname === '/luna/framework/uinavigation'}
 				/>
-				<SidebarDropdownItem
-					aClass={dropdownItemClass}
-					activeClass={dropdownActiveClass}
-					label="Localization"
-					href="/luna/framework/localization"
-					active={page.url.pathname === '/luna/framework/localization'}
-				/>
-				<SidebarDropdownItem
-					aClass={dropdownItemClass}
-					activeClass={dropdownActiveClass}
-					label="Drag & Drop"
-					href="/luna/framework/dragdrop"
-					active={page.url.pathname === '/luna/framework/dragdrop'}
-				/>
 			</SidebarDropdownWrapper>
 			<SidebarDropdownWrapper
 				btnClass={dropdownWrapperClass}
@@ -507,6 +493,22 @@
 			</SidebarDropdownWrapper>
 			<SidebarDropdownWrapper
 				btnClass={dropdownWrapperClass}
+				label="Solutions"
+				isOpen={page.url.pathname.includes('/luna/solutions')}
+			>
+				<svelte:fragment slot="icon">
+					<i class="fa-solid fa-lightbulb"></i>
+				</svelte:fragment>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Save System"
+					href="/luna/solutions/savesystem"
+					active={page.url.pathname === '/luna/solutions/savesystem'}
+				/>
+			</SidebarDropdownWrapper>
+			<SidebarDropdownWrapper
+				btnClass={dropdownWrapperClass}
 				label="Utility"
 				isOpen={page.url.pathname.includes('/luna/utility')}
 			>
@@ -519,6 +521,13 @@
 					label="TransitionToggleRepeat"
 					href="/luna/utility/transitiontogglerepeat"
 					active={page.url.pathname === '/luna/utility/transitiontogglerepeat'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Drag & Drop"
+					href="/luna/utility/dragdrop"
+					active={page.url.pathname === '/luna/utility/dragdrop'}
 				/>
 			</SidebarDropdownWrapper>
 		</SidebarGroup>
@@ -558,6 +567,13 @@
 					label="Masking"
 					href="/uitkguide/masking"
 					active={page.url.pathname === '/uitkguide/masking'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Localization"
+					href="/uitkguide/localization"
+					active={page.url.pathname === '/uitkguide/localization'}
 				/>
 			</SidebarDropdownWrapper>
 		</SidebarGroup>
