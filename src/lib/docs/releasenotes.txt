@@ -1,3 +1,17 @@
+# [1.2.3]
+## New Features
+- New Sample "GameFull": This sample combines GameStandart with Localization and Newtonsoft samples. Adding localization and working save load system.
+- Improved Main Menu in Game Samples.
+- SpeechBubble Tail: Added optional tails that can be positioned on any corner.
+## New Documentation
+- TransitionToggleRepeat: helps you loop UI Toolkit transitions effortlessly by toggling a USS class at the end of each transition. Use it to create repeating animations like pulsing buttons, bouncing icons, or rotating avatars without coroutines. (https://www.docs.cupkek.games/luna/utility/transitiontogglerepeat)
+- Save System: https://www.docs.cupkek.games/luna/solutions/savesystem
+- Newtonsoft Save Implementation Sample: https://www.docs.cupkek.games/luna/samples/newtonsoft
+- Localization: https://www.docs.cupkek.games/uitkguide/localization
+## Fixes
+- USS Cursor: fix uss cursor styling error.
+- AddressabeAssetManager: Also release the AssetReference's internal operation to prevent "already loaded" errors in DestroyAllThenRelease function.
+
 # [1.2.2]
 ## New Features
 - InputPrompt: Local multiplayer support via PlayerInputManager. See documentation for more info: https://www.docs.cupkek.games/luna/framework/uimanager
