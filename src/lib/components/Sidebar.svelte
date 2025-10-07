@@ -111,9 +111,16 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Game"
-					href="/luna/samples/game"
-					active={page.url.pathname === '/luna/samples/game'}
+					label="Game Full"
+					href="/luna/samples/gamefull"
+					active={page.url.pathname === '/luna/samples/gamefull'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Game Standard"
+					href="/luna/samples/gamestandard"
+					active={page.url.pathname === '/luna/samples/gamestandard'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
