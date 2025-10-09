@@ -24,6 +24,9 @@
     Unity Localization: UI Toolkit
     <i class="fa-solid fa-up-right-from-square ms-2 flex items-center"></i>
   </Button  >
+  <div class="flex w-full items-center justify-center my-8">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/TTimh8e3qVg?si=-UhT6f_gvmCpXxcO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
   <Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl">Guide</Heading>
   <Heading tag="h3" class="my-2" customSize="text-lg font-bold md:text-xl lg:text-2xl ml-2">UI Builder authoring</Heading>
   <P class="mb-4">You can use the UI Builder to create and fine-tune UI assets and their associated data bindings, including localization data bindings. You can connect to visual element attribute fields or styles. You can also address mismatched data types smoothly by creating your own converters for data type conversion.</P>
