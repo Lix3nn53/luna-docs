@@ -7,7 +7,7 @@
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl"
-	>Solutions/ Drag & Drop</Heading
+	>Utility/ Drag & Drop</Heading
 >
 <div class="p-4">
 	<img alt="draganddrop" src={draganddrop} class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4" />

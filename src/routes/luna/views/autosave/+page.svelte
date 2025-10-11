@@ -30,5 +30,5 @@
 		src={autosavegif}
 		class="mb-6 xl:max-w-xl max-w-full rounded-xl border-4"
 	/>
-	<P>An autosave notification that integrates with the <A color="text-sky-400 font-extrabold" href="/luna/solutions/savesystem">Game Save Manager</A> and utilizes the <A color="text-sky-400 font-extrabold" href="/luna/framework/examplemultipage">Radial Loading</A> component.</P>
+	<P>An autosave notification that integrates with the <A color="text-sky-400 font-extrabold" href="/systems/savesystem">Game Save Manager</A> and utilizes the <A color="text-sky-400 font-extrabold" href="/luna/framework/examplemultipage">Radial Loading</A> component.</P>
 </div>

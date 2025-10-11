@@ -6,7 +6,7 @@
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl"
-	>Solutions/ Save System</Heading
+	>Systems/ Save System</Heading
 >
 <div class="p-4">
 	<P>

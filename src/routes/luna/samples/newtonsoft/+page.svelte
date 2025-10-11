@@ -14,7 +14,7 @@
 	</P>
 
 	<P class="pt-4">
-		Refer to <A color="text-sky-400 font-extrabold" href="/luna/solutions/savesystem">Save System Framework</A> to learn about the UI-agnostic save system architecture.
+		Refer to <A color="text-sky-400 font-extrabold" href="/systems/savesystem">Save System Framework</A> to learn about the UI-agnostic save system architecture.
 	</P>
 
 	<Alert border class="my-4">

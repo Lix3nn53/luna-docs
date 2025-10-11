@@ -1,3 +1,16 @@
+# [1.3.0]
+## World Space Support for 6.2
+- Tooltip: Position calculation now works correctly in world-space UI. A new demo scene has been added to the Components sample.
+- Drag & Drop: Position calculation now works correctly in world-space UI. A new demo scene has been added to the Components sample.
+## Shader Demos for Unity 6.3
+- RPGDemo: Added a new RPGDemo to the Components sample. This demo showcases diablo health and mana orb, skill slots with cooldown wipe and tooltip. A showcase video is available on the store page.
+- Shader Effects Demo: Demo scene showcasing shader effects. Shiny visual effect. More effects will be added over time.
+## New Features
+- ProgressBar: Visuals are now fully customizable. In the new RPGDemo, the progress bar uses shaders entirely instead of visual elements while still taking advantage of features such as indicator.
+- Default Tooltip: Added a new visual element slot named AbsoluteBackground. TooltipContainerSetup has new paramater for absoluteBackground. This is also used in RPGDemo for custom tooltip background.
+- Pie Chart: Calculates the center of each segment, allowing you to position custom elements such as labels. The Pie Chart demo in the Components sample has been updated.
+- UITKCoordinateUtility: new static class that has a bunch of utility functions.
+
 # [1.2.3]
 ## New Features
 - New Sample "GameFull": This sample combines GameStandart with Localization and Newtonsoft samples. Adding localization and working save load system.
@@ -5,7 +18,7 @@
 - SpeechBubble Tail: Added optional tails that can be positioned on any corner.
 ## New Documentation
 - TransitionToggleRepeat: helps you loop UI Toolkit transitions effortlessly by toggling a USS class at the end of each transition. Use it to create repeating animations like pulsing buttons, bouncing icons, or rotating avatars without coroutines. (https://www.docs.cupkek.games/luna/utility/transitiontogglerepeat)
-- Save System: https://www.docs.cupkek.games/luna/solutions/savesystem
+- Save System: https://www.docs.cupkek.games/systems/savesystem
 - Newtonsoft Save Implementation Sample: https://www.docs.cupkek.games/luna/samples/newtonsoft
 - Localization: https://www.docs.cupkek.games/uitkguide/localization
 ## Fixes

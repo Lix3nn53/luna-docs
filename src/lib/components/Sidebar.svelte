@@ -500,22 +500,6 @@
 			</SidebarDropdownWrapper>
 			<SidebarDropdownWrapper
 				btnClass={dropdownWrapperClass}
-				label="Solutions"
-				isOpen={page.url.pathname.includes('/luna/solutions')}
-			>
-				<svelte:fragment slot="icon">
-					<i class="fa-solid fa-lightbulb"></i>
-				</svelte:fragment>
-				<SidebarDropdownItem
-					aClass={dropdownItemClass}
-					activeClass={dropdownActiveClass}
-					label="Save System"
-					href="/luna/solutions/savesystem"
-					active={page.url.pathname === '/luna/solutions/savesystem'}
-				/>
-			</SidebarDropdownWrapper>
-			<SidebarDropdownWrapper
-				btnClass={dropdownWrapperClass}
 				label="Utility"
 				isOpen={page.url.pathname.includes('/luna/utility')}
 			>
@@ -537,6 +521,13 @@
 					active={page.url.pathname === '/luna/utility/dragdrop'}
 				/>
 			</SidebarDropdownWrapper>
+			<SidebarItem
+				class={itemClass}
+				{activeClass}
+				{nonActiveClass}
+				label="Release Notes"
+				href="/luna/releasenotes"
+			/>
 		</SidebarGroup>
 		<SidebarGroup border {borderClass}>
 			<SidebarDropdownWrapper
@@ -649,14 +640,14 @@
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Game Save Manager"
-					href="/systems/gamesavemanager"
-					active={page.url.pathname === '/systems/gamesavemanager'}
+					label="Save System"
+					href="/systems/savesystem"
+					active={page.url.pathname === '/systems/savesystem'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
-					label="Game Settings System"
+					label="Settings System"
 					href="/systems/gamesettings"
 					active={page.url.pathname === '/systems/gamesettings'}
 				/>
