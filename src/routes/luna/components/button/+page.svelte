@@ -40,7 +40,9 @@
 <!-- MASKED -->
 <engine:Button class="btn btn-xl violet masked" />
 <!-- SHADE -->
-<engine:Button class="btn btn-xl violet shade" />`}
+<engine:Button class="btn btn-xl violet shade" />
+<!-- OUTLINE -->
+<engine:Button class="btn btn-xl violet outline" />`}
 		showHeader={false}
 		showLineNumbers={false}
 		background="bg-zinc-900"
@@ -116,6 +118,13 @@
 					>Similar to ghost, but with a semi-transparent black background that is always visible, not
 					just on hover. The text color does not change on hover. Combine with ghost to also change
 					text color on hover.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>outline</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>A class which gives the button a border in the color of the
+					button's color class. The text color matches the border color.</TableBodyCell
 				>
 			</TableBodyRow>
 		</TableBody>
