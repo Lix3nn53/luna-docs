@@ -38,7 +38,9 @@
 <!-- GHOST -->
 <engine:Button class="btn btn-xl violet ghost" />
 <!-- MASKED -->
-<engine:Button class="btn btn-xl violet masked" />`}
+<engine:Button class="btn btn-xl violet masked" />
+<!-- SHADE -->
+<engine:Button class="btn btn-xl violet shade" />`}
 		showHeader={false}
 		showLineNumbers={false}
 		background="bg-zinc-900"
@@ -106,6 +108,13 @@
 					>A class which gives the button a transparent background. Upon hover and focus states, the
 					background changes to whichever color class the button was given and text color remains
 					the same.</TableBodyCell
+				>
+			</TableBodyRow>
+			<TableBodyRow color="custom" class={tdrowClass}>
+				<TableBodyCell {tdClass}>shade</TableBodyCell>
+				<TableBodyCell {tdClass}
+					>Similar to ghost, but with a semi-transparent black background that is always visible, not
+					just on hover. The text color changes to be whichever color class the button was given.</TableBodyCell
 				>
 			</TableBodyRow>
 		</TableBody>
