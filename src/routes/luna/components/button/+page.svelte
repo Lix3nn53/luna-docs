@@ -114,7 +114,8 @@
 				<TableBodyCell {tdClass}>shade</TableBodyCell>
 				<TableBodyCell {tdClass}
 					>Similar to ghost, but with a semi-transparent black background that is always visible, not
-					just on hover. The text color changes to be whichever color class the button was given.</TableBodyCell
+					just on hover. The text color does not change on hover. Combine with ghost to also change
+					text color on hover.</TableBodyCell
 				>
 			</TableBodyRow>
 		</TableBody>
