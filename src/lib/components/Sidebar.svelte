@@ -520,6 +520,13 @@
 					href="/luna/utility/dragdrop"
 					active={page.url.pathname === '/luna/utility/dragdrop'}
 				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="ListViewWrapper"
+					href="/luna/utility/listviewwrapper"
+					active={page.url.pathname === '/luna/utility/listviewwrapper'}
+				/>
 			</SidebarDropdownWrapper>
 			<SidebarItem
 				class={itemClass}

@@ -2,6 +2,7 @@
 ## New Features
 - Button: Added "shade" style class. Similar to ghost but with a semi-transparent black background that is always visible, not just on hover.
 - Button: Added "outline" style class. Gives the button a border in the color of the button's color class.
+- ListViewWrapper: New utility class that provides keyboard navigation functionality for Unity's ListView component. Prevents individual list items from receiving focus and handles Up/Down/Next/Previous navigation between items, making keyboard navigation feel natural. See documentation: https://www.docs.cupkek.games/luna/utility/listviewwrapper
 ## Fixes
 - Luna.TabView: Fix "No player input found" spamming in editor.
 - SceneLoaderAddressable: Cleanup OnDestroy so you don't get "Attempting to load AssetReference Scene that has already been loaded." error in editor.

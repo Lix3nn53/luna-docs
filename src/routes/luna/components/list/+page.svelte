@@ -1,5 +1,5 @@
 <script>
-	import { Heading, P, A, Mark, Secondary, GradientButton, Hr } from 'flowbite-svelte';
+	import { Heading, P, A, Mark, Secondary, GradientButton, Hr, Alert } from 'flowbite-svelte';
 	import listImg from '$lib/img/docs/components/list.png';
 
 	import { CodeBlock } from 'svhighlight';
@@ -42,6 +42,16 @@
 		background="bg-zinc-900"
 		headerClasses="bg-zinc-800 text-white/80 text-xs font-bold"
 	/>
+	<Alert border class="my-4">
+		<div class="flex flex-row">
+			<i class="fa-solid fa-circle-info fa-2xl mr-4 mt-4"></i>
+			<div>
+				<P class="mb-2">
+					This page shows visual styling examples for ListView components. For functional keyboard navigation and focus management, refer to <A color="text-sky-400 font-extrabold" href="/luna/utility/listviewwrapper">ListViewWrapper</A>.
+				</P>
+			</div>
+		</div>
+	</Alert>
 	<Heading tag="h2" class="my-4" customSize="text-xl font-bold md:text-2xl lg:text-3xl"
 		>Colors</Heading
 	>
