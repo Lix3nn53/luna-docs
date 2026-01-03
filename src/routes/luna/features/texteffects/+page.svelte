@@ -3,7 +3,7 @@
   import { onMount } from 'svelte';
   import { marked } from 'marked';
   import texteffects from '$lib/docs/texteffects.txt?raw';
-  import textEffectsGif from '$lib/img/docs/features/TextEffects.gif';
+  import textEffectsGif from '$lib/img/docs/features/TextEffects.webp';
 
   let parsedContent: string = '';
 

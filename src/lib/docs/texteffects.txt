@@ -90,7 +90,6 @@ Text effects work with all dialogue text reveal modes:
 
 - **VertexReveal**: Effects only apply to revealed glyphs (recommended)
 - **Default**: Effects apply to all text as it's typed
-- **Visibility**: Effects apply to all text as it's typed
 - **Instant**: Effects apply immediately to all text
 
 ### Important Notes
@@ -765,4 +764,3 @@ Text Effects in Luna UI provide a powerful and easy-to-use system for animating 
 - Effects coordinate with text reveal automatically
 
 Happy animating! 🎨
-
