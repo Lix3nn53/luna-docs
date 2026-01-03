@@ -1,0 +1,768 @@
+# Text Effects User Guide
+
+Luna UI's Text Effects system allows you to add dynamic animations to text using rich text tags. This guide covers everything you need to know to use text effects in your Unity projects.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Quick Start](#quick-start)
+- [Usage with Dialogue System](#usage-with-dialogue-system)
+- [Usage without Dialogue System](#usage-without-dialogue-system)
+- [Available Effects](#available-effects)
+- [Common Parameters](#common-parameters)
+- [Combining Effects](#combining-effects)
+- [Examples](#examples)
+- [Troubleshooting](#troubleshooting)
+
+---
+
+## Overview
+
+Text Effects in Luna UI provide 12 different animation effects that can be applied to text using simple rich text tags. Effects are parsed from the text, applied to glyphs, and animated in real-time using Unity's UI Toolkit vertex manipulation.
+
+### Key Features
+
+- **12 Different Effects**: Pendulum, Dangle, Fade, Rainbow, Rotate, Bounce, Slide, Swing, Wave, Increase Size, Shake, and Wiggle
+- **Rich Text Tags**: Simple XML-like syntax for easy integration
+- **Automatic Integration**: Works seamlessly with DialogueController
+- **Standalone Component**: Can be used independently with TextEffectComponent
+- **Effect Nesting**: Combine multiple effects for complex animations
+- **Text Reveal Support**: Effects coordinate with text reveal animations
+
+---
+
+## Quick Start
+
+### Basic Syntax
+
+All text effects use the same basic syntax:
+
+```xml
+<effectname parameter="value">Your text here</effectname>
+```
+
+**Example:**
+
+```xml
+<wave startoffset="-10" endoffset="10">Wavy Text</wave>
+```
+
+### Simple Example
+
+```xml
+Hello <rainb durationperchar="1.0">World</rainb>!
+```
+
+This creates a rainbow effect on the word "World" while keeping "Hello" and "!" normal.
+
+---
+
+## Usage with Dialogue System
+
+The Dialogue System automatically supports text effects. Simply include effect tags in your dialogue text, and they will be parsed and applied automatically.
+
+### Setup
+
+No additional setup is required! The `DialogueController` automatically:
+
+1. Parses effect tags from dialogue text
+2. Initializes text effects
+3. Coordinates effects with text reveal
+4. Removes tags from displayed text
+
+### Example with Ink Dialogue
+
+```ink
+Character: This text has a <pend startangle="-20" endangle="20">pendulum</pend> effect!
+Character: Watch this <rainb durationperchar="1.0">rainbow</rainb> text cycle through colors!
+```
+
+### Example with Code
+
+```csharp
+string dialogueText = "This text will <shake maxxamplitude="5" maxyamplitude="5">shake</shake>!";
+dialogueController.Play(dialogueText);
+```
+
+### Text Reveal Modes
+
+Text effects work with all dialogue text reveal modes:
+
+- **VertexReveal**: Effects only apply to revealed glyphs (recommended)
+- **Default**: Effects apply to all text as it's typed
+- **Visibility**: Effects apply to all text as it's typed
+- **Instant**: Effects apply immediately to all text
+
+### Important Notes
+
+- Effect tags are automatically removed from the displayed text
+- Effects coordinate with text reveal - they only animate revealed characters
+- You can combine effects by nesting tags
+- Effects work with other rich text tags (color, size, etc.)
+
+---
+
+## Usage without Dialogue System
+
+To use text effects on static labels (not in dialogue), use the `TextEffectComponent`.
+
+### Setup Steps
+
+1. **Add TextEffectComponent to your GameObject**
+
+   - Select the GameObject with your UIDocument
+   - Add Component → `TextEffectComponent`
+
+2. **Configure the Component**
+
+   - **UIDocument**: Reference to your UIDocument (auto-detected if on same GameObject)
+   - **Label Selector**: Configure which labels should have effects applied
+     - **Type**: Select "Name" to target by name, "Class" for USS classes, etc.
+     - **Value**: Enter the name/class/value to match
+
+3. **Add Effect Tags to Your Label Text**
+   - Set the label's text property with effect tags
+   - Effects are applied automatically when the component starts
+
+### Example Setup
+
+**In Unity Editor:**
+
+1. Create a UIDocument GameObject
+2. Add a Label element with name "TitleLabel"
+3. Add `TextEffectComponent` to the GameObject
+4. Set Label Selector Type to "Name"
+5. Set Label Selector Value to "TitleLabel"
+6. Set the Label's text to: `Welcome to <rainb durationperchar="1.0">Luna UI</rainb>!`
+
+**In Code:**
+
+```csharp
+using UnityEngine;
+using UnityEngine.UIElements;
+using CupkekGames.Luna.TextAnimation;
+
+public class MyUI : MonoBehaviour
+{
+    private UIDocument uiDocument;
+    private TextEffectComponent effectComponent;
+
+    void Start()
+    {
+        uiDocument = GetComponent<UIDocument>();
+        effectComponent = GetComponent<TextEffectComponent>();
+
+        // Set text with effects
+        Label titleLabel = uiDocument.rootVisualElement.Q<Label>("TitleLabel");
+        titleLabel.text = "Welcome to <rainb durationperchar=\"1.0\">Luna UI</rainb>!";
+
+        // Apply effects (or they'll be applied automatically in Start)
+        effectComponent.ApplyEffects();
+    }
+}
+```
+
+### Dynamic Text Updates
+
+When you change a label's text at runtime, call `ApplyEffects()` to re-apply effects:
+
+```csharp
+// Update text
+myLabel.text = "New <wave>text</wave> with effects";
+
+// Re-apply effects
+textEffectComponent.ApplyEffects();
+```
+
+### Element Selector Configuration
+
+The `ElementSelector` allows you to target specific labels:
+
+- **By Name**: `Type = "Name"`, `Value = "MyLabel"`
+- **By Class**: `Type = "Class"`, `Value = "effect-label"`
+- **By Type**: `Type = "Type"`, `Value = "Label"` (targets all labels)
+
+---
+
+## Available Effects
+
+### 1. Pendulum (`<pend>`)
+
+Creates a swinging pendulum motion where text rotates around its top center point.
+
+**Parameters:**
+
+- `startangle` (float, default: -15) - Starting rotation angle in degrees
+- `endangle` (float, default: 15) - Ending rotation angle in degrees
+- `damping` (float, default: 0.05) - Damping factor (0 = no damping, higher = more damping)
+- `centeroffsetx` (float, default: 0) - Horizontal offset of rotation center
+- `centeroffsety` (float, default: -40) - Vertical offset of rotation center (negative = up)
+- `durationperchar` (float, default: 0.5) - Duration of animation per character
+- `animationtype` (string, default: "pingpong") - Animation type: "pingpong", "loop", "onetime"
+
+**Example:**
+
+```xml
+<pend startangle="-20" endangle="20">Swinging Text</pend>
+```
+
+**Notes:**
+
+- All glyphs animate together synchronously
+- Uses damped sine wave for realistic pendulum motion
+- Damping reduces amplitude over time
+
+---
+
+### 2. Dangle (`<dangle>`)
+
+Creates a spring-like dangle motion where text oscillates vertically with gravity effects.
+
+**Parameters:**
+
+- `startoffset` (float, default: -10) - Starting vertical offset in pixels
+- `endoffset` (float, default: 10) - Ending vertical offset in pixels
+- `speed` (float, default: 1.0) - Speed of oscillation (cycles per second)
+- `gravity` (float, default: 9.8) - Gravity effect strength
+- `damping` (float, default: 0.9) - Damping factor (0-1, higher = less damping)
+- `durationperchar` (float, default: 0.5) - Duration of animation per character
+- `timebetweenchars` (float, default: 0.05) - Delay between characters starting animation
+
+**Example:**
+
+```xml
+<dangle startoffset="-12" endoffset="12">Dangling Text</dangle>
+```
+
+**Notes:**
+
+- Each glyph animates with a slight delay for wave propagation
+- Includes gravity acceleration over time
+- Uses exponential decay with cosine wave
+
+---
+
+### 3. Fade (`<fade>`)
+
+Smoothly fades text opacity between minimum and maximum values.
+
+**Parameters:**
+
+- `startalpha` (float, default: 0.0) - Starting alpha (0-1)
+- `endalpha` (float, default: 1.0) - Ending alpha (0-1)
+- `durationperchar` (float, default: 0.5) - Duration of fade cycle per character
+- `timebetweenchars` (float, default: 0.05) - Delay between characters starting animation
+- `animationtype` (string, default: "pingpong") - Animation type
+
+**Example:**
+
+```xml
+<fade startalpha="0.3" endalpha="1.0">Fading Text</fade>
+```
+
+**Notes:**
+
+- Preserves original color, only modifies alpha channel
+- Each glyph animates with a slight delay for wave propagation
+- Uses sine wave interpolation between min and max alpha
+
+---
+
+### 4. Rainbow (`<rainb>`)
+
+Cycles text through colors, supporting multiple color modes.
+
+**Parameters:**
+
+- `durationperchar` (float, default: 0.5) - Duration of color cycle per character
+- `colormode` (int, default: 0) - Color mode:
+  - `0` = Rainbow (HSV hue cycling)
+  - `1` = Gradient (custom color stops)
+  - `2` = Between Two Colors (simple gradient)
+  - `3` = Only Alpha (alpha fade only)
+- `speed` (float, default: 1.0) - Speed of color cycling (Rainbow mode only)
+- `saturation` (float, default: 1.0) - Color saturation 0-1 (Rainbow mode only)
+- `brightness` (float, default: 1.0) - Color brightness 0-1 (Rainbow mode only)
+- `color1`, `color2`, `color3`, `color4` (string) - Custom colors (Gradient/BetweenTwoColors modes)
+  - Supports hex: `"FF0000"` or `"#FF0000"`
+  - Supports RGB: `"255,0,0"` or `"1,0,0"`
+  - Supports named: `"red"`, `"blue"`, `"green"`, etc.
+- `startalpha` (float, default: 0) - Starting alpha for Alpha mode (0-1)
+- `endalpha` (float, default: 1) - Ending alpha for Alpha mode (0-1)
+- `timebetweenchars` (float, default: 0.05) - Delay between characters starting animation
+
+**Examples:**
+
+**Rainbow Mode (Default):**
+
+```xml
+<rainb durationperchar="1.0">Rainbow Text</rainb>
+```
+
+**Custom Gradient (3 colors):**
+
+```xml
+<rainb durationperchar="1.0" colormode="1" color1="FF0000" color2="00FF00" color3="0000FF">Custom Gradient</rainb>
+```
+
+**Two Colors:**
+
+```xml
+<rainb durationperchar="1.0" colormode="2" color1="red" color2="blue">Two Colors</rainb>
+```
+
+**Alpha Fade:**
+
+```xml
+<rainb colormode="3" startalpha="0" endalpha="1">Alpha Fade</rainb>
+```
+
+**Notes:**
+
+- Rainbow mode uses HSV color space for smooth transitions
+- Creates spatial gradient based on glyph index
+- All glyphs use same elapsed time to maintain consistent gradient
+
+---
+
+### 5. Rotate (`<rot>`)
+
+Rotates text around its center point, either continuously or as a one-time rotation.
+
+**Parameters:**
+
+- `startangle` (float, default: -15) - Starting rotation angle in degrees
+- `endangle` (float, default: 15) - Ending rotation angle in degrees
+- `loop` (float, default: 0) - If > 0.5, continuous rotation in one direction
+- `centeroffsetx` (float, default: 0) - Horizontal offset of rotation center
+- `centeroffsety` (float, default: 0) - Vertical offset of rotation center
+- `durationperchar` (float, default: 0.5) - Duration of rotation per character
+- `animationtype` (string, default: "pingpong") - Animation type
+
+**Example:**
+
+```xml
+<rot startangle="0" endangle="360" animationtype="loop" loop="1" durationperchar="2.0">Rotating</rot>
+```
+
+**Notes:**
+
+- Continuous mode: rotates endlessly in one direction
+- PingPong mode: oscillates between start and end angles
+- Each glyph animates with a slight delay for wave propagation (unless loop is enabled)
+
+---
+
+### 6. Bounce (`<bounce>`)
+
+Creates an upward bouncing motion with decay, like a ball bouncing.
+
+**Parameters:**
+
+- `startoffset` (float, default: 0) - Starting vertical offset in pixels
+- `endoffset` (float, default: -10) - Ending vertical offset in pixels (negative = up)
+- `decay` (float, default: 0.8) - Decay factor (0-1, lower = faster decay)
+- `speed` (float, default: 2.0) - Bounce frequency (cycles per second)
+- `durationperchar` (float, default: 0.5) - Duration of bounce per character
+- `timebetweenchars` (float, default: 0.05) - Delay between characters starting animation
+
+**Example:**
+
+```xml
+<bounce startoffset="0" endoffset="-10" decay="0">Bouncing Text</bounce>
+```
+
+**Notes:**
+
+- Uses absolute value of sine wave for upward-only bounce
+- Exponential decay reduces bounce height over time
+- Each glyph animates with a slight delay for wave propagation
+
+---
+
+### 7. Slide (`<slideh>`)
+
+Slides text horizontally or vertically, either continuously or as a one-time slide-in.
+
+**Parameters:**
+
+- `startoffsetx` (float, default: -10) - Starting horizontal offset in pixels
+- `endoffsetx` (float, default: 0) - Ending horizontal offset in pixels
+- `startoffsety` (float, default: 0) - Starting vertical offset in pixels
+- `endoffsety` (float, default: 0) - Ending vertical offset in pixels
+- `durationperchar` (float, default: 0.5) - Duration of slide per character
+- `timebetweenchars` (float, default: 0.05) - Delay between characters starting animation
+- `animationtype` (string, default: "pingpong") - Animation type
+
+**Example:**
+
+```xml
+<slideh startoffsetx="-10">Sliding Text</slideh>
+```
+
+**Notes:**
+
+- Continuous mode: oscillates back and forth
+- One-time mode: slides from start to end position
+- Each glyph animates with a slight delay for wave propagation
+
+---
+
+### 8. Swing (`<swing>`)
+
+Creates an arc-like swinging motion combining horizontal and vertical movement.
+
+**Parameters:**
+
+- `startangle` (float, default: -15) - Starting swing angle in degrees
+- `endangle` (float, default: 15) - Ending swing angle in degrees
+- `amplitude` (float, default: 20.0) - Maximum swing distance in pixels
+- `durationperchar` (float, default: 0.5) - Duration of swing per character
+- `timebetweenchars` (float, default: 0.05) - Delay between characters starting animation
+- `animationtype` (string, default: "pingpong") - Animation type
+
+**Example:**
+
+```xml
+<swing startangle="-15" endangle="15">Swinging Text</swing>
+```
+
+**Notes:**
+
+- Combines horizontal and vertical offsets based on angle
+- Creates curved arc motion
+- Each glyph animates with a slight delay for wave propagation
+
+---
+
+### 9. Wave (`<wave>`)
+
+Creates a smooth sine wave motion that propagates through the text.
+
+**Parameters:**
+
+- `startoffset` (float, default: -10) - Starting vertical offset in pixels
+- `endoffset` (float, default: 10) - Ending vertical offset in pixels
+- `frequency` (float, default: 1.0) - Wave frequency (affects spacing between peaks)
+- `durationperchar` (float, default: 0.5) - Duration of wave per character
+- `timebetweenchars` (float, default: 0.05) - Delay between characters starting animation
+- `animationtype` (string, default: "pingpong") - Animation type
+
+**Example:**
+
+```xml
+<wave startoffset="-10" endoffset="10" frequency="1.5">Wavy Text</wave>
+```
+
+**Notes:**
+
+- Classic sine wave propagation effect
+- Each glyph has a phase offset based on its index
+- Creates smooth wave motion across the text
+
+---
+
+### 10. Increase Size (`<incr>`)
+
+Pulsates text size between minimum and maximum scale values.
+
+**Parameters:**
+
+- `startscale` (float, default: 0.8) - Starting scale (1.0 = normal size)
+- `endscale` (float, default: 1.2) - Ending scale
+- `durationperchar` (float, default: 0.5) - Duration of pulsation per character
+- `timebetweenchars` (float, default: 0.05) - Delay between characters starting animation
+- `animationtype` (string, default: "pingpong") - Animation type
+
+**Example:**
+
+```xml
+<incr startscale="0.8" endscale="1.2" animationtype="pingpong">Pulsing Text</incr>
+```
+
+**Notes:**
+
+- Continuous mode: oscillates between min and max scale
+- One-time mode: grows from min to max scale
+- Scales from glyph center point
+- Each glyph animates with a slight delay for wave propagation
+
+---
+
+### 11. Shake (`<shake>`)
+
+Applies random shaking motion to each character independently.
+
+**Parameters:**
+
+- `maxxamplitude` (float, default: 5.0) - Maximum horizontal shake offset in pixels
+- `maxyamplitude` (float, default: 5.0) - Maximum vertical shake offset in pixels
+- `minwait` (float, default: 0.1) - Minimum time between random updates (seconds)
+- `maxwait` (float, default: 0.15) - Maximum time between random updates (seconds)
+- `speed` (float, default: 10.0) - Frequency of random updates (updates per second)
+
+**Example:**
+
+```xml
+<shake maxxamplitude="5" maxyamplitude="5">Shaking Text</shake>
+```
+
+**Notes:**
+
+- Each glyph maintains its own random offset state
+- Random offsets update periodically based on speed
+- Shake is applied to all vertices of each glyph independently
+- Creates chaotic vibration effect
+
+---
+
+### 12. Wiggle (`<wiggle>`)
+
+Creates small, smooth wiggling motions using sine and cosine waves.
+
+**Parameters:**
+
+- `startoffsetx` (float, default: -3) - Starting horizontal offset in pixels
+- `startoffsety` (float, default: -2) - Starting vertical offset in pixels
+- `endoffsetx` (float, default: 3) - Ending horizontal offset in pixels
+- `endoffsety` (float, default: 2) - Ending vertical offset in pixels
+- `frequency` (float, default: 2.0) - Wiggle frequency (affects pattern variation)
+- `durationperchar` (float, default: 0.5) - Duration of wiggle per character
+- `timebetweenchars` (float, default: 0.05) - Delay between characters starting animation
+- `animationtype` (string, default: "pingpong") - Animation type
+
+**Example:**
+
+```xml
+<wiggle startoffsetx="-3" startoffsety="-2" endoffsetx="3" endoffsety="2" frequency="2">Wiggling Text</wiggle>
+```
+
+**Notes:**
+
+- Uses combined sine/cosine waves for organic motion
+- Creates small, subtle movements
+- Each glyph animates with a slight delay for wave propagation
+
+---
+
+## Common Parameters
+
+Most effects support these common parameters:
+
+### Timing Parameters
+
+- **`durationperchar`** (float, default: 0.5)
+
+  - Duration of animation per character in seconds
+  - Lower values = faster animation
+  - Higher values = slower animation
+
+- **`timebetweenchars`** (float, default: 0.05)
+
+  - Delay between characters starting their animation in seconds
+  - Creates wave propagation effect
+  - Set to 0 for simultaneous start
+
+- **`nodelayforchars`** (bool, default: false)
+  - If true, all characters start animating at the same time
+  - Useful for effects that should animate as a unit (like pendulum)
+
+### Animation Type
+
+- **`animationtype`** (string, default: "pingpong")
+  - **`"pingpong"`** or `"0"`: Oscillates back and forth (default)
+  - **`"loop"`** or `"1"`: Loops continuously in one direction
+  - **`"onetime"`** or `"2"`: Plays once from start to end
+  - **`"loopfixedduration"`** or `"3"`: Loops with fixed duration
+
+**Example:**
+
+```xml
+<wave animationtype="loop">Continuously Waving</wave>
+<fade animationtype="onetime" startalpha="0" endalpha="1">Fade In Once</fade>
+```
+
+---
+
+## Combining Effects
+
+You can nest effects to combine multiple animations on the same text.
+
+### Basic Nesting
+
+```xml
+<wave durationperchar="0.67"><rainb durationperchar="1.0">Wavy Rainbow</rainb></wave>
+```
+
+### Multiple Nested Effects
+
+```xml
+<shake maxxamplitude="3" maxyamplitude="3" minwait="0.1" maxwait="0.15">
+  <wave durationperchar="0.67">Shaky Wavy</wave>
+</shake>
+```
+
+### Important Notes
+
+- Inner effects are applied first, then outer effects
+- Order matters: `<wave><rainb>text</rainb></wave>` applies rainbow first, then wave
+- Be careful with conflicting transformations (e.g., rotation + scale)
+- Performance: More nested effects = more computation per frame
+
+---
+
+## Examples
+
+### Dialogue Examples
+
+**Emphasized Speech:**
+
+```ink
+Character: I'm <shake maxxamplitude="3" maxyamplitude="3">angry</shake> about this!
+Character: This is <rainb durationperchar="1.0">amazing</rainb>!
+Character: Look at this <wave>wavy</wave> text!
+```
+
+**Emotional Text:**
+
+```ink
+Character: I'm so <bounce startoffset="0" endoffset="-10">excited</bounce>!
+Character: This makes me <fade startalpha="0.5" endalpha="1.0">happy</fade>.
+Character: I'm <shake maxxamplitude="5" maxyamplitude="5">shaking</shake> with fear!
+```
+
+### UI Label Examples
+
+**Animated Title:**
+
+```xml
+Welcome to <rainb durationperchar="1.0" colormode="2" color1="red" color2="blue">Luna UI</rainb>!
+```
+
+**Attention-Grabbing Button:**
+
+```xml
+<incr startscale="0.9" endscale="1.1" animationtype="pingpong">Click Me!</incr>
+```
+
+**Status Indicator:**
+
+```xml
+Status: <fade startalpha="0.3" endalpha="1.0">Online</fade>
+```
+
+### Complex Combinations
+
+**Animated Logo:**
+
+```xml
+<wave durationperchar="0.5">
+  <rainb durationperchar="1.0" colormode="1" color1="FF0000" color2="00FF00" color3="0000FF">
+    My Game
+  </rainb>
+</wave>
+```
+
+**Dramatic Text:**
+
+```xml
+<shake maxxamplitude="4" maxyamplitude="4">
+  <incr startscale="0.7" endscale="1.3" animationtype="pingpong">
+    WARNING!
+  </incr>
+</shake>
+```
+
+---
+
+## Troubleshooting
+
+### Effects Not Appearing
+
+**Problem:** Text effects aren't showing up.
+
+**Solutions:**
+
+1. Check that effect tags are properly closed: `<effect>text</effect>`
+2. Verify parameter names are correct (case-insensitive)
+3. For TextEffectComponent: Ensure the component is on the same GameObject as UIDocument
+4. For TextEffectComponent: Check that Label Selector matches your label
+5. Call `ApplyEffects()` after changing text at runtime
+
+### Effects Too Fast/Slow
+
+**Problem:** Animation speed doesn't match expectations.
+
+**Solutions:**
+
+1. Adjust `durationperchar` - lower = faster, higher = slower
+2. Adjust `timebetweenchars` - affects wave propagation speed
+3. For continuous effects, use `animationtype="loop"` with appropriate `durationperchar`
+
+### Effects Not Coordinating with Text Reveal
+
+**Problem:** Effects animate before text is revealed.
+
+**Solutions:**
+
+1. Use `DialogueAnimationMode.VertexReveal` in DialogueController
+2. Effects automatically coordinate with text reveal in this mode
+3. Ensure `TextRevealManager` is properly linked to `TextEffectManager`
+
+### Performance Issues
+
+**Problem:** Too many effects causing performance problems.
+
+**Solutions:**
+
+1. Limit the number of nested effects
+2. Use simpler effects (fade, rainbow) instead of complex ones (shake, wiggle)
+3. Reduce `durationperchar` to make effects complete faster
+4. Avoid applying effects to very long text strings
+
+### Parameter Not Working
+
+**Problem:** A parameter doesn't seem to have any effect.
+
+**Solutions:**
+
+1. Check parameter name spelling (case-insensitive but must match exactly)
+2. Verify parameter is supported by the effect (see effect documentation)
+3. Check parameter value range (e.g., alpha must be 0-1)
+4. Some parameters only work in specific modes (e.g., `colormode` for rainbow)
+
+### Effects Disappear When Text Changes
+
+**Problem:** Effects stop working when label text is updated.
+
+**Solutions:**
+
+1. For TextEffectComponent: Call `ApplyEffects()` after changing text
+2. For DialogueController: Effects are automatically re-initialized on each dialogue line
+3. Ensure text includes effect tags when updating
+
+---
+
+## Additional Resources
+
+- See `TEXT_EFFECTS_DOCUMENTATION.md` for technical implementation details
+- Check `TextEffectsDemo.ink` for live examples of all effects
+- Review the Components sample scene for TextEffectComponent usage examples
+
+---
+
+## Summary
+
+Text Effects in Luna UI provide a powerful and easy-to-use system for animating text. Whether you're using them in dialogue or static UI elements, the rich text tag syntax makes it simple to add dynamic animations to your text.
+
+**Key Takeaways:**
+
+- Use `<effectname>text</effectname>` syntax
+- Works automatically with DialogueController
+- Use TextEffectComponent for standalone labels
+- Combine effects by nesting tags
+- Adjust `durationperchar` to control speed
+- Effects coordinate with text reveal automatically
+
+Happy animating! 🎨
+

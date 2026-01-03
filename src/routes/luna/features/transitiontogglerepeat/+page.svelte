@@ -6,7 +6,7 @@
 </script>
 
 <Heading tag="h1" customSize="text-2xl font-extrabold md:text-3xl lg:text-4xl"
-	>Utility/ TransitionToggleRepeat</Heading
+	>Features/ TransitionToggleRepeat</Heading
 >
 <div class="p-4">
 	<P>

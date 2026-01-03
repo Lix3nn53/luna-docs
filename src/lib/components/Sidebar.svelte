@@ -500,8 +500,8 @@
 			</SidebarDropdownWrapper>
 			<SidebarDropdownWrapper
 				btnClass={dropdownWrapperClass}
-				label="Utility"
-				isOpen={page.url.pathname.includes('/luna/utility')}
+				label="Features"
+				isOpen={page.url.pathname.includes('/luna/features')}
 			>
 				<svelte:fragment slot="icon">
 					<i class="fa-solid fa-wrench"></i>
@@ -510,22 +510,29 @@
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
 					label="TransitionToggleRepeat"
-					href="/luna/utility/transitiontogglerepeat"
-					active={page.url.pathname === '/luna/utility/transitiontogglerepeat'}
+					href="/luna/features/transitiontogglerepeat"
+					active={page.url.pathname === '/luna/features/transitiontogglerepeat'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
 					label="Drag & Drop"
-					href="/luna/utility/dragdrop"
-					active={page.url.pathname === '/luna/utility/dragdrop'}
+					href="/luna/features/dragdrop"
+					active={page.url.pathname === '/luna/features/dragdrop'}
 				/>
 				<SidebarDropdownItem
 					aClass={dropdownItemClass}
 					activeClass={dropdownActiveClass}
 					label="ListViewWrapper"
-					href="/luna/utility/listviewwrapper"
-					active={page.url.pathname === '/luna/utility/listviewwrapper'}
+					href="/luna/features/listviewwrapper"
+					active={page.url.pathname === '/luna/features/listviewwrapper'}
+				/>
+				<SidebarDropdownItem
+					aClass={dropdownItemClass}
+					activeClass={dropdownActiveClass}
+					label="Text Effects"
+					href="/luna/features/texteffects"
+					active={page.url.pathname === '/luna/features/texteffects'}
 				/>
 			</SidebarDropdownWrapper>
 			<SidebarItem
